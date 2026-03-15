@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eddie James Tips — The Esoteric Tipster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #0a0a0a;
+      color: #F5F0E8;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      background: #FF6600;
+      display: flex;
+      align-items: stretch;
+      min-height: 110px;
+    }
+    .h-inner {
+      padding: 0.8rem 2rem;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+    }
+    .logo-text {
+      font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.05;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .logo-text .james { color: #FFD700; }
+    .h-divider {
+      width: 1px;
+      background: rgba(255,255,255,0.4);
+      align-self: stretch;
+      margin: 0.8rem 0;
+      flex-shrink: 0;
+    }
+    .h-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 1.2rem;
+    }
+    .tips-word {
+      font-size: clamp(2.2rem, 5.5vw, 3.2rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 1;
+    }
+    .tagline {
+      font-size: 0.92rem;
+      font-weight: 400;
+      color: #fff;
+      margin-top: 0.4rem;
+      opacity: 0.9;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+    }
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #FF6600;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #333;
+    }
+    .festival-card {
+      border: 1px solid #333;
+      border-left: 4px solid #FF6600;
+      padding: 1.8rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1px;
+    }
+    .festival-name {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #F5F0E8;
+    }
+    .festival-detail {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      color: #aaa;
+      margin-top: 0.3rem;
+      letter-spacing: 0.05em;
+    }
+    .festival-pl {
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: #FF6600;
+      text-align: right;
+      line-height: 1;
+    }
+    .festival-pl-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      color: #aaa;
+      text-align: right;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 1px;
+      background: #333;
+    }
+    .stat {
+      background: #0a0a0a;
+      padding: 1.2rem 1.5rem;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: #FFD700;
+      line-height: 1;
+    }
+    .stat-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem;
+      color: #aaa;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
+    }
+    .about {
+      margin-top: 4rem;
+      border-top: 1px solid #333;
+      padding-top: 2.5rem;
+    }
+    .about p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #ccc;
+      max-width: 580px;
+      font-weight: 400;
+    }
+    .about p + p { margin-top: 1rem; }
+    .follow { margin-top: 3rem; }
+    .follow-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: #FF6600;
+      color: #0a0a0a;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 1.8rem;
+      transition: background 0.2s;
+    }
+    .follow-link:hover { background: #FFD700; }
+    footer {
+      border-top: 1px solid #333;
+      padding: 1.8rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .compliance {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem;
+      color: #888;
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+    }
+    .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
+    .compliance a:hover { color: #FF6600; }
+    @media (max-width: 600px) {
+      .h-inner { padding: 1rem 1.2rem; gap: 1rem; }
+      main { padding: 2rem 1.2rem 3rem; }
+      .festival-card { grid-template-columns: 1fr; }
+      .festival-pl { text-align: left; }
+      footer { flex-direction: column; padding: 1.5rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="h-inner">
+      <div class="logo-text">EDDIE<br><span class="james">JAMES</span></div>
+      <div class="h-divider"></div>
+      <div class="h-right">
+        <div class="tips-word">TIPS</div>
+        <div class="tagline">The Esoteric Tipster.</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section style="margin-bottom:4rem">
+      <div class="section-label">Advised Price Record</div>
+      <div class="festival-card">
+        <div>
+          <div class="festival-name">Cheltenham Festival 2026</div>
+          <div class="festival-detail">10–13 March 2026 &nbsp;·&nbsp; 20 selections &nbsp;·&nbsp; 5 winners &nbsp;·&nbsp; 4 placed</div>
+        </div>
+        <div>
+          <div class="festival-pl">+87.7</div>
+          <div class="festival-pl-label">pts advised price</div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">73.3%</div>
+          <div class="stat-label">ROI</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Winners</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">23.7/1</div>
+          <div class="stat-label">Avg Win Price</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="section-label">About</div>
+      <p>Free horse racing tips, posted daily. No commentary. No debate. No explanation.</p>
+      <p>Prices advised at time of posting. Record maintained at advised prices. Small stakes, big prices, positive expected value.</p>
+    </section>
+
+    <div class="follow">
+      <a class="follow-link" href="https://x.com/EddieJamesTips" target="_blank" rel="noopener">
+        Follow on X &rarr;
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="compliance">
+      18+ only &nbsp;·&nbsp; Please gamble responsibly &nbsp;·&nbsp;
+      <a href="https://www.begambleaware.org" target="_blank" rel="noopener">BeGambleAware.org</a><br>
+      Tips are for entertainment purposes only. Past performance does not guarantee future results.
+    </div>
+    <div style="font-size:1.4rem">🟠</div>
+  </footer>
+
+</body>
+</html>
