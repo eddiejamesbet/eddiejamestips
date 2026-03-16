@@ -11,7 +11,9 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { background: #0a0a0a; color: #F5F0E8; font-family: 'Nunito', sans-serif; font-weight: 300; min-height: 100vh; overflow-x: hidden; }
-    header { background: #FF6600; display: flex; align-items: stretch; min-height: 110px; }
+    header { background: #FF6600; display: flex; flex-direction: column; min-height: 110px; }
+    .h-inner { padding: 0.8rem 2rem; flex: 1; display: flex; align-items: center; gap: 1.8rem; }
+    .header-record { background: rgba(0,0,0,0.15); padding: 0.4rem 2rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: #fff; letter-spacing: 0.1em; }
     .h-inner { padding: 0.8rem 2rem; flex: 1; display: flex; align-items: center; gap: 1.8rem; }
     .logo-text { font-size: clamp(1.8rem, 4.5vw, 2.6rem); font-weight: 800; line-height: 1.05; text-transform: uppercase; color: #fff; text-decoration: none; display: block; }
     .logo-text .james { color: #FFD700; }
@@ -64,6 +66,7 @@
         <div class="tagline">The Esoteric Tipster.</div>
       </div>
     </div>
+    <div class="header-record">Since inception &nbsp;·&nbsp; 28 bets &nbsp;·&nbsp; +76.3pts &nbsp;·&nbsp; advised price</div>
   </header>
   <nav>
     <a href="index.html" class="active">Home</a>
