@@ -10,8 +10,9 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: #0a0a0a; color: #F5F0E8; font-family: 'Nunito', sans-serif; font-weight: 400; min-height: 100vh; }
-    header { background: #FF6600; display: flex; align-items: stretch; min-height: 110px; }
+    header { background: #FF6600; display: flex; flex-direction: column; min-height: 110px; }
     .h-inner { padding: 0.8rem 2rem; flex: 1; display: flex; align-items: center; gap: 1.8rem; }
+    .header-record { background: rgba(0,0,0,0.15); padding: 0.4rem 2rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: #fff; letter-spacing: 0.1em; }
     .logo-text { font-size: clamp(1.8rem, 4.5vw, 2.6rem); font-weight: 800; line-height: 1.05; text-transform: uppercase; color: #fff; text-decoration: none; display: block; }
     .logo-text .james { color: #FFD700; }
     .h-divider { width: 1px; background: rgba(255,255,255,0.4); align-self: stretch; margin: 0.8rem 0; flex-shrink: 0; }
@@ -50,6 +51,7 @@
         <div class="tagline">The Esoteric Tipster.</div>
       </div>
     </div>
+    <div class="header-record">Since inception &nbsp;·&nbsp; 29 bets &nbsp;·&nbsp; +74.3pts &nbsp;·&nbsp; advised price</div>
   </header>
   <nav>
     <a href="index.html">Home</a>
@@ -64,19 +66,19 @@
       <div class="record-grid">
         <a href="advised.html" class="record-card">
           <div class="record-card-label">Advised Price</div>
-          <div class="record-card-pl">+82.3pts</div>
+          <div class="record-card-pl">+74.3pts</div>
           <div class="record-card-desc">Price at time of posting</div>
           <div class="record-card-arrow">View record &rarr;</div>
         </a>
         <a href="isp.html" class="record-card">
           <div class="record-card-label">ISP</div>
-          <div class="record-card-pl">+70.8pts</div>
+          <div class="record-card-pl">+68.8pts</div>
           <div class="record-card-desc">Industry Starting Price</div>
           <div class="record-card-arrow">View record &rarr;</div>
         </a>
         <a href="bsp.html" class="record-card">
           <div class="record-card-label">BSP</div>
-          <div class="record-card-pl">+90.94pts</div>
+          <div class="record-card-pl">+88.94pts</div>
           <div class="record-card-desc">Betfair Starting Price</div>
           <div class="record-card-arrow">View record &rarr;</div>
         </a>
