@@ -24,17 +24,20 @@
     nav a { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; text-decoration: none; padding: 1rem 1.5rem; border-bottom: 2px solid transparent; transition: color 0.2s; }
     nav a:hover { color: #FF6600; }
     nav a.active { color: #FF6600; border-bottom-color: #FF6600; }
-    main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem 4rem; }
-    .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: #FF6600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+    main { max-width: 860px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+    .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: #FF6600; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem; }
     .section-label::after { content: ''; flex: 1; height: 1px; background: #333; }
-    .today { margin-bottom: 4rem; }
-    .today-grid { display: grid; grid-template-columns: 180px 1fr; gap: 2rem; align-items: start; }
-    .today-links { display: flex; flex-direction: column; gap: 0.8rem; padding-top: 0.2rem; }
-    .tip-card { border: 1px solid #333; border-left: 4px solid #FFD700; padding: 2rem 2.5rem; margin-bottom: 1px; }
-    .tip-race { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: #aaa; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.6rem; }
-    .tip-horse { font-size: 2rem; font-weight: 900; color: #F5F0E8; line-height: 1; margin-bottom: 0.6rem; }
+    .today { margin-bottom: 1.5rem; }
+    .tip-card { border: 1px solid #333; border-left: 4px solid #FFD700; padding: 1.6rem 2rem; margin-bottom: 1px; }
+    .tip-race { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: #aaa; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tip-horse { font-size: 1.8rem; font-weight: 900; color: #F5F0E8; line-height: 1; margin-bottom: 0.5rem; }
     .tip-details { font-family: 'IBM Plex Mono', monospace; font-size: 0.82rem; color: #FF6600; letter-spacing: 0.05em; }
     .tip-price { font-size: 1.1rem; font-weight: 800; color: #FFD700; }
+    .cta-bar { display: flex; gap: 1rem; margin-bottom: 3rem; }
+    .follow-link { display: inline-flex; align-items: center; gap: 0.7rem; background: #FF6600; color: #0a0a0a; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 1.8rem; transition: background 0.2s; flex: 1; justify-content: center; }
+    .follow-link:hover { background: #FFD700; }
+    .follow-link.coffee { background: #FFD700; }
+    .follow-link.coffee:hover { background: #FF6600; }
     .festival-card { border: 1px solid #333; border-left: 4px solid #FF6600; padding: 1.8rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; margin-bottom: 1px; }
     .festival-name { font-size: 1.1rem; font-weight: 800; color: #F5F0E8; }
     .festival-detail { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: #aaa; margin-top: 0.3rem; }
@@ -44,18 +47,14 @@
     .stat { background: #0a0a0a; padding: 1rem 1.5rem; text-align: center; }
     .stat-number { font-size: 1.6rem; font-weight: 900; color: #FFD700; line-height: 1; }
     .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.3rem; }
-    .about { margin-top: 4rem; border-top: 1px solid #333; padding-top: 2.5rem; }
+    .about { margin-top: 3rem; border-top: 1px solid #333; padding-top: 2rem; }
     .about p { font-size: 1rem; line-height: 1.8; color: #ccc; max-width: 580px; font-weight: 400; }
     .about p + p { margin-top: 1rem; }
-    .follow-link { display: inline-flex; align-items: center; gap: 0.7rem; background: #FF6600; color: #0a0a0a; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 1.8rem; transition: background 0.2s; }
-    .follow-link:hover { background: #FFD700; }
-    .follow-link.coffee { background: #FFD700; }
-    .follow-link.coffee:hover { background: #FF6600; }
     footer { border-top: 1px solid #333; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     .compliance { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #888; letter-spacing: 0.05em; line-height: 1.6; }
     .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
     .compliance a:hover { color: #FF6600; }
-    @media (max-width: 600px) { .h-inner { padding: 1rem 1.2rem; gap: 1rem; } main { padding: 2rem 1.2rem 3rem; } .today-grid { grid-template-columns: 1fr; } .festival-card { grid-template-columns: 1fr; } .festival-pl { text-align: left; } footer { flex-direction: column; padding: 1.5rem 1.2rem; } nav { overflow-x: auto; } }
+    @media (max-width: 600px) { .h-inner { padding: 1rem 1.2rem; gap: 1rem; } main { padding: 1.5rem 1.2rem 3rem; } .festival-card { grid-template-columns: 1fr; } .festival-pl { text-align: left; } footer { flex-direction: column; padding: 1.5rem 1.2rem; } nav { overflow-x: auto; } .cta-bar { flex-direction: column; } }
   </style>
 </head>
 <body>
@@ -80,31 +79,27 @@
   <main>
     <section class="today">
       <div class="section-label">Wednesday 18 March 2026 — Eddie Advises</div>
-      <div class="today-grid">
-        <div class="today-links">
-          <a class="follow-link" href="https://x.com/EddieJamesTips" target="_blank" rel="noopener">Follow on X &rarr;</a>
-          <a class="follow-link coffee" href="https://buymeacoffee.com/eddiejamestips" target="_blank" rel="noopener">Buy Me a Coffee &rarr;</a>
-        </div>
-        <div>
-          <div class="tip-card">
-            <div class="tip-race">18:00 &nbsp;·&nbsp; Kempton Park</div>
-            <div class="tip-horse">Eyes Front</div>
-            <div class="tip-details">1pt EW &nbsp;·&nbsp; <span class="tip-price">33/1</span> &nbsp;·&nbsp; Bet365</div>
-          </div>
-          <div class="tip-card">
-            <div class="tip-race">19:00 &nbsp;·&nbsp; Kempton Park</div>
-            <div class="tip-horse">Arantes Nascimento</div>
-            <div class="tip-details">1pt WIN &nbsp;·&nbsp; <span class="tip-price">11/1</span> &nbsp;·&nbsp; Bet365</div>
-          </div>
-          <div class="tip-card">
-            <div class="tip-race">20:00 &nbsp;·&nbsp; Kempton Park</div>
-            <div class="tip-horse">Ice Opera</div>
-            <div class="tip-details">1pt WIN &nbsp;·&nbsp; <span class="tip-price">14/1</span> &nbsp;·&nbsp; Paddy Power</div>
-          </div>
-        </div>
+      <div class="tip-card">
+        <div class="tip-race">18:00 &nbsp;·&nbsp; Kempton Park</div>
+        <div class="tip-horse">Eyes Front</div>
+        <div class="tip-details">1pt EW &nbsp;·&nbsp; <span class="tip-price">33/1</span> &nbsp;·&nbsp; Bet365</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-race">19:00 &nbsp;·&nbsp; Kempton Park</div>
+        <div class="tip-horse">Arantes Nascimento</div>
+        <div class="tip-details">1pt WIN &nbsp;·&nbsp; <span class="tip-price">11/1</span> &nbsp;·&nbsp; Bet365</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-race">20:00 &nbsp;·&nbsp; Kempton Park</div>
+        <div class="tip-horse">Ice Opera</div>
+        <div class="tip-details">1pt WIN &nbsp;·&nbsp; <span class="tip-price">14/1</span> &nbsp;·&nbsp; Paddy Power</div>
       </div>
     </section>
-    <section style="margin-bottom:4rem">
+    <div class="cta-bar">
+      <a class="follow-link" href="https://x.com/EddieJamesTips" target="_blank" rel="noopener">Follow on X &rarr;</a>
+      <a class="follow-link coffee" href="https://buymeacoffee.com/eddiejamestips" target="_blank" rel="noopener">Buy Me a Coffee &rarr;</a>
+    </div>
+    <section style="margin-bottom:3rem">
       <div class="section-label">Advised Price Record</div>
       <div class="festival-card">
         <div>
