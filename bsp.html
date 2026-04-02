@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BSP Record — Eddie James Tips</title>
+  <title>ISP Record — Eddie James Tips</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -37,17 +37,17 @@
     tbody tr:hover { background: #111; }
     tbody td { padding: 0.7rem 1rem; color: #ccc; white-space: nowrap; }
     tbody td.horse { color: #F5F0E8; font-weight: 700; font-family: 'Nunito', sans-serif; font-size: 0.85rem; }
-    tbody td.place-bet { color: #888; font-style: italic; }
     tbody td.won { color: #FFD700; font-weight: 700; }
+    tbody td.placed { color: #FF6600; font-weight: 700; }
     tbody td.lost { color: #555; }
     tbody td.nr { color: #555; font-style: italic; }
+    tbody td.unknown { color: #555; }
     tbody td.pl-pos { color: #FFD700; }
     tbody td.pl-neg { color: #888; }
     tbody td.running { color: #F5F0E8; font-weight: 700; }
     .meeting-header td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.5rem 1rem; border-top: 1px solid #333; }
     tfoot td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem; border-top: 2px solid #FF6600; font-weight: 700; }
     tfoot td.total-pl { color: #FFD700; font-size: 1rem; }
-    .note { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: #555; margin-top: 1rem; }
     footer { border-top: 1px solid #333; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 4rem; }
     .compliance { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #888; letter-spacing: 0.05em; line-height: 1.6; }
     .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
@@ -63,165 +63,126 @@
         <div class="tagline">The Esoteric Tipster.</div>
       </div>
     </div>
-    <div class="header-record">Since inception &nbsp;·&nbsp; 60 bets &nbsp;·&nbsp; +81.6pts &nbsp;·&nbsp; advised price</div>
+    <div class="header-record">Since inception &nbsp;·&nbsp; 62 bets &nbsp;·&nbsp; +78.6pts &nbsp;·&nbsp; advised price</div>
   </header>
   <nav>
     <a href="index.html">Home</a>
     <a href="record.html">Record</a>
     <a href="advised.html">Advised Price</a>
-    <a href="isp.html">ISP</a>
-    <a href="bsp.html" class="active">BSP</a>
+    <a href="isp.html" class="active">ISP</a>
+    <a href="bsp.html">BSP</a>
   </nav>
   <main>
     <section style="margin-bottom:3rem">
-      <div class="section-label">BSP Record — Betfair Starting Price</div>
+      <div class="section-label">ISP Record</div>
       <div class="summary">
-        <div class="stat"><div class="stat-number">+85.63pts</div><div class="stat-label">Total P&L</div></div>
-        <div class="stat"><div class="stat-number">102</div><div class="stat-label">Bets</div></div>
-        <div class="stat"><div class="stat-number">16W</div><div class="stat-label">Winners</div></div>
-        <div class="stat"><div class="stat-number">95.6%</div><div class="stat-label">ROI</div></div>
+        <div class="stat"><div class="stat-number">+57.8pts</div><div class="stat-label">Total P&L</div></div>
+        <div class="stat"><div class="stat-number">62</div><div class="stat-label">Bets</div></div>
+        <div class="stat"><div class="stat-number">7W / 10P</div><div class="stat-label">Results</div></div>
+        <div class="stat"><div class="stat-number">66.5%</div><div class="stat-label">ROI</div></div>
       </div>
     </section>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Date</th><th>Time</th><th>Horse</th><th>Course</th><th>Market</th><th>Stake</th><th>BSP</th><th>Result</th><th>Return</th><th>P&L</th><th>Running</th>
+            <th>Date</th><th>Time</th><th>Horse</th><th>Course</th><th>Type</th><th>Stake / Terms</th><th>ISP</th><th>Result</th><th>Return</th><th>P&L</th><th>Running</th>
           </tr>
         </thead>
         <tbody>
           <tr class="meeting-header"><td colspan="11">Cheltenham Festival — 10–13 March 2026</td></tr>
-          <tr><td>10-Mar</td><td>13:20</td><td class="horse">Sober Glory</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>6.20</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-1</td></tr>
-          <tr><td>10-Mar</td><td>13:20</td><td class="horse place-bet">Sober Glory (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>2.45</td><td class="won">Won</td><td>2.45</td><td class="pl-pos">+1.45</td><td class="running">0.45</td></tr>
-          <tr><td>10-Mar</td><td>14:40</td><td class="horse">Pourquoir Les Papa</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>21.56</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-0.55</td></tr>
-          <tr><td>10-Mar</td><td>14:40</td><td class="horse place-bet">Pourquoir Les Papa (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>4.00</td><td class="won">Won</td><td>4.00</td><td class="pl-pos">+3</td><td class="running">2.45</td></tr>
-          <tr><td>10-Mar</td><td>15:20</td><td class="horse">Search For Glory</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>48.25</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">1.45</td></tr>
-          <tr><td>10-Mar</td><td>15:20</td><td class="horse place-bet">Search For Glory (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>11.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">0.45</td></tr>
-          <tr><td>11-Mar</td><td>13:20</td><td class="horse">Laurets D'Estruval</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>97.58</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-0.55</td></tr>
-          <tr><td>11-Mar</td><td>13:20</td><td class="horse place-bet">Laurets D'Estruval (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>19.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-1.55</td></tr>
-          <tr><td>11-Mar</td><td>13:20</td><td class="horse">Bossman Jack</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>30.83</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-2.55</td></tr>
-          <tr><td>11-Mar</td><td>13:20</td><td class="horse place-bet">Bossman Jack (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>6.21</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-3.55</td></tr>
-          <tr><td>11-Mar</td><td>14:00</td><td class="horse">Kitzbuhel</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>18.04</td><td class="won">Won</td><td>18.04</td><td class="pl-pos">+17.04</td><td class="running">13.49</td></tr>
-          <tr><td>11-Mar</td><td>14:00</td><td class="horse place-bet">Kitzbuhel (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>3.55</td><td class="won">Won</td><td>3.55</td><td class="pl-pos">+2.55</td><td class="running">16.04</td></tr>
-          <tr><td>11-Mar</td><td>16:00</td><td class="horse">Saint Segal</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>144.87</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">15.04</td></tr>
-          <tr><td>11-Mar</td><td>16:00</td><td class="horse place-bet">Saint Segal (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>8.75</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">14.04</td></tr>
-          <tr><td>11-Mar</td><td>16:00</td><td class="horse">Liberty Hunter</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>110.47</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">13.04</td></tr>
-          <tr><td>11-Mar</td><td>16:00</td><td class="horse place-bet">Liberty Hunter (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>9.92</td><td class="won">Won</td><td>9.92</td><td class="pl-pos">+8.92</td><td class="running">21.96</td></tr>
-          <tr><td>12-Mar</td><td>13:20</td><td class="horse">Future Prospect</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>21.32</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">20.96</td></tr>
-          <tr><td>12-Mar</td><td>13:20</td><td class="horse place-bet">Future Prospect (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>5.70</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">19.96</td></tr>
-          <tr><td>12-Mar</td><td>14:00</td><td class="horse">Meetmebythesea</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>12.70</td><td class="won">Won</td><td>12.70</td><td class="pl-pos">+11.7</td><td class="running">31.66</td></tr>
-          <tr><td>12-Mar</td><td>15:20</td><td class="horse">Home By The Lee</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>37.70</td><td class="won">Won</td><td>37.70</td><td class="pl-pos">+36.7</td><td class="running">68.36</td></tr>
-          <tr><td>12-Mar</td><td>15:20</td><td class="horse place-bet">Home By The Lee (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>9.01</td><td class="won">Won</td><td>9.01</td><td class="pl-pos">+8.01</td><td class="running">76.37</td></tr>
-          <tr><td>12-Mar</td><td>15:00</td><td class="horse">Heart Wood</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>5.90</td><td class="won">Won</td><td>5.90</td><td class="pl-pos">+4.9</td><td class="running">81.27</td></tr>
-          <tr><td>13-Mar</td><td>13:20</td><td class="horse">Macho Man</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>15.60</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">80.27</td></tr>
-          <tr><td>13-Mar</td><td>13:20</td><td class="horse place-bet">Macho Man (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>5.30</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">79.27</td></tr>
-          <tr><td>13-Mar</td><td>14:00</td><td class="horse">Wilful</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>18.07</td><td class="won">Won</td><td>18.07</td><td class="pl-pos">+17.07</td><td class="running">96.34</td></tr>
-          <tr><td>13-Mar</td><td>14:00</td><td class="horse place-bet">Wilful (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>4.20</td><td class="won">Won</td><td>4.20</td><td class="pl-pos">+3.2</td><td class="running">99.54</td></tr>
-          <tr><td>13-Mar</td><td>15:20</td><td class="horse">Swindon Village</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>198.80</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">98.54</td></tr>
-          <tr><td>13-Mar</td><td>15:20</td><td class="horse place-bet">Swindon Village (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>37.26</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">97.54</td></tr>
-          <tr><td>13-Mar</td><td>16:00</td><td class="horse">Firefox</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>25.36</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">96.54</td></tr>
-          <tr><td>13-Mar</td><td>16:00</td><td class="horse place-bet">Firefox (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>5.54</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">95.54</td></tr>
-          <tr><td>13-Mar</td><td>17:20</td><td class="horse">Hot Fuss</td><td>Cheltenham</td><td>Win</td><td>1pt</td><td>29.93</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">94.54</td></tr>
-          <tr><td>13-Mar</td><td>17:20</td><td class="horse place-bet">Hot Fuss (Place)</td><td>Cheltenham</td><td>Place</td><td>1pt</td><td>6.40</td><td class="won">Won</td><td>6.40</td><td class="pl-pos">+5.4</td><td class="running">99.94</td></tr>
+          <tr><td>10-Mar</td><td>13:20</td><td class="horse">Sober Glory</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW 3 places)</td><td>9/2</td><td class="placed">Placed</td><td>1.9</td><td class="pl-neg">-0.1</td><td class="running">-0.1</td></tr>
+          <tr><td>10-Mar</td><td>14:40</td><td class="horse">Pourquoir Les Papa</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Bet365 6 places)</td><td>16/1</td><td class="placed">Placed</td><td>4.2</td><td class="pl-pos">+2.2</td><td class="running">2.1</td></tr>
+          <tr><td>10-Mar</td><td>15:20</td><td class="horse">Search For Glory</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Bet365 6 places)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">0.1</td></tr>
+          <tr><td>11-Mar</td><td>13:20</td><td class="horse">Laurets D'Estruval</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Bet365 4 places)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">-1.9</td></tr>
+          <tr><td>11-Mar</td><td>13:20</td><td class="horse">Bossman Jack</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Bet365 4 places)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">-3.9</td></tr>
+          <tr><td>11-Mar</td><td>14:00</td><td class="horse">Kitzbuhel</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Paddy Power 4 places)</td><td>11/1</td><td class="won">Won</td><td>15.2</td><td class="pl-pos">+13.2</td><td class="running">9.3</td></tr>
+          <tr><td>11-Mar</td><td>16:00</td><td class="horse">Saint Segal</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Bet365)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">7.3</td></tr>
+          <tr><td>11-Mar</td><td>16:00</td><td class="horse">Liberty Hunter</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Paddy Power)</td><td>50/1</td><td class="placed">Placed</td><td>11</td><td class="pl-pos">+9</td><td class="running">16.3</td></tr>
+          <tr><td>12-Mar</td><td>13:20</td><td class="horse">Future Prospect</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Bet365 4 places)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">14.3</td></tr>
+          <tr><td>12-Mar</td><td>14:00</td><td class="horse">Meetmebythesea</td><td>Cheltenham</td><td>Win</td><td>1pt Generally</td><td>9/1</td><td class="won">Won</td><td>10</td><td class="pl-pos">+9</td><td class="running">23.3</td></tr>
+          <tr><td>12-Mar</td><td>15:20</td><td class="horse">Home By The Lee</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Bet365 4 places)</td><td>33/1</td><td class="won">Won</td><td>41.6</td><td class="pl-pos">+39.6</td><td class="running">62.9</td></tr>
+          <tr><td>12-Mar</td><td>15:00</td><td class="horse">Heart Wood</td><td>Cheltenham</td><td>Win</td><td>1pt Hills</td><td>9/2</td><td class="won">Won</td><td>5.5</td><td class="pl-pos">+4.5</td><td class="running">67.4</td></tr>
+          <tr><td>13-Mar</td><td>13:20</td><td class="horse">Macho Man</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Coral/Lads 4 places)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">65.4</td></tr>
+          <tr><td>13-Mar</td><td>14:00</td><td class="horse">Wilful</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Bet365 6 places)</td><td>14/1</td><td class="won">Won</td><td>18.8</td><td class="pl-pos">+16.8</td><td class="running">82.2</td></tr>
+          <tr><td>13-Mar</td><td>15:20</td><td class="horse">Swindon Village</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Generally)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">80.2</td></tr>
+          <tr><td>13-Mar</td><td>16:00</td><td class="horse">Firefox</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Generally)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">78.2</td></tr>
+          <tr><td>13-Mar</td><td>17:20</td><td class="horse">Hot Fuss</td><td>Cheltenham</td><td>EW</td><td>2pts (1EW Betfred 6 places)</td><td>25/1</td><td class="placed">Placed</td><td>6</td><td class="pl-pos">+4</td><td class="running">82.2</td></tr>
           <tr class="meeting-header"><td colspan="11">Uttoxeter — 14 March 2026</td></tr>
-          <tr><td>14-Mar</td><td>13:50</td><td class="horse">It's Top</td><td>Uttoxeter</td><td>Win</td><td>1pt</td><td>8.55</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">98.94</td></tr>
-          <tr><td>14-Mar</td><td>14:25</td><td class="horse">Hartington</td><td>Uttoxeter</td><td>Win</td><td>1pt</td><td>13.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">97.94</td></tr>
-          <tr><td>14-Mar</td><td>14:25</td><td class="horse">Twig</td><td>Uttoxeter</td><td>Win</td><td>1pt</td><td>70.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">96.94</td></tr>
-          <tr><td>14-Mar</td><td>14:25</td><td class="horse place-bet">Twig (Place)</td><td>Uttoxeter</td><td>Place</td><td>1pt</td><td>8.20</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">95.94</td></tr>
-          <tr><td>14-Mar</td><td>15:00</td><td class="horse">Minella Blueway</td><td>Uttoxeter</td><td>Win</td><td>1pt</td><td>55.21</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">94.94</td></tr>
-          <tr><td>14-Mar</td><td>15:00</td><td class="horse place-bet">Minella Blueway (Place)</td><td>Uttoxeter</td><td>Place</td><td>1pt</td><td>8.60</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">93.94</td></tr>
-          <tr><td>14-Mar</td><td>15:00</td><td class="horse">Rock My Way</td><td>Uttoxeter</td><td>Win</td><td>1pt</td><td>25.54</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">92.94</td></tr>
-          <tr><td>14-Mar</td><td>15:00</td><td class="horse place-bet">Rock My Way (Place)</td><td>Uttoxeter</td><td>Place</td><td>1pt</td><td>5.00</td><td class="won">Won</td><td>5.00</td><td class="pl-pos">+4</td><td class="running">96.94</td></tr>
+          <tr><td>14-Mar</td><td>13:50</td><td class="horse">It's Top</td><td>Uttoxeter</td><td>Win</td><td>1pt Hills</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">81.2</td></tr>
+          <tr><td>14-Mar</td><td>14:25</td><td class="horse">Hartington</td><td>Uttoxeter</td><td>Win</td><td>1pt Bet365</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">80.2</td></tr>
+          <tr><td>14-Mar</td><td>14:25</td><td class="horse">Twig</td><td>Uttoxeter</td><td>EW</td><td>2pts (1EW Bet365 5 places)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">78.2</td></tr>
+          <tr><td>14-Mar</td><td>15:00</td><td class="horse">Minella Blueway</td><td>Uttoxeter</td><td>EW</td><td>2pts (1EW Bet365 5 places)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">76.2</td></tr>
+          <tr><td>14-Mar</td><td>15:00</td><td class="horse">Rock My Way</td><td>Uttoxeter</td><td>EW</td><td>2pts (1EW Bet365 5 places)</td><td>18/1</td><td class="placed">Placed</td><td>4.6</td><td class="pl-pos">+2.6</td><td class="running">78.8</td></tr>
           <tr class="meeting-header"><td colspan="11">Curragh / Chepstow — 15 March 2026</td></tr>
-          <tr><td>15-Mar</td><td>15:45</td><td class="horse">Rocket Robyn</td><td>Curragh</td><td>Win</td><td>1pt</td><td>25.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">95.94</td></tr>
-          <tr><td>15-Mar</td><td>15:45</td><td class="horse place-bet">Rocket Robyn (Place)</td><td>Curragh</td><td>Place</td><td>1pt</td><td>3.54</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">94.94</td></tr>
-          <tr><td>15-Mar</td><td>15:55</td><td class="horse">Springs A Girl</td><td>Chepstow</td><td>Win</td><td>1pt</td><td>17.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">93.94</td></tr>
-          <tr><td>15-Mar</td><td>16:20</td><td class="horse">Akecheta</td><td>Curragh</td><td>Win</td><td>1.5pt</td><td>6.83</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1.5</td><td class="running">92.44</td></tr>
-          <tr><td>15-Mar</td><td>16:20</td><td class="horse place-bet">Akecheta (Place)</td><td>Curragh</td><td>Place</td><td>1.5pt</td><td>2.26</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1.5</td><td class="running">90.94</td></tr>
+          <tr><td>15-Mar</td><td>15:45</td><td class="horse">Rocket Robyn</td><td>Curragh</td><td>EW</td><td>2pts (1EW Generally)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">76.8</td></tr>
+          <tr><td>15-Mar</td><td>15:55</td><td class="horse">Springs A Girl</td><td>Chepstow</td><td>Win</td><td>1pt Bet365</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">75.8</td></tr>
+          <tr><td>15-Mar</td><td>16:20</td><td class="horse">Akecheta</td><td>Curragh</td><td>EW</td><td>3pts (1.5EW Bet365 6 places)</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-3</td><td class="running">72.8</td></tr>
           <tr class="meeting-header"><td colspan="11">Wolverhampton — 16 March 2026</td></tr>
-          <tr><td>16-Mar</td><td>19:30</td><td class="horse">Digital</td><td>Wolverhampton</td><td>Win</td><td>1pt</td><td>26.06</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">89.94</td></tr>
-          <tr><td>16-Mar</td><td>19:30</td><td class="horse place-bet">Digital (Place)</td><td>Wolverhampton</td><td>Place</td><td>1pt</td><td>7.83</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">88.94</td></tr>
+          <tr><td>16-Mar</td><td>19:30</td><td class="horse">Digital</td><td>Wolverhampton</td><td>EW</td><td>2pts (1EW Bet365 3 places)</td><td>18/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">70.8</td></tr>
           <tr class="meeting-header"><td colspan="11">Wolverhampton — 17 March 2026</td></tr>
-          <tr><td>17-Mar</td><td>18:00</td><td class="horse">Punchbowl Flyer</td><td>Wolverhampton</td><td>Win</td><td>1pt</td><td>14.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">87.94</td></tr>
-          <tr><td>17-Mar</td><td>18:00</td><td class="horse place-bet">Punchbowl Flyer (Place)</td><td>Wolverhampton</td><td>Place</td><td>1pt</td><td>4.10</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">86.94</td></tr>
+          <tr><td>17-Mar</td><td>18:00</td><td class="horse">Punchbowl Flyer</td><td>Wolverhampton</td><td>EW</td><td>2pts (1EW Generally)</td><td>11/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">68.8</td></tr>
           <tr class="meeting-header"><td colspan="11">Kempton Park — 18 March 2026</td></tr>
-          <tr><td>18-Mar</td><td>18:00</td><td class="horse">Eyes Front</td><td>Kempton Park</td><td>Win</td><td>1pt</td><td>6.60</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">85.94</td></tr>
-          <tr><td>18-Mar</td><td>18:00</td><td class="horse place-bet">Eyes Front (Place)</td><td>Kempton Park</td><td>Place</td><td>1pt</td><td>2.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">84.94</td></tr>
-          <tr><td>18-Mar</td><td>19:00</td><td class="horse">Arantes Nascimento</td><td>Kempton Park</td><td>Win</td><td>1pt</td><td>&#8212;</td><td class="nr">NR</td><td>0</td><td>0</td><td class="running">84.94</td></tr>
-          <tr><td>18-Mar</td><td>20:00</td><td class="horse">Ice Opera</td><td>Kempton Park</td><td>Win</td><td>1pt</td><td>&#8212;</td><td class="nr">NR</td><td>0</td><td>0</td><td class="running">84.94</td></tr>
+          <tr><td>18-Mar</td><td>18:00</td><td class="horse">Eyes Front</td><td>Kempton Park</td><td>EW</td><td>2pts (1EW Bet365)</td><td>11/2</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">66.8</td></tr>
+          <tr><td>18-Mar</td><td>19:00</td><td class="horse">Arantes Nascimento</td><td>Kempton Park</td><td>Win</td><td>1pt Bet365</td><td>11/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">65.8</td></tr>
+          <tr><td>18-Mar</td><td>20:00</td><td class="horse">Ice Opera</td><td>Kempton Park</td><td>Win</td><td>1pt Paddy Power</td><td>14/1</td><td class="nr">NR</td><td>0</td><td>0</td><td class="running">65.8</td></tr>
           <tr class="meeting-header"><td colspan="11">Wolverhampton — 20 March 2026</td></tr>
-          <tr><td>20-Mar</td><td>16:22</td><td class="horse">Dark Kestrel</td><td>Wolverhampton</td><td>Win</td><td>1pt</td><td>11.89</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">83.94</td></tr>
-          <tr><td>20-Mar</td><td>16:55</td><td class="horse">Albegone</td><td>Wolverhampton</td><td>Win</td><td>1pt</td><td>18.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">82.94</td></tr>
-          <tr><td>20-Mar</td><td>16:55</td><td class="horse place-bet">Albegone (Place)</td><td>Wolverhampton</td><td>Place</td><td>1pt</td><td>4.64</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">81.94</td></tr>
-          <tr><td>20-Mar</td><td>18:00</td><td class="horse">Harbour Vision</td><td>Wolverhampton</td><td>Win</td><td>1pt</td><td>26.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">80.94</td></tr>
-          <tr><td>20-Mar</td><td>18:00</td><td class="horse place-bet">Harbour Vision (Place)</td><td>Wolverhampton</td><td>Place</td><td>1pt</td><td>6.75</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">79.94</td></tr>
+          <tr><td>20-Mar</td><td>16:22</td><td class="horse">Dark Kestrel</td><td>Wolverhampton</td><td>Win</td><td>1pt Generally</td><td>8/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">64.8</td></tr>
+          <tr><td>20-Mar</td><td>16:55</td><td class="horse">Albegone</td><td>Wolverhampton</td><td>EW</td><td>2pts (1EW Paddy Power &amp; Betfair)</td><td>14/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">62.8</td></tr>
+          <tr><td>20-Mar</td><td>18:00</td><td class="horse">Harbour Vision</td><td>Wolverhampton</td><td>EW</td><td>2pts (1EW Generally)</td><td>22/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">60.8</td></tr>
           <tr class="meeting-header"><td colspan="11">Kelso / Newbury — 21 March 2026</td></tr>
-          <tr><td>21-Mar</td><td>13:30</td><td class="horse">Speiriuil</td><td>Kelso</td><td>Win</td><td>1pt</td><td>6.80</td><td class="won">Won</td><td>6.80</td><td class="pl-pos">+5.8</td><td class="running">85.74</td></tr>
-          <tr><td>21-Mar</td><td>14:10</td><td class="horse">Madame La Papillon</td><td>Kelso</td><td>Win</td><td>1pt</td><td>19.44</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">84.74</td></tr>
-          <tr><td>21-Mar</td><td>14:10</td><td class="horse place-bet">Madame La Papillon (Place)</td><td>Kelso</td><td>Place</td><td>1pt</td><td>4.00</td><td class="won">Won</td><td>4.00</td><td class="pl-pos">+3</td><td class="running">87.74</td></tr>
-          <tr><td>21-Mar</td><td>15:35</td><td class="horse">No Way Jay</td><td>Newbury</td><td>Win</td><td>1pt</td><td>51.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">86.74</td></tr>
-          <tr><td>21-Mar</td><td>15:35</td><td class="horse place-bet">No Way Jay (Place)</td><td>Newbury</td><td>Place</td><td>1pt</td><td>9.89</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">85.74</td></tr>
+          <tr><td>21-Mar</td><td>13:30</td><td class="horse">Speiriuil</td><td>Kelso</td><td>Win</td><td>1pt Bet365 &amp; Hills</td><td>5/1</td><td class="won">Won</td><td>6</td><td class="pl-pos">+5</td><td class="running">65.8</td></tr>
+          <tr><td>21-Mar</td><td>14:10</td><td class="horse">Madame La Papillon</td><td>Kelso</td><td>EW</td><td>2pts (1EW Bet365 5 places)</td><td>18/1</td><td class="placed">Placed</td><td>4.6</td><td class="pl-pos">+2.6</td><td class="running">68.4</td></tr>
+          <tr><td>21-Mar</td><td>15:35</td><td class="horse">No Way Jay</td><td>Newbury</td><td>EW</td><td>2pts (1EW BoyleSports 4 places)</td><td>33/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">66.4</td></tr>
           <tr class="meeting-header"><td colspan="11">Naas — 22 March 2026</td></tr>
-          <tr><td>22-Mar</td><td>13:35</td><td class="horse">Magical Vision</td><td>Naas</td><td>Win</td><td>1pt</td><td>10.12</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">84.74</td></tr>
-          <tr><td>22-Mar</td><td>15:47</td><td class="horse">Flanker Jet</td><td>Naas</td><td>Win</td><td>1pt</td><td>30.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">83.74</td></tr>
-          <tr><td>22-Mar</td><td>16:22</td><td class="horse">Lemsairbat</td><td>Naas</td><td>Win</td><td>1pt</td><td>14.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">82.74</td></tr>
-          <tr><td>22-Mar</td><td>16:22</td><td class="horse place-bet">Lemsairbat (Place)</td><td>Naas</td><td>Place</td><td>1pt</td><td>2.95</td><td class="won">Won</td><td>2.95</td><td class="pl-pos">+1.95</td><td class="running">84.69</td></tr>
+          <tr><td>22-Mar</td><td>13:35</td><td class="horse">Magical Vision</td><td>Naas</td><td>Win</td><td>1pt Bet365</td><td>6/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">65.4</td></tr>
+          <tr><td>22-Mar</td><td>15:47</td><td class="horse">Flanker Jet</td><td>Naas</td><td>Win</td><td>1pt Generally</td><td>20/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">64.4</td></tr>
+          <tr><td>22-Mar</td><td>16:22</td><td class="horse">Lemsairbat (FR)</td><td>Naas</td><td>EW</td><td>2pts (1EW Betfair Sportsbook)</td><td>11/1</td><td class="placed">Placed</td><td>3.2</td><td class="pl-pos">+1.2</td><td class="running">65.6</td></tr>
           <tr class="meeting-header"><td colspan="11">Wolverhampton — 23 March 2026</td></tr>
-          <tr><td>23-Mar</td><td>19:30</td><td class="horse">Rain Cap</td><td>Wolverhampton</td><td>Win</td><td>1pt</td><td>11.87</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">83.69</td></tr>
-          <tr><td>23-Mar</td><td>19:30</td><td class="horse place-bet">Rain Cap (Place)</td><td>Wolverhampton</td><td>Place</td><td>1pt</td><td>3.85</td><td class="won">Won</td><td>3.85</td><td class="pl-pos">+2.85</td><td class="running">86.54</td></tr>
+          <tr><td>23-Mar</td><td>19:30</td><td class="horse">Rain Cap</td><td>Wolverhampton</td><td>EW</td><td>2pts (1EW Bet365)</td><td>17/2</td><td class="placed">Placed</td><td>2.7</td><td class="pl-pos">+0.7</td><td class="running">66.3</td></tr>
           <tr class="meeting-header"><td colspan="11">Southwell / Wolverhampton — 24 March 2026</td></tr>
-          <tr><td>24-Mar</td><td>16:30</td><td class="horse">Isle of Sark</td><td>Southwell</td><td>Win</td><td>1pt</td><td>66.10</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">85.54</td></tr>
-          <tr><td>24-Mar</td><td>16:30</td><td class="horse place-bet">Isle of Sark (Place)</td><td>Southwell</td><td>Place</td><td>1pt</td><td>11.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">84.54</td></tr>
-          <tr><td>24-Mar</td><td>18:30</td><td class="horse">Alyara</td><td>Wolverhampton</td><td>Win</td><td>1pt</td><td>50.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">83.54</td></tr>
-          <tr><td>24-Mar</td><td>18:30</td><td class="horse place-bet">Alyara (Place)</td><td>Wolverhampton</td><td>Place</td><td>1pt</td><td>9.40</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">82.54</td></tr>
+          <tr><td>24-Mar</td><td>16:30</td><td class="horse">Isle of Sark</td><td>Southwell</td><td>EW</td><td>2pts (1EW Betfair &amp; Paddy Power)</td><td>50/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">64.3</td></tr>
+          <tr><td>24-Mar</td><td>18:30</td><td class="horse">Alyara</td><td>Wolverhampton</td><td>EW</td><td>2pts (1EW Betfair &amp; Paddy Power)</td><td>33/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">62.3</td></tr>
           <tr class="meeting-header"><td colspan="11">Lingfield / Hexham — 25 March 2026</td></tr>
-          <tr><td>25-Mar</td><td>14:22</td><td class="horse">Miss Moonshine</td><td>Lingfield</td><td>Win</td><td>1pt</td><td>16.46</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">81.54</td></tr>
-          <tr><td>25-Mar</td><td>16:11</td><td class="horse">Getaway Master</td><td>Hexham</td><td>Win</td><td>1pt</td><td>32.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">80.54</td></tr>
-          <tr><td>25-Mar</td><td>16:11</td><td class="horse place-bet">Getaway Master (Place)</td><td>Hexham</td><td>Place</td><td>1pt</td><td>5.55</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">79.54</td></tr>
+          <tr><td>25-Mar</td><td>14:22</td><td class="horse">Miss Moonshine</td><td>Lingfield</td><td>Win</td><td>1pt Generally</td><td>10/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">61.3</td></tr>
+          <tr><td>25-Mar</td><td>16:11</td><td class="horse">Getaway Master</td><td>Hexham</td><td>EW</td><td>2pts (1EW Bet365)</td><td>20/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">59.3</td></tr>
           <tr class="meeting-header"><td colspan="11">Southwell — 26 March 2026</td></tr>
-          <tr><td>26-Mar</td><td>15:37</td><td class="horse">Superfortress</td><td>Southwell</td><td>Win</td><td>1pt</td><td>70.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">78.54</td></tr>
-          <tr><td>26-Mar</td><td>15:37</td><td class="horse place-bet">Superfortress (Place)</td><td>Southwell</td><td>Place</td><td>1pt</td><td>5.91</td><td class="won">Won</td><td>7.89</td><td class="pl-pos">+5.89</td><td class="running">84.43</td></tr>
+          <tr><td>26-Mar</td><td>15:37</td><td class="horse">Superfortress</td><td>Southwell</td><td>EW</td><td>2pts (1EW Paddy Power)</td><td>25/1</td><td class="placed">Placed</td><td>6</td><td class="pl-pos">+4</td><td class="running">63.3</td></tr>
           <tr class="meeting-header"><td colspan="11">Doncaster / Kempton Park — 28 March 2026</td></tr>
-          <tr><td>28-Mar</td><td>13:50</td><td class="horse">Aramram</td><td>Doncaster</td><td>Win</td><td>1pt</td><td>16.50</td><td class="won">Won</td><td>16.50</td><td class="pl-pos">+15.5</td><td class="running">99.93</td></tr>
-          <tr><td>28-Mar</td><td>13:50</td><td class="horse place-bet">Aramram (Place)</td><td>Doncaster</td><td>Place</td><td>1pt</td><td>4.40</td><td class="won">Won</td><td>4.40</td><td class="pl-pos">+3.4</td><td class="running">103.33</td></tr>
-          <tr><td>28-Mar</td><td>14:25</td><td class="horse">Milteye</td><td>Doncaster</td><td>Win</td><td>1pt</td><td>65.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">102.33</td></tr>
-          <tr><td>28-Mar</td><td>14:25</td><td class="horse place-bet">Milteye (Place)</td><td>Doncaster</td><td>Place</td><td>1pt</td><td>13.54</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">101.33</td></tr>
-          <tr><td>28-Mar</td><td>15:13</td><td class="horse">American Gal</td><td>Kempton Park</td><td>Win</td><td>1pt</td><td>36.49</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">100.33</td></tr>
-          <tr><td>28-Mar</td><td>15:32</td><td class="horse">Shout</td><td>Doncaster</td><td>Win</td><td>2pt</td><td>6.94</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">98.33</td></tr>
+          <tr><td>28-Mar</td><td>13:50</td><td class="horse">Aramram</td><td>Doncaster</td><td>EW</td><td>2pts (1EW Paddy Power 4 places)</td><td>12/1</td><td class="won">Won</td><td>16.4</td><td class="pl-pos">+14.4</td><td class="running">77.7</td></tr>
+          <tr><td>28-Mar</td><td>14:25</td><td class="horse">Milteye</td><td>Doncaster</td><td>EW</td><td>2pts (1EW Bet365 6 places)</td><td>40/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">75.7</td></tr>
+          <tr><td>28-Mar</td><td>15:13</td><td class="horse">American Gal</td><td>Kempton Park</td><td>Win</td><td>1pt Generally</td><td>25/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">74.7</td></tr>
+          <tr><td>28-Mar</td><td>15:32</td><td class="horse">Shout</td><td>Doncaster</td><td>Win</td><td>2pts Generally</td><td>12/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">72.7</td></tr>
           <tr class="meeting-header"><td colspan="11">Doncaster — 29 March 2026</td></tr>
-          <tr><td>29-Mar</td><td>16:05</td><td class="horse">Have Secret</td><td>Doncaster</td><td>Win</td><td>1pt</td><td>19.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">97.33</td></tr>
-          <tr><td>29-Mar</td><td>16:05</td><td class="horse place-bet">Have Secret (Place)</td><td>Doncaster</td><td>Place</td><td>1pt</td><td>4.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">96.33</td></tr>
+          <tr><td>29-Mar</td><td>16:05</td><td class="horse">Have Secret</td><td>Doncaster</td><td>EW</td><td>1pt (1EW Bet365 4 places)</td><td>14/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">70.7</td></tr>
           <tr class="meeting-header"><td colspan="11">Navan / Kempton Park — 30 March 2026</td></tr>
-          <tr><td>30-Mar</td><td>14:48</td><td class="horse">Majestic King</td><td>Navan</td><td>Win</td><td>1pt</td><td>1000.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">95.33</td></tr>
-          <tr><td>30-Mar</td><td>14:48</td><td class="horse place-bet">Majestic King (Place)</td><td>Navan</td><td>Place</td><td>1pt</td><td>130.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">94.33</td></tr>
-          <tr><td>30-Mar</td><td>15:40</td><td class="horse">Calypso Bloom</td><td>Kempton Park</td><td>Win</td><td>1pt</td><td>980.39</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">93.33</td></tr>
-          <tr><td>30-Mar</td><td>15:40</td><td class="horse place-bet">Calypso Bloom (Place)</td><td>Kempton Park</td><td>Place</td><td>1pt</td><td>70.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">92.33</td></tr>
+          <tr><td>30-Mar</td><td>14:48</td><td class="horse">Majestic King</td><td>Navan</td><td>EW</td><td>2pts (1EW Generally)</td><td>200/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">68.7</td></tr>
+          <tr><td>30-Mar</td><td>15:40</td><td class="horse">Calypso Bloom</td><td>Kempton Park</td><td>EW</td><td>2pts (1EW Bet365)</td><td>250/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">66.7</td></tr>
           <tr class="meeting-header"><td colspan="11">Newcastle / Bangor / Wolverhampton — 31 March 2026</td></tr>
-          <tr><td>31-Mar</td><td>14:30</td><td class="horse">Tamarind Bay</td><td>Newcastle</td><td>Win</td><td>1pt</td><td>9.20</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">91.33</td></tr>
-          <tr><td>31-Mar</td><td>15:50</td><td class="horse">Bleu D'Enfer</td><td>Bangor</td><td>Win</td><td>1pt</td><td>19.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">90.33</td></tr>
-          <tr><td>31-Mar</td><td>15:50</td><td class="horse place-bet">Bleu D'Enfer (Place)</td><td>Bangor</td><td>Place</td><td>1pt</td><td>4.30</td><td class="won">Won</td><td>4.30</td><td class="pl-pos">+3.3</td><td class="running">93.63</td></tr>
-          <tr><td>31-Mar</td><td>17:00</td><td class="horse">Glory Nights</td><td>Newcastle</td><td>Win</td><td>1pt</td><td>7.05</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">92.63</td></tr>
-          <tr><td>31-Mar</td><td>18:30</td><td class="horse">Habrdi</td><td>Wolverhampton</td><td>Win</td><td>1pt</td><td>13.21</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">91.63</td></tr>
-          <tr><td>31-Mar</td><td>20:00</td><td class="horse">Ice Opera</td><td>Wolverhampton</td><td>Win</td><td>0.5pt</td><td>28.12</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-0.5</td><td class="running">91.13</td></tr>
-          <tr><td>31-Mar</td><td>20:00</td><td class="horse place-bet">Ice Opera (Place)</td><td>Wolverhampton</td><td>Place</td><td>0.5pt</td><td>8.35</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-0.5</td><td class="running">90.63</td></tr>
+          <tr><td>31-Mar</td><td>14:30</td><td class="horse">Tamarind Bay</td><td>Newcastle</td><td>Win</td><td>1pt Bet365</td><td>6/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">65.7</td></tr>
+          <tr><td>31-Mar</td><td>15:50</td><td class="horse">Bleu D'Enfer</td><td>Bangor</td><td>EW</td><td>2pts (1EW Paddy Power / Betfair)</td><td>16/1</td><td class="placed">Placed</td><td>4.2</td><td class="pl-pos">+2.2</td><td class="running">67.9</td></tr>
+          <tr><td>31-Mar</td><td>17:00</td><td class="horse">Glory Nights</td><td>Newcastle</td><td>Win</td><td>1pt Bet365</td><td>5/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">66.9</td></tr>
+          <tr><td>31-Mar</td><td>18:30</td><td class="horse">Habrdi</td><td>Wolverhampton</td><td>Win</td><td>1pt Bet365</td><td>17/2</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">65.9</td></tr>
+          <tr><td>31-Mar</td><td>20:00</td><td class="horse">Ice Opera</td><td>Wolverhampton</td><td>EW</td><td>0.5pt EW Bet365</td><td>25/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">64.9</td></tr>
           <tr class="meeting-header"><td colspan="11">Wincanton / Southwell / Kempton — 1 April 2026</td></tr>
-          <tr><td>01-Apr</td><td>15:50</td><td class="horse">Stage Show</td><td>Wincanton</td><td>Win</td><td>1pt</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">89.63</td></tr>
-          <tr><td>01-Apr</td><td>15:50</td><td class="horse place-bet">Stage Show (Place)</td><td>Wincanton</td><td>Place</td><td>1pt</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">88.63</td></tr>
-          <tr><td>01-Apr</td><td>16:30</td><td class="horse">Immortal Flame</td><td>Southwell</td><td>Win</td><td>1pt</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">87.63</td></tr>
-          <tr><td>01-Apr</td><td>17:30</td><td class="horse">Divine Wish</td><td>Kempton</td><td>Win</td><td>1pt</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">86.63</td></tr>
-          <tr><td>01-Apr</td><td>17:30</td><td class="horse place-bet">Divine Wish (Place)</td><td>Kempton</td><td>Place</td><td>1pt</td><td>&#8212;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">85.63</td></tr>
+          <tr><td>01-Apr</td><td>15:50</td><td class="horse">Stage Show</td><td>Wincanton</td><td>EW</td><td>2pts (1EW Bet365 3 places)</td><td>20/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">62.9</td></tr>
+          <tr><td>01-Apr</td><td>16:30</td><td class="horse">Immortal Flame</td><td>Southwell</td><td>Win</td><td>1pt Hills / Coral</td><td>22/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">61.9</td></tr>
+          <tr><td>01-Apr</td><td>17:30</td><td class="horse">Divine Wish</td><td>Kempton</td><td>EW</td><td>2pts (1EW Bet365)</td><td>18/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">59.9</td></tr>
+          <tr class="meeting-header"><td colspan="11">Chepstow / Southwell — 2 April 2026</td></tr>
+          <tr><td>02-Apr</td><td>16:07</td><td class="horse">It's Top</td><td>Chepstow</td><td>Win</td><td>1pt Bet365</td><td>15/2</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">58.9</td></tr>
+          <tr><td>02-Apr</td><td>18:18</td><td class="horse">Hardstyle</td><td>Southwell</td><td>Win</td><td>2pts Bet365</td><td>9/2</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">57.8</td></tr>
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="7">Total — 102 bets · 16 Winners · 90pts staked</td>
+            <td colspan="7">Total — 62 bets · 7 Winners · 10 Placed · 98pts staked</td>
             <td></td><td></td>
-            <td class="total-pl">+85.63pts</td>
-            <td class="total-pl">ROI 95.6%</td>
+            <td class="total-pl">+57.8pts</td>
+            <td class="total-pl">ROI 66.5%</td>
           </tr>
         </tfoot>
       </table>
     </div>
-    <p class="note">BSP = Betfair Starting Price. Each EW selection split into separate win and place bets. &#8212; = BSP pending update.</p>
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:#555;margin-top:1rem;">ISP = Industry Starting Price. Where ISP is unavailable, stake is lost and shown as &#8212;.</p>
   </main>
   <footer>
     <div class="compliance">
