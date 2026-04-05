@@ -38,6 +38,11 @@
     .follow-link:hover { background: #FFD700; }
     .follow-link.coffee { background: #FFD700; }
     .follow-link.coffee:hover { background: #FF6600; }
+    .winner-card { border: 1px solid #333; border-left: 4px solid #FFD700; padding: 1.4rem 2rem; margin-bottom: 1px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; }
+    .winner-horse { font-size: 1.2rem; font-weight: 900; color: #F5F0E8; line-height: 1; }
+    .winner-detail { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: #aaa; margin-top: 0.3rem; }
+    .winner-price { font-size: 2rem; font-weight: 900; color: #FFD700; text-align: right; line-height: 1; }
+    .winner-price-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: #aaa; text-align: right; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.2rem; }
     .festival-card { border: 1px solid #333; border-left: 4px solid #FF6600; padding: 1.8rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; margin-bottom: 1px; }
     .festival-name { font-size: 1.1rem; font-weight: 800; color: #F5F0E8; }
     .festival-detail { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: #aaa; margin-top: 0.3rem; }
@@ -54,7 +59,7 @@
     .compliance { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #888; letter-spacing: 0.05em; line-height: 1.6; }
     .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
     .compliance a:hover { color: #FF6600; }
-    @media (max-width: 600px) { .h-inner { padding: 1rem 1.2rem; gap: 1rem; } main { padding: 1.5rem 1.2rem 3rem; } .festival-card { grid-template-columns: 1fr; } .festival-pl { text-align: left; } footer { flex-direction: column; padding: 1.5rem 1.2rem; } nav { overflow-x: auto; } .cta-bar { flex-direction: column; gap: 1px; } }
+    @media (max-width: 600px) { .h-inner { padding: 1rem 1.2rem; gap: 1rem; } main { padding: 1.5rem 1.2rem 3rem; } .festival-card { grid-template-columns: 1fr; } .festival-pl { text-align: left; } .winner-card { grid-template-columns: 1fr; } .winner-price { text-align: left; } footer { flex-direction: column; padding: 1.5rem 1.2rem; } nav { overflow-x: auto; } .cta-bar { flex-direction: column; gap: 1px; } }
   </style>
 </head>
 <body>
@@ -67,7 +72,7 @@
         <div class="tagline">The Esoteric Tipster.</div>
       </div>
     </div>
-    <div class="header-record">Since inception &nbsp;·&nbsp; 67 bets &nbsp;·&nbsp; +145.2pts &nbsp;·&nbsp; advised price</div>
+    <div class="header-record">Since inception &nbsp;·&nbsp; 69 bets &nbsp;·&nbsp; +182.8pts &nbsp;·&nbsp; advised price</div>
   </header>
   <nav>
     <a href="index.html" class="active">Home</a>
@@ -78,22 +83,51 @@
   </nav>
   <main>
     <section class="today">
-      <div class="section-label">Sunday 5 April 2026 — Eddie Advises</div>
+      <div class="section-label">Monday 6 April 2026 — Eddie Advises</div>
       <div class="tip-card">
-        <div class="tip-race">15:10 &nbsp;·&nbsp; Bath</div>
-        <div class="tip-horse">Azure Angel</div>
-        <div class="tip-details">1pt EW &nbsp;·&nbsp; <span class="tip-price">33/1</span> &nbsp;·&nbsp; Bet365 (4 places)</div>
+        <div class="tip-race">17:00 &nbsp;·&nbsp; Fairyhouse</div>
+        <div class="tip-horse">No. 18 Better Times Ahead</div>
+        <div class="tip-details">1pt EW &nbsp;·&nbsp; <span class="tip-price">16/1</span> &nbsp;·&nbsp; Bet365 (6 places)</div>
       </div>
-      <div class="tip-card">
-        <div class="tip-race">16:20 &nbsp;·&nbsp; Bath</div>
-        <div class="tip-horse">Summer Evening</div>
-        <div class="tip-details">1pt EW &nbsp;·&nbsp; <span class="tip-price">50/1</span> &nbsp;·&nbsp; Bet365</div>
-      </div>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:#555;margin-top:4px;padding-left:2px;">Prices correct as of 17:45, 5 April 2026.</p>
     </section>
-    <div class="cta-bar" style="margin-top: 1px;">
+    <div class="cta-bar" style="margin-top: 1rem;">
       <a class="follow-link" href="https://x.com/EddieJamesTips" target="_blank" rel="noopener">Follow on X &rarr;</a>
       <a class="follow-link coffee" href="https://buymeacoffee.com/eddiejamestips" target="_blank" rel="noopener">Buy Me a Coffee &rarr;</a>
     </div>
+    <section style="margin-bottom:3rem">
+      <div class="section-label">Recent Winners</div>
+      <div class="winner-card">
+        <div>
+          <div class="winner-horse">Azure Angel</div>
+          <div class="winner-detail">5 Apr 2026 &nbsp;·&nbsp; Bath 15:10 &nbsp;·&nbsp; 1pt EW &nbsp;·&nbsp; Advised 33/1</div>
+        </div>
+        <div>
+          <div class="winner-price">22/1</div>
+          <div class="winner-price-label">SP</div>
+        </div>
+      </div>
+      <div class="winner-card">
+        <div>
+          <div class="winner-horse">Sept Etoiles</div>
+          <div class="winner-detail">4 Apr 2026 &nbsp;·&nbsp; Fairyhouse 16:25 &nbsp;·&nbsp; 2pt EW &nbsp;·&nbsp; Advised 22/1</div>
+        </div>
+        <div>
+          <div class="winner-price">80/1</div>
+          <div class="winner-price-label">SP</div>
+        </div>
+      </div>
+      <div class="winner-card">
+        <div>
+          <div class="winner-horse">Celestial Orbit</div>
+          <div class="winner-detail">3 Apr 2026 &nbsp;·&nbsp; Curragh 15:07 &nbsp;·&nbsp; 1pt EW &nbsp;·&nbsp; Advised 18/1</div>
+        </div>
+        <div>
+          <div class="winner-price">33/1</div>
+          <div class="winner-price-label">SP</div>
+        </div>
+      </div>
+    </section>
     <section style="margin-bottom:3rem">
       <div class="section-label">Advised Price Record</div>
       <div class="festival-card">
