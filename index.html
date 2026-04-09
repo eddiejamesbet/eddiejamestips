@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eddie James Tips — The Esoteric Tipster</title>
+  <title>Record — Eddie James Tips</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { background: #0a0a0a; color: #F5F0E8; font-family: 'Nunito', sans-serif; font-weight: 300; min-height: 100vh; overflow-x: hidden; }
+    body { background: #0a0a0a; color: #F5F0E8; font-family: 'Nunito', sans-serif; font-weight: 400; min-height: 100vh; }
     header { background: #FF6600; display: flex; flex-direction: column; min-height: 110px; }
     .h-inner { padding: 0.8rem 2rem; flex: 1; display: flex; align-items: center; gap: 1.8rem; }
     .header-record { background: rgba(0,0,0,0.15); padding: 0.4rem 2rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: #fff; letter-spacing: 0.1em; }
@@ -19,45 +18,30 @@
     .h-divider { width: 1px; background: rgba(255,255,255,0.4); align-self: stretch; margin: 0.8rem 0; flex-shrink: 0; }
     .h-right { display: flex; flex-direction: column; justify-content: center; padding-left: 1.2rem; }
     .tips-word { font-size: clamp(2.2rem, 5.5vw, 3.2rem); font-weight: 800; text-transform: uppercase; color: #fff; line-height: 1; }
-    .tagline { font-size: 0.92rem; font-weight: 400; color: #fff; margin-top: 0.4rem; opacity: 0.9; }
+    .tagline { font-size: 0.92rem; color: #fff; margin-top: 0.4rem; opacity: 0.9; }
     nav { background: #111; border-bottom: 1px solid #333; padding: 0 2rem; display: flex; }
     nav a { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; text-decoration: none; padding: 1rem 1.5rem; border-bottom: 2px solid transparent; transition: color 0.2s; }
     nav a:hover { color: #FF6600; }
     nav a.active { color: #FF6600; border-bottom-color: #FF6600; }
-    main { max-width: 860px; margin: 0 auto; padding: 2rem 2rem 4rem; }
-    .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: #FF6600; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem; }
+    main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+    .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: #FF6600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
     .section-label::after { content: ''; flex: 1; height: 1px; background: #333; }
-    .today { margin-bottom: 0; }
-    .tip-card { border: 1px solid #333; border-left: 4px solid #FFD700; padding: 1.6rem 2rem; margin-bottom: 1px; }
-    .tip-race { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: #aaa; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; }
-    .tip-horse { font-size: 1.8rem; font-weight: 900; color: #F5F0E8; line-height: 1; margin-bottom: 0.5rem; }
-    .tip-details { font-family: 'IBM Plex Mono', monospace; font-size: 0.82rem; color: #FF6600; letter-spacing: 0.05em; }
-    .tip-price { font-size: 1.1rem; font-weight: 800; color: #FFD700; }
-    .cta-bar { display: flex; flex-direction: row; gap: 1px; margin-bottom: 3rem; margin-top: 1px; }
-    .follow-link { display: inline-flex; align-items: center; justify-content: center; gap: 0.7rem; background: #FF6600; color: #0a0a0a; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 1.8rem; transition: background 0.2s; flex: 1; }
-    .follow-link:hover { background: #FFD700; }
-    .winner-card { border: 1px solid #333; border-left: 4px solid #FFD700; padding: 1.4rem 2rem; margin-bottom: 1px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; }
-    .winner-horse { font-size: 1.2rem; font-weight: 900; color: #F5F0E8; line-height: 1; }
-    .winner-detail { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: #aaa; margin-top: 0.3rem; }
-    .winner-price { font-size: 2rem; font-weight: 900; color: #FFD700; text-align: right; line-height: 1; }
-    .winner-price-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: #aaa; text-align: right; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.2rem; }
-    .festival-card { border: 1px solid #333; border-left: 4px solid #FF6600; padding: 1.8rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; margin-bottom: 1px; }
-    .festival-name { font-size: 1.1rem; font-weight: 800; color: #F5F0E8; }
-    .festival-detail { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: #aaa; margin-top: 0.3rem; }
-    .festival-pl { font-size: 2.2rem; font-weight: 900; color: #FF6600; text-align: right; line-height: 1; }
-    .festival-pl-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; text-align: right; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.2rem; }
-    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 1px; background: #333; }
-    .stat { background: #0a0a0a; padding: 1rem 1.5rem; text-align: center; }
-    .stat-number { font-size: 1.6rem; font-weight: 900; color: #FFD700; line-height: 1; }
-    .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.3rem; }
-    .about { margin-top: 3rem; border-top: 1px solid #333; padding-top: 2rem; }
-    .about p { font-size: 1rem; line-height: 1.8; color: #ccc; max-width: 580px; font-weight: 400; }
-    .about p + p { margin-top: 1rem; }
-    footer { border-top: 1px solid #333; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .record-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #333; margin-bottom: 3rem; }
+    .record-card { background: #0a0a0a; padding: 2rem 1.5rem; text-align: center; text-decoration: none; display: block; transition: background 0.2s; }
+    .record-card:hover { background: #111; }
+    .record-card-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
+    .record-card-pl { font-size: 2.4rem; font-weight: 900; color: #FFD700; line-height: 1; margin-bottom: 0.4rem; }
+    .record-card-roi { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: #FF6600; letter-spacing: 0.08em; margin-bottom: 0.8rem; }
+    .record-card-bets { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: #555; letter-spacing: 0.08em; }
+    .record-card-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 1.2rem; border-top: 1px solid #222; padding-top: 0.8rem; }
+    .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #333; margin-bottom: 3rem; }
+    .stat { background: #0a0a0a; padding: 1.2rem 1.5rem; text-align: center; }
+    .stat-number { font-size: 1.9rem; font-weight: 900; color: #FFD700; line-height: 1; }
+    .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.3rem; }
+    footer { border-top: 1px solid #333; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 4rem; }
     .compliance { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #888; letter-spacing: 0.05em; line-height: 1.6; }
     .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
-    .compliance a:hover { color: #FF6600; }
-    @media (max-width: 600px) { .h-inner { padding: 1rem 1.2rem; gap: 1rem; } main { padding: 1.5rem 1.2rem 3rem; } .festival-card { grid-template-columns: 1fr; } .festival-pl { text-align: left; } .winner-card { grid-template-columns: 1fr; } .winner-price { text-align: left; } footer { flex-direction: column; padding: 1.5rem 1.2rem; } nav { overflow-x: auto; } .cta-bar { flex-direction: column; gap: 1px; } }
+    @media (max-width: 600px) { .record-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -70,98 +54,50 @@
         <div class="tagline">The Esoteric Tipster.</div>
       </div>
     </div>
-    <div class="header-record">Since inception &nbsp;·&nbsp; 74 bets &nbsp;·&nbsp; +172.8pts &nbsp;·&nbsp; advised price</div>
+    <div class="header-record">Since inception &nbsp;·&nbsp; 78 bets &nbsp;·&nbsp; +164.8pts &nbsp;·&nbsp; advised price</div>
   </header>
   <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="record.html">Record</a>
+    <a href="index.html">Home</a>
+    <a href="record.html" class="active">Record</a>
     <a href="advised.html">Advised Price</a>
     <a href="isp.html">ISP</a>
     <a href="bsp.html">BSP</a>
   </nav>
   <main>
-    <section class="today">
-      <div class="section-label">Thursday 9 April 2026 — Eddie Advises</div>
-      <div class="tip-card">
-        <div class="tip-race">16:05 &nbsp;·&nbsp; Aintree</div>
-        <div class="tip-horse">Golden Ace</div>
-        <div class="tip-details">1pt EW &nbsp;·&nbsp; <span class="tip-price">14/1</span> &nbsp;·&nbsp; Bet365 / Paddy Power (3 places)</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-race">16:40 &nbsp;·&nbsp; Aintree</div>
-        <div class="tip-horse">Hercule Du Seuil</div>
-        <div class="tip-details">1pt EW &nbsp;·&nbsp; <span class="tip-price">66/1</span> &nbsp;·&nbsp; Coral (4 places)</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-race">17:15 &nbsp;·&nbsp; Aintree</div>
-        <div class="tip-horse">Burds Of A Feather</div>
-        <div class="tip-details">2pt WIN &nbsp;·&nbsp; <span class="tip-price">9/1</span> &nbsp;·&nbsp; William Hill</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-race">19:30 &nbsp;·&nbsp; Southwell</div>
-        <div class="tip-horse">City Cyclone</div>
-        <div class="tip-details">1pt EW &nbsp;·&nbsp; <span class="tip-price">11/1</span> &nbsp;·&nbsp; William Hill</div>
-      </div>
-      <p style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:#555;margin-top:4px;padding-left:2px;">Prices correct as of 18:10, 8 April 2026.</p>
-    </section>
-    <div class="cta-bar" style="margin-top: 1rem;">
-      <a class="follow-link" href="https://x.com/EddieJamesTips" target="_blank" rel="noopener">Follow on X &rarr;</a>
-    </div>
     <section style="margin-bottom:3rem">
-      <div class="section-label">Recent Winners</div>
-      <div class="winner-card">
-        <div>
-          <div class="winner-horse">Azure Angel</div>
-          <div class="winner-detail">5 Apr 2026 &nbsp;·&nbsp; Bath 15:10 &nbsp;·&nbsp; 1pt EW &nbsp;·&nbsp; Advised 33/1</div>
-        </div>
-        <div>
-          <div class="winner-price">22/1</div>
-          <div class="winner-price-label">SP</div>
-        </div>
-      </div>
-      <div class="winner-card">
-        <div>
-          <div class="winner-horse">Sept Etoiles</div>
-          <div class="winner-detail">4 Apr 2026 &nbsp;·&nbsp; Fairyhouse 16:25 &nbsp;·&nbsp; 2pt EW &nbsp;·&nbsp; Advised 22/1</div>
-        </div>
-        <div>
-          <div class="winner-price">80/1</div>
-          <div class="winner-price-label">SP</div>
-        </div>
-      </div>
-      <div class="winner-card">
-        <div>
-          <div class="winner-horse">Celestial Orbit</div>
-          <div class="winner-detail">3 Apr 2026 &nbsp;·&nbsp; Curragh 15:07 &nbsp;·&nbsp; 1pt EW &nbsp;·&nbsp; Advised 18/1</div>
-        </div>
-        <div>
-          <div class="winner-price">33/1</div>
-          <div class="winner-price-label">SP</div>
-        </div>
+      <div class="section-label">Full Record — Since Inception</div>
+      <div class="record-grid">
+        <a href="advised.html" class="record-card">
+          <div class="record-card-label">Advised Price</div>
+          <div class="record-card-pl">+164.8pts</div>
+          <div class="record-card-roi">ROI 125.8%</div>
+          <div class="record-card-bets">78 bets &nbsp;·&nbsp; 10W / 10P</div>
+          <div class="record-card-link">View full record &rarr;</div>
+        </a>
+        <a href="isp.html" class="record-card">
+          <div class="record-card-label">ISP</div>
+          <div class="record-card-pl">+287.8pts</div>
+          <div class="record-card-roi">ROI 219.7%</div>
+          <div class="record-card-bets">78 bets &nbsp;·&nbsp; 10W / 11P</div>
+          <div class="record-card-link">View full record &rarr;</div>
+        </a>
+        <a href="bsp.html" class="record-card">
+          <div class="record-card-label">BSP</div>
+          <div class="record-card-pl">+723.67pts</div>
+          <div class="record-card-roi">ROI 549.0%</div>
+          <div class="record-card-bets">132 bets &nbsp;·&nbsp; Win + Place markets</div>
+          <div class="record-card-link">View full record &rarr;</div>
+        </a>
       </div>
     </section>
     <section style="margin-bottom:3rem">
-      <div class="section-label">Advised Price Record</div>
-      <div class="festival-card">
-        <div>
-          <div class="festival-name">Cheltenham Festival 2026</div>
-          <div class="festival-detail">10&#8211;13 March 2026 &nbsp;·&nbsp; 20 selections &nbsp;·&nbsp; 5 winners &nbsp;·&nbsp; 4 placed</div>
-        </div>
-        <div>
-          <div class="festival-pl">+87.7</div>
-          <div class="festival-pl-label">pts advised price</div>
-        </div>
-      </div>
-      <div class="stats">
+      <div class="section-label">Cheltenham Festival 2026</div>
+      <div class="summary">
+        <div class="stat"><div class="stat-number">+87.7pts</div><div class="stat-label">P&amp;L Advised</div></div>
         <div class="stat"><div class="stat-number">73.3%</div><div class="stat-label">ROI</div></div>
-        <div class="stat"><div class="stat-number">5</div><div class="stat-label">Winners</div></div>
+        <div class="stat"><div class="stat-number">5W / 4P</div><div class="stat-label">From 20 Bets</div></div>
         <div class="stat"><div class="stat-number">23.7/1</div><div class="stat-label">Avg Win Price</div></div>
       </div>
-    </section>
-    <section class="about">
-      <div class="section-label">About</div>
-      <p>Free horse racing tips, posted daily. No commentary. No debate. No explanation.</p>
-      <p>Prices advised at time of posting. Record maintained at advised prices. Big prices, positive expected value.</p>
     </section>
   </main>
   <footer>
