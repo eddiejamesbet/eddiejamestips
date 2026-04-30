@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISP Record &#8212; April 2026 &#8212; Eddie James Tips</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0a0a; color: #F5F0E8; font-family: 'Nunito', sans-serif; font-weight: 400; min-height: 100vh; }
+    header { background: #FF6600; display: flex; flex-direction: column; min-height: 110px; }
+    .h-inner { padding: 0.8rem 2rem; flex: 1; display: flex; align-items: center; gap: 1.8rem; }
+    .header-record { background: rgba(0,0,0,0.15); padding: 0.4rem 2rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: #fff; letter-spacing: 0.1em; }
+    .logo-text { font-size: clamp(1.8rem, 4.5vw, 2.6rem); font-weight: 800; line-height: 1.05; text-transform: uppercase; color: #fff; text-decoration: none; display: block; }
+    .logo-text .james { color: #FFD700; }
+    .h-divider { width: 1px; background: rgba(255,255,255,0.4); align-self: stretch; margin: 0.8rem 0; flex-shrink: 0; }
+    .h-right { display: flex; flex-direction: column; justify-content: center; padding-left: 1.2rem; }
+    .tips-word { font-size: clamp(2.2rem, 5.5vw, 3.2rem); font-weight: 800; text-transform: uppercase; color: #fff; line-height: 1; }
+    .tagline { font-size: 0.92rem; color: #fff; margin-top: 0.4rem; opacity: 0.9; }
+    nav { background: #111; border-bottom: 1px solid #333; padding: 0 2rem; display: flex; }
+    nav a { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; text-decoration: none; padding: 1rem 1.5rem; border-bottom: 2px solid transparent; transition: color 0.2s; }
+    nav a:hover { color: #FF6600; }
+    nav a.active { color: #FF6600; border-bottom-color: #FF6600; }
+    main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+    .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: #FF6600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: #333; }
+    .back-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; text-decoration: none; display: inline-block; margin-bottom: 2rem; }
+    .back-link:hover { color: #FF6600; }
+    .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #333; margin-bottom: 3rem; }
+    .stat { background: #0a0a0a; padding: 1.2rem 1.5rem; text-align: center; }
+    .stat-number { font-size: 1.9rem; font-weight: 900; color: #FFD700; line-height: 1; }
+    .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.3rem; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; }
+    thead th { background: #111; color: #FF6600; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid #333; white-space: nowrap; }
+    tbody tr { border-bottom: 1px solid #1a1a1a; }
+    tbody tr:hover { background: #111; }
+    tbody td { padding: 0.7rem 1rem; color: #ccc; white-space: nowrap; }
+    tbody td.horse { color: #F5F0E8; font-weight: 700; font-family: 'Nunito', sans-serif; font-size: 0.85rem; }
+    tbody td.won { color: #FFD700; font-weight: 700; }
+    tbody td.placed { color: #FF6600; font-weight: 700; }
+    tbody td.lost { color: #555; }
+    tbody td.nr { color: #555; font-style: italic; }
+    tbody td.pl-pos { color: #FFD700; }
+    tbody td.pl-neg { color: #888; }
+    tbody td.running { color: #F5F0E8; font-weight: 700; }
+    .meeting-header td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.5rem 1rem; border-top: 1px solid #333; }
+    tfoot td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem; border-top: 2px solid #FF6600; font-weight: 700; }
+    tfoot td.total-pl { color: #FFD700; font-size: 1rem; }
+    footer { border-top: 1px solid #333; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 4rem; }
+    .compliance { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #888; letter-spacing: 0.05em; line-height: 1.6; }
+    .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
+    .compliance a:hover { color: #FF6600; }
+    @media (max-width: 600px) { .summary { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="h-inner">
+      <a href="index.html" class="logo-text">EDDIE<br><span class="james">JAMES</span></a>
+      <div class="h-divider"></div>
+      <div class="h-right">
+        <div class="tips-word">TIPS</div>
+        <div class="tagline">The Esoteric Tipster.</div>
+      </div>
+    </div>
+    <div class="header-record">Since inception &nbsp;&#183;&nbsp; 111 bets &nbsp;&#183;&nbsp; +129.6pts &nbsp;&#183;&nbsp; advised price</div>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="record.html">Record</a>
+    <a href="advised.html">Advised Price</a>
+    <a href="isp.html" class="active">ISP</a>
+    <a href="bsp.html">BSP</a>
+  </nav>
+  <main>
+    <a href="isp.html" class="back-link">&larr; Back to ISP</a>
+    <section style="margin-bottom:3rem">
+      <div class="section-label">ISP Record &#45;&#45; April 2026</div>
+      <div class="summary">
+        <div class="stat"><div class="stat-number">+183.6pts</div><div class="stat-label">Total P&amp;L</div></div>
+        <div class="stat"><div class="stat-number">55</div><div class="stat-label">Bets</div></div>
+        <div class="stat"><div class="stat-number">4W / 1P</div><div class="stat-label">Results</div></div>
+        <div class="stat"><div class="stat-number">163.9%</div><div class="stat-label">ROI</div></div>
+      </div>
+    </section>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th><th>Time</th><th>Horse</th><th>Course</th><th>Type</th><th>Stake / Terms</th><th>ISP</th><th>Result</th><th>Return</th><th>P&amp;L</th><th>Running</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="meeting-header"><td colspan="11">Wincanton / Southwell / Kempton Park &#45;&#45; 1 April 2026</td></tr>
+          <tr><td>01-Apr</td><td>15:50</td><td class="horse">Stage Show</td><td>Wincanton</td><td>EW</td><td>2pts (1EW Bet365 3 places)</td><td>20/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">-2.0</td></tr>
+          <tr><td>01-Apr</td><td>16:30</td><td class="horse">Immortal Flame</td><td>Southwell</td><td>Win</td><td>1pt Generally</td><td>22/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-3.0</td></tr>
+          <tr><td>01-Apr</td><td>17:30</td><td class="horse">Divine Wish</td><td>Kempton Park</td><td>EW</td><td>2pts (1EW Generally)</td><td>18/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">-5.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Chepstow / Southwell &#45;&#45; 2 April 2026</td></tr>
+          <tr><td>02-Apr</td><td>16:07</td><td class="horse">It&#39;s Top</td><td>Chepstow</td><td>Win</td><td>1pt Generally</td><td>15/2</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-6.0</td></tr>
+          <tr><td>02-Apr</td><td>18:18</td><td class="horse">Hardstyle</td><td>Southwell</td><td>Win</td><td>2pts Generally</td><td>9/2</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">-8.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Newcastle / Curragh / Lingfield &#45;&#45; 3 April 2026</td></tr>
+          <tr><td>03-Apr</td><td>13:50</td><td class="horse">Sparksmith</td><td>Newcastle</td><td>EW</td><td>2pts (1EW Hills 4 places)</td><td>12/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-9.0</td></tr>
+          <tr><td>03-Apr</td><td>15:07</td><td class="horse">Celestial Orbit</td><td>Curragh</td><td>EW</td><td>2pts (1EW Generally)</td><td>33/1</td><td class="won">Won</td><td>41.6</td><td class="pl-pos">+39.6</td><td class="running">30.6</td></tr>
+          <tr><td>03-Apr</td><td>16:25</td><td class="horse">Grey Horizon</td><td>Lingfield</td><td>EW</td><td>4pts (2EW Bet365 / BoyleSports 4 places)</td><td>10/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-4</td><td class="running">26.6</td></tr>
+          <tr class="meeting-header"><td colspan="11">Musselburgh / Fairyhouse &#45;&#45; 4 April 2026</td></tr>
+          <tr><td>04-Apr</td><td>15:42</td><td class="horse">Rhythm N Hooves</td><td>Musselburgh</td><td>EW</td><td>2pts (1EW Bet365 4 places)</td><td>12/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">24.6</td></tr>
+          <tr><td>04-Apr</td><td>16:25</td><td class="horse">Sept Etoiles</td><td>Fairyhouse</td><td>EW</td><td>4pts (2EW Midnite 6 places)</td><td>80/1</td><td class="won">Won</td><td>196</td><td class="pl-pos">+192</td><td class="running">216.6</td></tr>
+          <tr class="meeting-header"><td colspan="11">Bath &#45;&#45; 5 April 2026</td></tr>
+          <tr><td>05-Apr</td><td>15:10</td><td class="horse">Azure Angel</td><td>Bath</td><td>EW</td><td>2pts (1EW Bet365 4 places)</td><td>22/1</td><td class="won">Won</td><td>28.4</td><td class="pl-pos">+26.4</td><td class="running">243.0</td></tr>
+          <tr><td>05-Apr</td><td>16:20</td><td class="horse">Summer Evening</td><td>Bath</td><td>EW</td><td>2pts (1EW Bet365)</td><td>50/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">241.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Fairyhouse &#45;&#45; 6 April 2026</td></tr>
+          <tr><td>06-Apr</td><td>17:00</td><td class="horse">Better Times Ahead</td><td>Fairyhouse</td><td>EW</td><td>2pts (1EW Bet365)</td><td>25/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">239.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Pontefract / Southwell &#45;&#45; 7 April 2026</td></tr>
+          <tr><td>07-Apr</td><td>17:00</td><td class="horse">Dream Forever</td><td>Pontefract</td><td>Win</td><td>1pt Generally</td><td>11/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">238.0</td></tr>
+          <tr><td>07-Apr</td><td>18:30</td><td class="horse">Go Victor</td><td>Southwell</td><td>EW</td><td>2pts (1EW Generally)</td><td>25/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">236.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Nottingham / Gowran Park &#45;&#45; 8 April 2026</td></tr>
+          <tr><td>08-Apr</td><td>13:17</td><td class="horse">Tripoli Flyer</td><td>Nottingham</td><td>Win</td><td>1pt Generally</td><td>25/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">235.0</td></tr>
+          <tr><td>08-Apr</td><td>13:47</td><td class="horse">Plutarch</td><td>Nottingham</td><td>EW</td><td>2pts (1EW Generally)</td><td>150/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">233.0</td></tr>
+          <tr><td>08-Apr</td><td>15:50</td><td class="horse">Balance Of Trade</td><td>Gowran Park</td><td>EW</td><td>2pts (1EW Generally)</td><td>7/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">231.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Aintree / Wolverhampton &#45;&#45; 9 April 2026</td></tr>
+          <tr><td>09-Apr</td><td>16:05</td><td class="horse">Golden Ace</td><td>Aintree</td><td>EW</td><td>2pts (1EW Bet365 3 places i.o. 2)</td><td>11/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">229.0</td></tr>
+          <tr><td>09-Apr</td><td>16:40</td><td class="horse">Hercule Du Seuil</td><td>Aintree</td><td>EW</td><td>2pts (1EW Coral 4 places i.o. 3)</td><td>50/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">227.0</td></tr>
+          <tr><td>09-Apr</td><td>17:15</td><td class="horse">Burds Of A Feather</td><td>Aintree</td><td>Win</td><td>2pts Generally</td><td>11/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">225.0</td></tr>
+          <tr><td>09-Apr</td><td>19:30</td><td class="horse">City Cyclone</td><td>Wolverhampton</td><td>EW</td><td>2pts (1EW Generally)</td><td>13/2</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">223.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Aintree / Thirsk &#45;&#45; 10 April 2026</td></tr>
+          <tr><td>10-Apr</td><td>13:45</td><td class="horse">Fingle Bridge</td><td>Aintree</td><td>EW</td><td>2pts (1EW Unibet 5 places)</td><td>33/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">221.0</td></tr>
+          <tr><td>10-Apr</td><td>16:25</td><td class="horse">Darkness</td><td>Thirsk</td><td>EW</td><td>2pts (1EW Bet365)</td><td>40/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">219.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Aintree &#45;&#45; 11 April 2026</td></tr>
+          <tr><td>11-Apr</td><td>16:00</td><td class="horse">Marble Sands</td><td>Aintree</td><td>EW</td><td>4pts (2EW Bet365 6 places i.o. 5)</td><td>66/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-4</td><td class="running">215.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Musselburgh &#45;&#45; 12 April 2026</td></tr>
+          <tr><td>12-Apr</td><td>17:15</td><td class="horse">Per Contra</td><td>Musselburgh</td><td>EW</td><td>2pts (1EW Paddy Power 4 places i.o. 3)</td><td>18/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">213.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Fakenham &#45;&#45; 13 April 2026</td></tr>
+          <tr><td>13-Apr</td><td>14:40</td><td class="horse">Mahon Falls</td><td>Fakenham</td><td>EW</td><td>2pts (1EW Generally)</td><td>40/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">211.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Newmarket (Rowley) &#45;&#45; 14 April 2026</td></tr>
+          <tr><td>14-Apr</td><td>13:15</td><td class="horse">Powder Monkey</td><td>Newmarket (Rowley)</td><td>EW</td><td>2pts (1EW Generally)</td><td>25/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">209.0</td></tr>
+          <tr><td>14-Apr</td><td>16:10</td><td class="horse">Blue To Blue</td><td>Newmarket (Rowley)</td><td>EW</td><td>4pts (2EW Bet365 4 places i.o. 3)</td><td>50/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-4</td><td class="running">205.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Newmarket (Rowley) &#45;&#45; 15 April 2026</td></tr>
+          <tr><td>15-Apr</td><td>14:25</td><td class="horse">Shayem</td><td>Newmarket (Rowley)</td><td>Win</td><td>2pts Generally</td><td>11/2</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">203.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Newmarket (Rowley) &#45;&#45; 16 April 2026</td></tr>
+          <tr><td>16-Apr</td><td>13:50</td><td class="horse">Pilu</td><td>Newmarket (Rowley)</td><td>EW</td><td>2pts (1EW Bet365 5 places i.o. 4)</td><td>&#45;</td><td class="nr">NR</td><td>0</td><td>0</td><td class="running">203.0</td></tr>
+          <tr><td>16-Apr</td><td>15:00</td><td class="horse">Completely Random</td><td>Newmarket (Rowley)</td><td>Win</td><td>2pts Generally</td><td>12/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">201.0</td></tr>
+          <tr><td>16-Apr</td><td>17:20</td><td class="horse">Goldmoyne</td><td>Newmarket (Rowley)</td><td>Win</td><td>2pts Generally</td><td>9/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">199.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Ayr / Newbury &#45;&#45; 17 April 2026</td></tr>
+          <tr><td>17-Apr</td><td>13:45</td><td class="horse">Gaballo De Guerra</td><td>Ayr</td><td>EW</td><td>2pts (1EW Bet365 4 places i.o. 3)</td><td>12/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">197.0</td></tr>
+          <tr><td>17-Apr</td><td>16:05</td><td class="horse">Phantomofthepoints</td><td>Ayr</td><td>EW</td><td>2pts (Generally 4 places i.o. 3)</td><td>14/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">195.0</td></tr>
+          <tr><td>17-Apr</td><td>16:55</td><td class="horse">The Resdev Scholar</td><td>Newbury</td><td>EW</td><td>2pts (1EW Bet365 4 places i.o. 3)</td><td>20/1</td><td class="placed">Placed</td><td>6</td><td class="pl-pos">+4</td><td class="running">199.0</td></tr>
+          <tr><td>17-Apr</td><td>17:25</td><td class="horse">Arctic Thunder</td><td>Newbury</td><td>Win</td><td>1pt Bet365</td><td>11/2</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">198.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Newbury &#45;&#45; 18 April 2026</td></tr>
+          <tr><td>18-Apr</td><td>13:25</td><td class="horse">Splish Splash</td><td>Newbury</td><td>EW</td><td>2pts (1EW Bet365 4 places i.o. 3)</td><td>12/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">196.0</td></tr>
+          <tr><td>18-Apr</td><td>14:00</td><td class="horse">Ardisia</td><td>Newbury</td><td>EW</td><td>2pts (1EW William Hill 1/4 place odds)</td><td>14/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">194.0</td></tr>
+          <tr><td>18-Apr</td><td>15:10</td><td class="horse">Ebt&#39;s Guard</td><td>Newbury</td><td>EW</td><td>2pts (1EW Bet365 6 places i.o. 4)</td><td>12/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">192.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Curragh &#45;&#45; 19 April 2026</td></tr>
+          <tr><td>19-Apr</td><td>15:00</td><td class="horse">Nouvel Espoir</td><td>Curragh</td><td>EW</td><td>2pts (1EW Bet365 5 places)</td><td>40/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">190.0</td></tr>
+          <tr><td>19-Apr</td><td>16:45</td><td class="horse">San Aer</td><td>Curragh</td><td>EW</td><td>2pts (1EW Bet365 5 places)</td><td>28/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">188.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Pontefract / Yarmouth &#45;&#45; 21 April 2026</td></tr>
+          <tr><td>21-Apr</td><td>14:17</td><td class="horse">Uncertainty</td><td>Pontefract</td><td>EW</td><td>2pts (1EW Generally)</td><td>&#45;</td><td class="nr">NR</td><td>0</td><td>0</td><td class="running">188.0</td></tr>
+          <tr><td>21-Apr</td><td>15:27</td><td class="horse">Parlando</td><td>Pontefract</td><td>EW</td><td>1pt Generally</td><td>11/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">187.0</td></tr>
+          <tr><td>21-Apr</td><td>16:55</td><td class="horse">Captain Parma</td><td>Yarmouth</td><td>EW</td><td>2pts (1EW Bet365 4 places i.o. 3)</td><td>12/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">185.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Sandown Park &#45;&#45; 24 April 2026</td></tr>
+          <tr><td>24-Apr</td><td>13:50</td><td class="horse">Suspended Sentence</td><td>Sandown Park</td><td>EW</td><td>2pts (1EW Bet365)</td><td>14/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">183.0</td></tr>
+          <tr><td>24-Apr</td><td>15:00</td><td class="horse">Cicero&#39;s Gift</td><td>Sandown Park</td><td>EW</td><td>4pts (2EW Bet365)</td><td>25/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-4</td><td class="running">179.0</td></tr>
+          <tr class="meeting-header"><td colspan="11">Sandown Park / Navan / Haydock &#45;&#45; 25 April 2026</td></tr>
+          <tr><td>25-Apr</td><td>13:45</td><td class="horse">Dutch Corner</td><td>Sandown Park</td><td>EW</td><td>2pts (1EW Hills &amp; Bet365 5 places)</td><td>12/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">177.0</td></tr>
+          <tr><td>25-Apr</td><td>15:05</td><td class="horse">Layfayette</td><td>Navan</td><td>EW</td><td>2pts (1EW Generally)</td><td>22/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">175.0</td></tr>
+          <tr><td>25-Apr</td><td>15:30</td><td class="horse">Transmission</td><td>Sandown Park</td><td>EW</td><td>2pts (1EW Generally)</td><td>12/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">173.0</td></tr>
+          <tr><td>25-Apr</td><td>15:45</td><td class="horse">Dunkeld Dreamer</td><td>Haydock</td><td>EW</td><td>2pts (1EW Generally)</td><td>18/1</td><td class="won">Won</td><td>23.6</td><td class="pl-pos">+21.6</td><td class="running">194.6</td></tr>
+          <tr class="meeting-header"><td colspan="11">Naas &#45;&#45; 27 April 2026</td></tr>
+          <tr><td>27-Apr</td><td>19:15</td><td class="horse">Fahrenheit Seven</td><td>Naas</td><td>Win</td><td>1pt Generally</td><td>3/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">193.6</td></tr>
+          <tr class="meeting-header"><td colspan="11">Punchestown &#45;&#45; 28 April 2026</td></tr>
+          <tr><td>28-Apr</td><td>15:05</td><td class="horse">San Hilario</td><td>Punchestown</td><td>EW</td><td>2pts (1EW Bet365 6 places)</td><td>16/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">191.6</td></tr>
+          <tr><td>28-Apr</td><td>15:40</td><td class="horse">We&#39;re Red And Blue</td><td>Punchestown</td><td>EW</td><td>2pts (1EW Generally 5 places)</td><td>16/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">189.6</td></tr>
+          <tr class="meeting-header"><td colspan="11">Punchestown &#45;&#45; 29 April 2026</td></tr>
+          <tr><td>29-Apr</td><td>17:25</td><td class="horse">Jesse Evans</td><td>Punchestown</td><td>EW</td><td>2pts (1EW Generally)</td><td>14/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">187.6</td></tr>
+          <tr class="meeting-header"><td colspan="11">Punchestown &#45;&#45; 30 April 2026</td></tr>
+          <tr><td>30-Apr</td><td>14:30</td><td class="horse">Ionian</td><td>Punchestown</td><td>EW</td><td>2pts (1EW Bet365)</td><td>20/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">185.6</td></tr>
+          <tr><td>30-Apr</td><td>16:50</td><td class="horse">Western Diego</td><td>Punchestown</td><td>EW</td><td>2pts (1EW Generally 5 places)</td><td>14/1</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">183.6</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="7">Total &#45;&#45; 55 bets &nbsp;&#183;&nbsp; 4 Winners &nbsp;&#183;&nbsp; 1 Placed &nbsp;&#183;&nbsp; 112pts staked</td>
+            <td></td><td></td>
+            <td class="total-pl">+183.6pts</td>
+            <td class="total-pl">ROI 163.9%</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:#555;margin-top:1rem;">ISP = Industry Starting Price. Advised price record on separate page. BSP record on separate page.</p>
+  </main>
+  <footer>
+    <div class="compliance">
+      18+ only &nbsp;&#183;&nbsp; Please gamble responsibly &nbsp;&#183;&nbsp;
+      <a href="https://www.begambleaware.org" target="_blank" rel="noopener">BeGambleAware.org</a><br>
+      Tips are for entertainment purposes only. Past performance does not guarantee future results.
+    </div>
+    <div style="font-size:1.4rem">&#127840;</div>
+  </footer>
+</body>
+</html>
