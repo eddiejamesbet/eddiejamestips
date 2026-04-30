@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advised Price &#8212; May 2026 &#8212; Eddie James Tips</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0a0a; color: #F5F0E8; font-family: 'Nunito', sans-serif; font-weight: 400; min-height: 100vh; }
+    header { background: #FF6600; display: flex; flex-direction: column; min-height: 110px; }
+    .h-inner { padding: 0.8rem 2rem; flex: 1; display: flex; align-items: center; gap: 1.8rem; }
+    .header-record { background: rgba(0,0,0,0.15); padding: 0.4rem 2rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: #fff; letter-spacing: 0.1em; }
+    .logo-text { font-size: clamp(1.8rem, 4.5vw, 2.6rem); font-weight: 800; line-height: 1.05; text-transform: uppercase; color: #fff; text-decoration: none; display: block; }
+    .logo-text .james { color: #FFD700; }
+    .h-divider { width: 1px; background: rgba(255,255,255,0.4); align-self: stretch; margin: 0.8rem 0; flex-shrink: 0; }
+    .h-right { display: flex; flex-direction: column; justify-content: center; padding-left: 1.2rem; }
+    .tips-word { font-size: clamp(2.2rem, 5.5vw, 3.2rem); font-weight: 800; text-transform: uppercase; color: #fff; line-height: 1; }
+    .tagline { font-size: 0.92rem; color: #fff; margin-top: 0.4rem; opacity: 0.9; }
+    nav { background: #111; border-bottom: 1px solid #333; padding: 0 2rem; display: flex; }
+    nav a { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; text-decoration: none; padding: 1rem 1.5rem; border-bottom: 2px solid transparent; transition: color 0.2s; }
+    nav a:hover { color: #FF6600; }
+    nav a.active { color: #FF6600; border-bottom-color: #FF6600; }
+    main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+    .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: #FF6600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: #333; }
+    .back-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; text-decoration: none; display: inline-block; margin-bottom: 2rem; }
+    .back-link:hover { color: #FF6600; }
+    .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #333; margin-bottom: 3rem; }
+    .stat { background: #0a0a0a; padding: 1.2rem 1.5rem; text-align: center; }
+    .stat-number { font-size: 1.9rem; font-weight: 900; color: #FFD700; line-height: 1; }
+    .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.3rem; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; }
+    thead th { background: #111; color: #FF6600; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid #333; white-space: nowrap; }
+    tbody tr { border-bottom: 1px solid #1a1a1a; }
+    tbody tr:hover { background: #111; }
+    tbody td { padding: 0.7rem 1rem; color: #ccc; white-space: nowrap; }
+    tbody td.horse { color: #F5F0E8; font-weight: 700; font-family: 'Nunito', sans-serif; font-size: 0.85rem; }
+    tbody td.won { color: #FFD700; font-weight: 700; }
+    tbody td.placed { color: #FF6600; font-weight: 700; }
+    tbody td.lost { color: #555; }
+    tbody td.pl-pos { color: #FFD700; }
+    tbody td.pl-neg { color: #888; }
+    tbody td.running { color: #F5F0E8; font-weight: 700; }
+    .meeting-header td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.5rem 1rem; border-top: 1px solid #333; }
+    tfoot td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem; border-top: 2px solid #FF6600; font-weight: 700; }
+    tfoot td.total-pl { color: #FFD700; font-size: 1rem; }
+    .pending { border: 1px solid #333; border-left: 4px solid #FF6600; padding: 1.6rem 2rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.82rem; color: #555; letter-spacing: 0.05em; }
+    footer { border-top: 1px solid #333; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 4rem; }
+    .compliance { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #888; letter-spacing: 0.05em; line-height: 1.6; }
+    .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
+    .compliance a:hover { color: #FF6600; }
+    @media (max-width: 600px) { .summary { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="h-inner">
+      <a href="index.html" class="logo-text">EDDIE<br><span class="james">JAMES</span></a>
+      <div class="h-divider"></div>
+      <div class="h-right">
+        <div class="tips-word">TIPS</div>
+        <div class="tagline">The Esoteric Tipster.</div>
+      </div>
+    </div>
+    <div class="header-record">Since inception &nbsp;&#183;&nbsp; 111 bets &nbsp;&#183;&nbsp; +129.6pts &nbsp;&#183;&nbsp; advised price</div>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="record.html">Record</a>
+    <a href="advised.html" class="active">Advised Price</a>
+    <a href="isp.html">ISP</a>
+    <a href="bsp.html">BSP</a>
+  </nav>
+  <main>
+    <a href="advised.html" class="back-link">&larr; Back to Advised Price</a>
+    <section style="margin-bottom:3rem">
+      <div class="section-label">Advised Price &#45;&#45; May 2026</div>
+      <div class="summary">
+        <div class="stat"><div class="stat-number">0.0pts</div><div class="stat-label">Total P&amp;L</div></div>
+        <div class="stat"><div class="stat-number">0</div><div class="stat-label">Bets</div></div>
+        <div class="stat"><div class="stat-number">&#45;&#45;</div><div class="stat-label">Results</div></div>
+        <div class="stat"><div class="stat-number">&#45;&#45;</div><div class="stat-label">ROI</div></div>
+      </div>
+    </section>
+    <div class="pending">Month in progress. First bets will appear here once results are confirmed.</div>
+  </main>
+  <footer>
+    <div class="compliance">
+      18+ only &nbsp;&#183;&nbsp; Please gamble responsibly &nbsp;&#183;&nbsp;
+      <a href="https://www.begambleaware.org" target="_blank" rel="noopener">BeGambleAware.org</a><br>
+      Tips are for entertainment purposes only. Past performance does not guarantee future results.
+    </div>
+    <div style="font-size:1.4rem">&#127840;</div>
+  </footer>
+</body>
+</html>
