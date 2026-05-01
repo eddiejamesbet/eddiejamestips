@@ -31,8 +31,26 @@
     .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #333; margin-bottom: 3rem; }
     .stat { background: #0a0a0a; padding: 1.2rem 1.5rem; text-align: center; }
     .stat-number { font-size: 1.9rem; font-weight: 900; color: #FFD700; line-height: 1; }
+    .stat-number.neg { color: #888; }
     .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.3rem; }
-    .pending { border: 1px solid #333; border-left: 4px solid #FF6600; padding: 1.6rem 2rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.82rem; color: #555; letter-spacing: 0.05em; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; }
+    thead th { background: #111; color: #FF6600; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid #333; white-space: nowrap; }
+    tbody tr { border-bottom: 1px solid #1a1a1a; }
+    tbody tr:hover { background: #111; }
+    tbody td { padding: 0.7rem 1rem; color: #ccc; white-space: nowrap; }
+    tbody td.horse { color: #F5F0E8; font-weight: 700; font-family: 'Nunito', sans-serif; font-size: 0.85rem; }
+    tbody td.won { color: #FFD700; font-weight: 700; }
+    tbody td.placed { color: #FF6600; font-weight: 700; }
+    tbody td.lost { color: #555; }
+    tbody td.nr { color: #555; font-style: italic; }
+    tbody td.pending { color: #FF6600; font-style: italic; }
+    tbody td.pl-pos { color: #FFD700; }
+    tbody td.pl-neg { color: #888; }
+    tbody td.running { color: #F5F0E8; font-weight: 700; }
+    .meeting-header td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.5rem 1rem; border-top: 1px solid #333; }
+    tfoot td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem; border-top: 2px solid #FF6600; font-weight: 700; }
+    tfoot td.total-pl { color: #888; font-size: 1rem; }
     footer { border-top: 1px solid #333; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 4rem; }
     .compliance { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #888; letter-spacing: 0.05em; line-height: 1.6; }
     .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
@@ -50,7 +68,7 @@
         <div class="tagline">The Esoteric Tipster.</div>
       </div>
     </div>
-    <div class="header-record">Since inception &nbsp;&#183;&nbsp; 111 bets &nbsp;&#183;&nbsp; +129.6pts &nbsp;&#183;&nbsp; advised price</div>
+    <div class="header-record">Since inception &nbsp;&#183;&nbsp; 113 bets &nbsp;&#183;&nbsp; +123.6pts &nbsp;&#183;&nbsp; advised price</div>
   </header>
   <nav>
     <a href="index.html">Home</a>
@@ -64,13 +82,100 @@
     <section style="margin-bottom:3rem">
       <div class="section-label">ISP Record &#45;&#45; May 2026</div>
       <div class="summary">
-        <div class="stat"><div class="stat-number">0.0pts</div><div class="stat-label">Total P&amp;L</div></div>
-        <div class="stat"><div class="stat-number">0</div><div class="stat-label">Bets</div></div>
-        <div class="stat"><div class="stat-number">&#45;&#45;</div><div class="stat-label">Results</div></div>
-        <div class="stat"><div class="stat-number">&#45;&#45;</div><div class="stat-label">ROI</div></div>
+        <div class="stat"><div class="stat-number neg">&#45;6.0pts</div><div class="stat-label">Total P&amp;L</div></div>
+        <div class="stat"><div class="stat-number">2</div><div class="stat-label">Bets</div></div>
+        <div class="stat"><div class="stat-number">0W / 0P</div><div class="stat-label">Results</div></div>
+        <div class="stat"><div class="stat-number neg">&#45;85.7%</div><div class="stat-label">ROI</div></div>
       </div>
     </section>
-    <div class="pending">Month in progress. First bets will appear here once results are confirmed.</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Horse</th>
+            <th>Course</th>
+            <th>Type</th>
+            <th>Stake</th>
+            <th>ISP</th>
+            <th>Result</th>
+            <th>P&amp;L</th>
+            <th>Running P&amp;L</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="meeting-header"><td colspan="10">1 May 2026 &mdash; Ascot / Newmarket</td></tr>
+          <tr>
+            <td>01-May-26</td>
+            <td>14:25</td>
+            <td class="horse">Beylerbeyi</td>
+            <td>Ascot</td>
+            <td>EW</td>
+            <td>NR</td>
+            <td>NR</td>
+            <td class="nr">NR</td>
+            <td>&#45;&#45;</td>
+            <td class="running">0.0</td>
+          </tr>
+          <tr>
+            <td>01-May-26</td>
+            <td>14:55</td>
+            <td class="horse">Objector</td>
+            <td>Newmarket</td>
+            <td>EW</td>
+            <td>2pts (1EW)</td>
+            <td>15/2</td>
+            <td class="lost">Lost</td>
+            <td class="pl-neg">&#45;2.0</td>
+            <td class="running">&#45;2.0</td>
+          </tr>
+          <tr>
+            <td>01-May-26</td>
+            <td>15:30</td>
+            <td class="horse">Paradias</td>
+            <td>Newmarket</td>
+            <td>EW</td>
+            <td>4pts (2EW)</td>
+            <td>18/1</td>
+            <td class="lost">Lost</td>
+            <td class="pl-neg">&#45;4.0</td>
+            <td class="running">&#45;6.0</td>
+          </tr>
+          <tr class="meeting-header"><td colspan="10">2 May 2026 &mdash; Newmarket &mdash; Pending</td></tr>
+          <tr>
+            <td>02-May-26</td>
+            <td>13:45</td>
+            <td class="horse">Coul Angel</td>
+            <td>Newmarket</td>
+            <td>Win</td>
+            <td>1pt Generally</td>
+            <td>&#45;&#45;</td>
+            <td class="pending">Pending</td>
+            <td>&#45;&#45;</td>
+            <td>&#45;&#45;</td>
+          </tr>
+          <tr>
+            <td>02-May-26</td>
+            <td>15:35</td>
+            <td class="horse">Padraig Dawn</td>
+            <td>Newmarket</td>
+            <td>EW</td>
+            <td>4pts (2EW @ Bet365 [4 places])</td>
+            <td>&#45;&#45;</td>
+            <td class="pending">Pending</td>
+            <td>&#45;&#45;</td>
+            <td>&#45;&#45;</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="8">May 2026 Total (2 bets resulted)</td>
+            <td class="total-pl" colspan="2">&#45;6.0pts</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
   </main>
   <footer>
     <div class="compliance">
