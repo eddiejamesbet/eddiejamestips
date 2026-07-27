@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ISP Record &#8212; Eddie James Tips</title>
+  <title>ISP Record &#8212; July 2026 &#8212; Eddie James Tips</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -26,25 +26,36 @@
     main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
     .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: #FF6600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
     .section-label::after { content: ''; flex: 1; height: 1px; background: #333; }
+    .back-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; text-decoration: none; display: inline-block; margin-bottom: 2rem; }
+    .back-link:hover { color: #FF6600; }
     .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #333; margin-bottom: 3rem; }
     .stat { background: #0a0a0a; padding: 1.2rem 1.5rem; text-align: center; }
     .stat-number { font-size: 1.9rem; font-weight: 900; color: #FFD700; line-height: 1; }
+    .stat-number.neg { color: #888; }
     .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.3rem; }
-    .month-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
-    .month-card { background: #0a0a0a; border: 1px solid #333; padding: 2rem 1.5rem; text-decoration: none; display: block; transition: background 0.2s; }
-    .month-card:hover { background: #111; }
-    .month-card-name { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
-    .month-card-pl { font-size: 2.2rem; font-weight: 900; color: #FFD700; line-height: 1; margin-bottom: 0.4rem; }
-    .month-card-pl.neg { color: #888; }
-    .month-card-roi { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: #FF6600; letter-spacing: 0.08em; margin-bottom: 0.8rem; }
-    .month-card-bets { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: #555; letter-spacing: 0.08em; }
-    .month-card-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 1.2rem; border-top: 1px solid #222; padding-top: 0.8rem; }
-    .month-card.current .month-card-name { color: #FF6600; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; }
+    thead th { background: #111; color: #FF6600; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid #333; white-space: nowrap; }
+    tbody tr { border-bottom: 1px solid #1a1a1a; }
+    tbody tr:hover { background: #111; }
+    tbody td { padding: 0.7rem 1rem; color: #ccc; white-space: nowrap; }
+    tbody td.horse { color: #F5F0E8; font-weight: 700; font-family: 'Nunito', sans-serif; font-size: 0.85rem; }
+    tbody td.won { color: #FFD700; font-weight: 700; }
+    tbody td.placed { color: #FF6600; font-weight: 700; }
+    tbody td.lost { color: #555; }
+    tbody td.nr { color: #555; font-style: italic; }
+    tbody td.pending { color: #FF6600; font-style: italic; }
+    tbody td.pl-pos { color: #FFD700; }
+    tbody td.pl-neg { color: #888; }
+    tbody td.running { color: #F5F0E8; font-weight: 700; }
+    .meeting-header td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.5rem 1rem; border-top: 1px solid #333; }
+    tfoot td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem; border-top: 2px solid #FF6600; font-weight: 700; }
+    tfoot td.total-pl { color: #FFD700; font-size: 1rem; }
     footer { border-top: 1px solid #333; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 4rem; }
     .compliance { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #888; letter-spacing: 0.05em; line-height: 1.6; }
     .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
     .compliance a:hover { color: #FF6600; }
-    @media (max-width: 600px) { .summary { grid-template-columns: repeat(2, 1fr); } .month-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .summary { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
@@ -57,7 +68,7 @@
         <div class="tagline">The Esoteric Tipster.</div>
       </div>
     </div>
-    <div class="header-record">Since inception &nbsp;&#183;&nbsp; 241 bets &nbsp;&#183;&nbsp; +209.41pts &nbsp;&#183;&nbsp; advised price</div>
+    <div class="header-record">Since inception &nbsp;&#183;&nbsp; 242 bets &nbsp;&#183;&nbsp; +208.41pts &nbsp;&#183;&nbsp; advised price</div>
   </header>
   <nav>
     <a href="index.html">Home</a>
@@ -67,56 +78,117 @@
     <a href="bsp.html">BSP</a>
   </nav>
   <main>
+    <a href="isp.html" class="back-link">&larr; Back to ISP</a>
     <section style="margin-bottom:3rem">
-      <div class="section-label">ISP Record &#45;&#45; Since Inception</div>
+      <div class="section-label">ISP Record &#45;&#45; July 2026</div>
       <div class="summary">
-        <div class="stat"><div class="stat-number">+237.9pts</div><div class="stat-label">Total P&amp;L</div></div>
-        <div class="stat"><div class="stat-number">241</div><div class="stat-label">Bets</div></div>
-        <div class="stat"><div class="stat-number">17W / 33P</div><div class="stat-label">Results</div></div>
-        <div class="stat"><div class="stat-number">49.2%</div><div class="stat-label">ROI</div></div>
+        <div class="stat"><div class="stat-number">+69.8pts</div><div class="stat-label">Total P&amp;L</div></div>
+        <div class="stat"><div class="stat-number">43</div><div class="stat-label">Bets</div></div>
+        <div class="stat"><div class="stat-number">4W / 9P</div><div class="stat-label">Results</div></div>
+        <div class="stat"><div class="stat-number">85.1%</div><div class="stat-label">ROI</div></div>
       </div>
     </section>
-    <section style="margin-bottom:3rem">
-      <div class="section-label">Records By Month</div>
-      <div class="month-grid">
-        <a href="isp-march-2026.html" class="month-card">
-          <div class="month-card-name">March 2026</div>
-          <div class="month-card-pl">+64.9pts</div>
-          <div class="month-card-roi">ROI 67.6%</div>
-          <div class="month-card-bets">56 bets &nbsp;&#183;&nbsp; 7W / 10P</div>
-          <div class="month-card-link">View full record &rarr;</div>
-        </a>
-        <a href="isp-april-2026.html" class="month-card">
-          <div class="month-card-name">April 2026</div>
-          <div class="month-card-pl">+183.6pts</div>
-          <div class="month-card-roi">ROI 163.9%</div>
-          <div class="month-card-bets">55 bets &nbsp;&#183;&nbsp; 4W / 1P</div>
-          <div class="month-card-link">View full record &rarr;</div>
-        </a>
-        <a href="isp-may-2026.html" class="month-card">
-          <div class="month-card-name">May 2026</div>
-          <div class="month-card-pl">&#45;73.3pts</div>
-          <div class="month-card-roi">ROI &#45;69.8%</div>
-          <div class="month-card-bets">47 bets &nbsp;&#183;&nbsp; 0W / 5P</div>
-          <div class="month-card-link">View full record &rarr;</div>
-        </a>
-        <a href="isp-june-2026.html" class="month-card">
-          <div class="month-card-name">June 2026</div>
-          <div class="month-card-pl">&#45;8.1pts</div>
-          <div class="month-card-roi">ROI &#45;9.0%</div>
-          <div class="month-card-bets">41 bets &nbsp;&#183;&nbsp; 2W / 8P</div>
-          <div class="month-card-link">View full record &rarr;</div>
-        </a>
-        <a href="isp-july-2026.html" class="month-card current">
-          <div class="month-card-name">July 2026 &#45;&#45; Current</div>
-          <div class="month-card-pl">+70.8pts</div>
-          <div class="month-card-roi">ROI 87.4%</div>
-          <div class="month-card-bets">42 bets &nbsp;&#183;&nbsp; 4W / 9P</div>
-          <div class="month-card-link">View full record &rarr;</div>
-        </a>
-      </div>
-    </section>
-    <p style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:#555;margin-top:1rem;">ISP = Industry Starting Price. Advised price record on separate page. BSP record on separate page.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Horse</th>
+            <th>Course</th>
+            <th>Type</th>
+            <th>Stake</th>
+            <th>ISP</th>
+            <th>Result</th>
+            <th>P&amp;L</th>
+            <th>Running P&amp;L</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="meeting-header"><td colspan="10">3 July 2026 &mdash; Sandown</td></tr>
+          <tr><td>03-Jul-26</td><td>15:35</td><td class="horse">Boiling Point</td><td>Sandown</td><td>EW</td><td>2pts (1EW)</td><td>11/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+165.1</td></tr>
+          <tr class="meeting-header"><td colspan="10">4 July 2026 &mdash; Sandown / Newmarket July</td></tr>
+          <tr><td>04-Jul-26</td><td>13:50</td><td class="horse">Partisan Hero</td><td>Sandown</td><td>EW</td><td>2pts (1EW)</td><td>12/1</td><td class="placed">Placed</td><td class="pl-pos">+1.4</td><td class="running">+166.5</td></tr>
+          <tr><td>04-Jul-26</td><td>15:15</td><td class="horse">Sportingsilvermine</td><td>Newmarket July</td><td>EW</td><td>2pts (1EW)</td><td>12/1</td><td class="won">Won</td><td class="pl-pos">+14.4</td><td class="running">+180.9</td></tr>
+          <tr class="meeting-header"><td colspan="10">5 July 2026 &mdash; Southwell</td></tr>
+          <tr><td>05-Jul-26</td><td>14:02</td><td class="horse">Just A Gambler</td><td>Southwell</td><td>EW</td><td>2pts (1EW)</td><td>7/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+178.9</td></tr>
+          <tr class="meeting-header"><td colspan="10">6 July 2026 &mdash; Ayr</td></tr>
+          <tr><td>06-Jul-26</td><td>16:00</td><td class="horse">Concert Boy</td><td>Ayr</td><td>EW</td><td>2pts (1EW)</td><td>50/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+176.9</td></tr>
+          <tr><td>06-Jul-26</td><td>16:30</td><td class="horse">The Caltonian</td><td>Ayr</td><td>EW</td><td>2pts (1EW)</td><td>28/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+174.9</td></tr>
+          <tr><td>06-Jul-26</td><td>17:00</td><td class="horse">Henry Hawk</td><td>Ayr</td><td>EW</td><td>2pts (1EW)</td><td>33/1</td><td class="placed">Placed</td><td class="pl-pos">+5.6</td><td class="running">+180.5</td></tr>
+          <tr class="meeting-header"><td colspan="10">7 July 2026 &mdash; Pontefract</td></tr>
+          <tr><td>07-Jul-26</td><td>15:48</td><td class="horse">Muhib</td><td>Pontefract</td><td>EW</td><td>2pts (1EW)</td><td>28/1</td><td class="placed">Placed</td><td class="pl-pos">+4.6</td><td class="running">+185.1</td></tr>
+          <tr class="meeting-header"><td colspan="10">8 July 2026 &mdash; Chepstow</td></tr>
+          <tr><td>08-Jul-26</td><td>19:36</td><td class="horse">Bobby Dassler</td><td>Chepstow</td><td>EW</td><td>2pts (1EW)</td><td>7/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+183.1</td></tr>
+          <tr><td>08-Jul-26</td><td>19:48</td><td class="horse">Betty Lemon</td><td>Chepstow</td><td>EW</td><td>2pts (1EW)</td><td>22/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+181.1</td></tr>
+          <tr class="meeting-header"><td colspan="10">9 July 2026 &mdash; Newmarket</td></tr>
+          <tr><td>09-Jul-26</td><td>15:00</td><td class="horse">Advertised</td><td>Newmarket</td><td>EW</td><td>2pts (1EW)</td><td>&#45;&#45;</td><td class="nr">NR</td><td>&#45;&#45;</td><td class="running">+181.1</td></tr>
+          <tr><td>09-Jul-26</td><td>15:35</td><td class="horse">Tenability</td><td>Newmarket</td><td>WIN</td><td>1pt WIN</td><td>&#45;&#45;</td><td class="nr">NR</td><td>&#45;&#45;</td><td class="running">+181.1</td></tr>
+          <tr><td>09-Jul-26</td><td>16:45</td><td class="horse">Conclave</td><td>Newmarket</td><td>WIN</td><td>1pt WIN</td><td>13/2</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+180.1</td></tr>
+          <tr><td>09-Jul-26</td><td>17:20</td><td class="horse">Asmen Warrior</td><td>Newmarket</td><td>EW</td><td>2pts (1EW)</td><td>9/2</td><td class="won">Won</td><td class="pl-pos">+5.4</td><td class="running">+185.5</td></tr>
+          <tr class="meeting-header"><td colspan="10">10 July 2026 &mdash; York / Newmarket</td></tr>
+          <tr><td>10-Jul-26</td><td>14:10</td><td class="horse">Pellitory</td><td>York</td><td>EW</td><td>2pts (1EW)</td><td>14/1</td><td class="placed">Placed</td><td class="pl-pos">+1.8</td><td class="running">+187.3</td></tr>
+          <tr><td>10-Jul-26</td><td>14:25</td><td class="horse">Etonnante</td><td>Newmarket</td><td>EW</td><td>2pts (1EW)</td><td>10/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+185.3</td></tr>
+          <tr><td>10-Jul-26</td><td>14:45</td><td class="horse">Kinswoman</td><td>York</td><td>EW</td><td>2pts (1EW)</td><td>28/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+183.3</td></tr>
+          <tr><td>10-Jul-26</td><td>15:35</td><td class="horse">Jancis</td><td>Newmarket</td><td>EW</td><td>2pts (1EW)</td><td>15/2</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+181.3</td></tr>
+          <tr class="meeting-header"><td colspan="10">11 July 2026 &mdash; Ascot / York / Newmarket</td></tr>
+          <tr><td>11-Jul-26</td><td>13:55</td><td class="horse">Regal Envoy</td><td>Ascot</td><td>EW</td><td>2pts (1EW)</td><td>40/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+179.3</td></tr>
+          <tr><td>11-Jul-26</td><td>15:45</td><td class="horse">Have Secret</td><td>York</td><td>EW</td><td>2pts (1EW)</td><td>100/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+177.3</td></tr>
+          <tr><td>11-Jul-26</td><td>16:00</td><td class="horse">Notable Dream</td><td>Newmarket</td><td>EW</td><td>2pts (1EW)</td><td>25/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+175.3</td></tr>
+          <tr><td>11-Jul-26</td><td>16:35</td><td class="horse">Prince Of India</td><td>Newmarket</td><td>EW</td><td>2pts (1EW)</td><td>80/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+173.3</td></tr>
+          <tr class="meeting-header"><td colspan="10">12 July 2026 &mdash; Stratford</td></tr>
+          <tr><td>12-Jul-26</td><td>17:20</td><td class="horse">Basilette</td><td>Stratford</td><td>EW</td><td>2pts (1EW)</td><td>7/2</td><td class="won">Won</td><td class="pl-pos">+5.2</td><td class="running">+178.5</td></tr>
+          <tr class="meeting-header"><td colspan="10">13 July 2026 &mdash; Ayr / Lingfield</td></tr>
+          <tr><td>13-Jul-26</td><td>14:30</td><td class="horse">JM Jhingree</td><td>Ayr</td><td>WIN</td><td>1pt WIN</td><td>20/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+177.5</td></tr>
+          <tr><td>13-Jul-26</td><td>17:40</td><td class="horse">Educator</td><td>Lingfield</td><td>EW</td><td>2pts (1EW)</td><td>11/2</td><td class="placed">Placed</td><td class="pl-pos">+0.1</td><td class="running">+177.6</td></tr>
+          <tr><td>13-Jul-26</td><td>18:40</td><td class="horse">Split Elevens</td><td>Lingfield</td><td>WIN</td><td>1pt WIN</td><td>&#45;&#45;</td><td class="nr">NR</td><td>&#45;&#45;</td><td class="running">+177.6</td></tr>
+          <tr class="meeting-header"><td colspan="10">14 July 2026 &mdash; Ffos Las / Beverley / Wolverhampton</td></tr>
+          <tr><td>14-Jul-26</td><td>15:30</td><td class="horse">Gris De Chine</td><td>Ffos Las</td><td>EW</td><td>2pts (1EW)</td><td>20/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+175.6</td></tr>
+          <tr><td>14-Jul-26</td><td>16:23</td><td class="horse">He's An Angel</td><td>Beverley</td><td>WIN</td><td>1pt WIN</td><td>6/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+174.6</td></tr>
+          <tr><td>14-Jul-26</td><td>18:55</td><td class="horse">Midnight's Bay</td><td>Wolverhampton</td><td>WIN</td><td>1pt WIN</td><td>10/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+173.6</td></tr>
+          <tr class="meeting-header"><td colspan="10">15 July 2026 &mdash; Uttoxeter / Killarney</td></tr>
+          <tr><td>15-Jul-26</td><td>14:48</td><td class="horse">Character Testing</td><td>Uttoxeter</td><td>EW</td><td>2pts (1EW)</td><td>11/2</td><td class="placed">Placed</td><td class="pl-pos">+0.1</td><td class="running">+173.7</td></tr>
+          <tr><td>15-Jul-26</td><td>17:30</td><td class="horse">Land Of The Giants</td><td>Killarney</td><td>WIN</td><td>1pt WIN</td><td>11/2</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+172.7</td></tr>
+          <tr><td>15-Jul-26</td><td>18:00</td><td class="horse">Celtic Moon</td><td>Killarney</td><td>EW</td><td>2pts (1EW)</td><td>&#45;&#45;</td><td class="nr">NR</td><td>&#45;&#45;</td><td class="running">+172.7</td></tr>
+          <tr class="meeting-header"><td colspan="10">16 July 2026 &mdash; Hamilton / Chepstow / Worcester</td></tr>
+          <tr><td>16-Jul-26</td><td>14:50</td><td class="horse">Al Fujjairah</td><td>Hamilton</td><td>EW</td><td>2pts (1EW)</td><td>40/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+170.7</td></tr>
+          <tr><td>16-Jul-26</td><td>17:00</td><td class="horse">Magna</td><td>Chepstow</td><td>EW</td><td>2pts (1EW)</td><td>&#45;&#45;</td><td class="nr">NR</td><td>&#45;&#45;</td><td class="running">+170.7</td></tr>
+          <tr><td>16-Jul-26</td><td>20:12</td><td class="horse">Hardy Buck</td><td>Worcester</td><td>EW</td><td>2pts (1EW)</td><td>22/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+168.7</td></tr>
+          <tr class="meeting-header"><td colspan="10">18 July 2026 &mdash; Market Rasen / Newmarket July / Curragh</td></tr>
+          <tr><td>18-Jul-26</td><td>14:45</td><td class="horse">Breizh River</td><td>Market Rasen</td><td>EW</td><td>2pts (1EW)</td><td>6/1</td><td class="placed">Placed</td><td class="pl-pos">+0.2</td><td class="running">+168.9</td></tr>
+          <tr><td>18-Jul-26</td><td>15:05</td><td class="horse">Brielle</td><td>Newmarket July</td><td>EW</td><td>4pts (2EW)</td><td>33/1</td><td class="won">Won</td><td class="pl-pos">+79.2</td><td class="running">+248.1</td></tr>
+          <tr><td>18-Jul-26</td><td>15:25</td><td class="horse">Partisan Hero</td><td>Curragh</td><td>EW</td><td>2pts (1EW)</td><td>14/1</td><td class="placed">Placed</td><td class="pl-pos">+1.8</td><td class="running">+249.9</td></tr>
+          <tr><td>18-Jul-26</td><td>16:35</td><td class="horse">Sparan Nua</td><td>Curragh</td><td>WIN</td><td>2pts (2WIN)</td><td>8/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+247.9</td></tr>
+          <tr class="meeting-header"><td colspan="10">19 July 2026 &mdash; Curragh</td></tr>
+          <tr><td>19-Jul-26</td><td>16:25</td><td class="horse">Happy Pharoah</td><td>Curragh</td><td>EW</td><td>2pts (1EW)</td><td>25/1</td><td class="placed">Placed</td><td class="pl-pos">+4.0</td><td class="running">+251.9</td></tr>
+          <tr class="meeting-header"><td colspan="10">20 July 2026 &mdash; Ayr</td></tr>
+          <tr><td>20-Jul-26</td><td>15:00</td><td class="horse">Ramon Di Loria</td><td>Ayr</td><td>WIN</td><td>1pt WIN</td><td>4/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+250.9</td></tr>
+          <tr class="meeting-header"><td colspan="10">21 July 2026 &mdash; Nottingham / Wolverhampton</td></tr>
+          <tr><td>21-Jul-26</td><td>17:15</td><td class="horse">Dark Kestrel</td><td>Nottingham</td><td>EW</td><td>2pts (1EW)</td><td>18/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+248.9</td></tr>
+          <tr><td>21-Jul-26</td><td>18:30</td><td class="horse">Bellasio</td><td>Wolverhampton</td><td>WIN</td><td>1pt WIN</td><td>5/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+247.9</td></tr>
+          <tr class="meeting-header"><td colspan="10">22 July 2026 &mdash; Worcester</td></tr>
+          <tr><td>22-Jul-26</td><td>16:30</td><td class="horse">Estacas</td><td>Worcester</td><td>EW</td><td>2pts (1EW)</td><td>5/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+245.9</td></tr>
+          <tr class="meeting-header"><td colspan="10">23 July 2026 &mdash; Sandown</td></tr>
+          <tr><td>23-Jul-26</td><td>17:17</td><td class="horse">Dalmally</td><td>Sandown</td><td>EW</td><td>2pts (1EW)</td><td>28/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+243.9</td></tr>
+          <tr class="meeting-header"><td colspan="10">24 July 2026 &mdash; Uttoxeter</td></tr>
+          <tr><td>24-Jul-26</td><td>14:40</td><td class="horse">Genbu</td><td>Uttoxeter</td><td>EW</td><td>2pts (1EW)</td><td>17/2</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+241.9</td></tr>
+          <tr class="meeting-header"><td colspan="10">25 July 2026 &mdash; York</td></tr>
+          <tr><td>25-Jul-26</td><td>14:00</td><td class="horse">We Never Stop</td><td>York</td><td>EW</td><td>4pts (2EW)</td><td>33/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;4.0</td><td class="running">+237.9</td></tr>
+          <tr class="meeting-header"><td colspan="10">27 July 2026 &mdash; Galway</td></tr>
+          <tr><td>27-Jul-26</td><td>19:15</td><td class="horse">Sagasti</td><td>Galway</td><td>WIN</td><td>1pt WIN</td><td>&#45;&#45;</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+236.9</td></tr>
+          <tr class="meeting-header"><td colspan="10">28 July 2026 &mdash; Goodwood</td></tr>
+          <tr><td>28-Jul-26</td><td>13:50</td><td class="horse">King's Code</td><td>Goodwood</td><td>EW</td><td>4pts (2EW)</td><td>&#45;&#45;</td><td class="pending">Pending</td><td>&#45;&#45;</td><td class="running">+236.9</td></tr>
+          <tr><td>28-Jul-26</td><td>15:35</td><td class="horse">French Master</td><td>Goodwood</td><td>EW</td><td>2pts (1EW)</td><td>&#45;&#45;</td><td class="pending">Pending</td><td>&#45;&#45;</td><td class="running">+236.9</td></tr>
+          <tr><td>28-Jul-26</td><td>16:10</td><td class="horse">Spring Is Sprung</td><td>Goodwood</td><td>EW</td><td>2pts (1EW)</td><td>&#45;&#45;</td><td class="pending">Pending</td><td>&#45;&#45;</td><td class="running">+236.9</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="8">July 2026 Total &mdash; 43 bets &nbsp;&#183;&nbsp; 82pts staked</td>
+            <td class="total-pl" colspan="2">+69.8pts</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
   </main>
   <footer>
     <div class="compliance">
