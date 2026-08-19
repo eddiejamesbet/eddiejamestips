@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BSP Record &#8212; August 2026 &#8212; Eddie James Tips</title>
+  <title>BSP Record &#8212; Eddie James Tips</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -26,36 +26,25 @@
     main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
     .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: #FF6600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
     .section-label::after { content: ''; flex: 1; height: 1px; background: #333; }
-    .back-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; text-decoration: none; display: inline-block; margin-bottom: 2rem; }
-    .back-link:hover { color: #FF6600; }
     .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #333; margin-bottom: 3rem; }
     .stat { background: #0a0a0a; padding: 1.2rem 1.5rem; text-align: center; }
     .stat-number { font-size: 1.9rem; font-weight: 900; color: #FFD700; line-height: 1; }
-    .stat-number.neg { color: #888; }
     .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.3rem; }
-    .table-wrap { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; }
-    thead th { background: #111; color: #FF6600; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid #333; white-space: nowrap; }
-    tbody tr { border-bottom: 1px solid #1a1a1a; }
-    tbody tr:hover { background: #111; }
-    tbody td { padding: 0.7rem 1rem; color: #ccc; white-space: nowrap; }
-    tbody td.horse { color: #F5F0E8; font-weight: 700; font-family: 'Nunito', sans-serif; font-size: 0.85rem; }
-    tbody td.won { color: #FFD700; font-weight: 700; }
-    tbody td.placed { color: #FF6600; font-weight: 700; }
-    tbody td.lost { color: #555; }
-    tbody td.nr { color: #555; font-style: italic; }
-    tbody td.pending { color: #FF6600; font-style: italic; }
-    tbody td.pl-pos { color: #FFD700; }
-    tbody td.pl-neg { color: #888; }
-    tbody td.running { color: #F5F0E8; font-weight: 700; }
-    .meeting-header td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.5rem 1rem; border-top: 1px solid #333; }
-    tfoot td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem; border-top: 2px solid #FF6600; font-weight: 700; }
-    tfoot td.total-pl { color: #FFD700; font-size: 1rem; }
+    .month-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .month-card { background: #0a0a0a; border: 1px solid #333; padding: 2rem 1.5rem; text-decoration: none; display: block; transition: background 0.2s; }
+    .month-card:hover { background: #111; }
+    .month-card-name { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
+    .month-card-pl { font-size: 2.2rem; font-weight: 900; color: #FFD700; line-height: 1; margin-bottom: 0.4rem; }
+    .month-card-pl.neg { color: #888; }
+    .month-card-roi { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: #FF6600; letter-spacing: 0.08em; margin-bottom: 0.8rem; }
+    .month-card-bets { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: #555; letter-spacing: 0.08em; }
+    .month-card-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 1.2rem; border-top: 1px solid #222; padding-top: 0.8rem; }
+    .month-card.current .month-card-name { color: #FF6600; }
     footer { border-top: 1px solid #333; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 4rem; }
     .compliance { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #888; letter-spacing: 0.05em; line-height: 1.6; }
     .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
     .compliance a:hover { color: #FF6600; }
-    @media (max-width: 600px) { .summary { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .summary { grid-template-columns: repeat(2, 1fr); } .month-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -78,102 +67,63 @@
     <a href="bsp.html" class="active">BSP</a>
   </nav>
   <main>
-    <a href="bsp.html" class="back-link">&larr; Back to BSP</a>
     <section style="margin-bottom:3rem">
-      <div class="section-label">BSP Record &#45;&#45; August 2026</div>
+      <div class="section-label">BSP Record &#45;&#45; Betfair Starting Price</div>
       <div class="summary">
-        <div class="stat"><div class="stat-number">&#45;35.96pts</div><div class="stat-label">Total P&amp;L</div></div>
-        <div class="stat"><div class="stat-number">43</div><div class="stat-label">Bets</div></div>
-        <div class="stat"><div class="stat-number">&#45;73.4%</div><div class="stat-label">ROI</div></div>
+        <div class="stat"><div class="stat-number">+715.75pts</div><div class="stat-label">Total P&amp;L</div></div>
+        <div class="stat"><div class="stat-number">496</div><div class="stat-label">Bets</div></div>
+        <div class="stat"><div class="stat-number">128.1%</div><div class="stat-label">ROI</div></div>
         <div class="stat"><div class="stat-number">Win + Place</div><div class="stat-label">Markets Split</div></div>
       </div>
     </section>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Horse</th>
-            <th>Course</th>
-            <th>Market</th>
-            <th>Stake</th>
-            <th>BSP</th>
-            <th>Result</th>
-            <th>P&amp;L</th>
-            <th>Running P&amp;L</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="meeting-header"><td colspan="10">1 August 2026 &mdash; Goodwood</td></tr>
-          <tr><td>01-Aug-26</td><td>15:35</td><td class="horse">King Of Light</td><td>Goodwood</td><td>Win</td><td>2pt BSP</td><td>50.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+749.71</td></tr>
-          <tr><td>01-Aug-26</td><td>15:35</td><td class="horse">King Of Light</td><td>Goodwood</td><td>Place</td><td>2pt BSP Place</td><td>8.26</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+747.71</td></tr>
-          <tr class="meeting-header"><td colspan="10">2 August 2026 &mdash; Galway</td></tr>
-          <tr><td>02-Aug-26</td><td>13:50</td><td class="horse">Cloonainra</td><td>Galway</td><td>Win</td><td>1pt BSP</td><td>30.37</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+746.71</td></tr>
-          <tr><td>02-Aug-26</td><td>13:50</td><td class="horse">Cloonainra</td><td>Galway</td><td>Place</td><td>1pt BSP Place</td><td>5.23</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+745.71</td></tr>
-          <tr><td>02-Aug-26</td><td>15:30</td><td class="horse">Bythesametoken</td><td>Galway</td><td>Win</td><td>1pt BSP</td><td>74.27</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+744.71</td></tr>
-          <tr><td>02-Aug-26</td><td>15:30</td><td class="horse">Bythesametoken</td><td>Galway</td><td>Place</td><td>1pt BSP Place</td><td>12.59</td><td class="won">Won</td><td class="pl-pos">+11.59</td><td class="running">+756.30</td></tr>
-          <tr class="meeting-header"><td colspan="10">3 August 2026 &mdash; Windsor</td></tr>
-          <tr><td>03-Aug-26</td><td>20:00</td><td class="horse">Tiger Beetle</td><td>Windsor</td><td>Win</td><td>1pt BSP</td><td>&#45;&#45;</td><td class="nr">NR</td><td>&#45;&#45;</td><td class="running">+756.30</td></tr>
-          <tr class="meeting-header"><td colspan="10">4 August 2026 &mdash; Lingfield</td></tr>
-          <tr><td>04-Aug-26</td><td>19:48</td><td class="horse">Gearing's Point</td><td>Lingfield</td><td>Win</td><td>1pt BSP</td><td>8.96</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+755.30</td></tr>
-          <tr class="meeting-header"><td colspan="10">5 August 2026 &mdash; Kempton Park</td></tr>
-          <tr><td>05-Aug-26</td><td>18:50</td><td class="horse">Kino Plasmat</td><td>Kempton Park</td><td>Win</td><td>1pt BSP</td><td>360.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+754.30</td></tr>
-          <tr><td>05-Aug-26</td><td>18:50</td><td class="horse">Kino Plasmat</td><td>Kempton Park</td><td>Place</td><td>1pt BSP Place</td><td>53.27</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+753.30</td></tr>
-          <tr class="meeting-header"><td colspan="10">6 August 2026 &mdash; Leopardstown</td></tr>
-          <tr><td>06-Aug-26</td><td>18:00</td><td class="horse">Tokenomics</td><td>Leopardstown</td><td>Win</td><td>1pt BSP</td><td>20.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+752.30</td></tr>
-          <tr><td>06-Aug-26</td><td>18:00</td><td class="horse">Tokenomics</td><td>Leopardstown</td><td>Place</td><td>1pt BSP Place</td><td>4.40</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+751.30</td></tr>
-          <tr><td>06-Aug-26</td><td>18:35</td><td class="horse">Green Impact</td><td>Leopardstown</td><td>Win</td><td>1pt BSP</td><td>6.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+750.30</td></tr>
-          <tr><td>06-Aug-26</td><td>19:10</td><td class="horse">Dinamine</td><td>Leopardstown</td><td>Win</td><td>1pt BSP</td><td>20/1</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+749.30</td></tr>
-          <tr class="meeting-header"><td colspan="10">8 August 2026 &mdash; Haydock Park / Ascot</td></tr>
-          <tr><td>08-Aug-26</td><td>15:00</td><td class="horse">Mostar Dreams</td><td>Haydock Park</td><td>Win</td><td>2pt BSP</td><td>65.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+747.30</td></tr>
-          <tr><td>08-Aug-26</td><td>15:00</td><td class="horse">Mostar Dreams</td><td>Haydock Park</td><td>Place</td><td>2pt BSP Place</td><td>9.80</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+745.30</td></tr>
-          <tr><td>08-Aug-26</td><td>15:20</td><td class="horse">Figjam</td><td>Ascot</td><td>Win</td><td>1pt BSP</td><td>13.50</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+744.30</td></tr>
-          <tr><td>08-Aug-26</td><td>15:20</td><td class="horse">Figjam</td><td>Ascot</td><td>Place</td><td>1pt BSP Place</td><td>3.30</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+743.30</td></tr>
-          <tr><td>08-Aug-26</td><td>15:55</td><td class="horse">Level Look</td><td>Ascot</td><td>Win</td><td>1pt BSP</td><td>24.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+742.30</td></tr>
-          <tr><td>08-Aug-26</td><td>15:55</td><td class="horse">Level Look</td><td>Ascot</td><td>Place</td><td>1pt BSP Place</td><td>4.87</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+741.30</td></tr>
-          <tr class="meeting-header"><td colspan="10">10 August 2026 &mdash; Windsor</td></tr>
-          <tr><td>10-Aug-26</td><td>19:15</td><td class="horse">Uncle Don</td><td>Windsor</td><td>Win</td><td>1pt BSP</td><td>32.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+740.30</td></tr>
-          <tr><td>10-Aug-26</td><td>19:15</td><td class="horse">Uncle Don</td><td>Windsor</td><td>Place</td><td>1pt BSP Place</td><td>6.20</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+739.30</td></tr>
-          <tr class="meeting-header"><td colspan="10">12 August 2026 &mdash; Salisbury / Kempton Park</td></tr>
-          <tr><td>12-Aug-26</td><td>15:30</td><td class="horse">My A' Ali Baba</td><td>Salisbury</td><td>Win</td><td>1pt BSP</td><td>141.86</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+738.30</td></tr>
-          <tr><td>12-Aug-26</td><td>15:30</td><td class="horse">My A' Ali Baba</td><td>Salisbury</td><td>Place</td><td>1pt BSP Place</td><td>8.43</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+737.30</td></tr>
-          <tr><td>12-Aug-26</td><td>21:00</td><td class="horse">May We Dance</td><td>Kempton Park</td><td>Win</td><td>1pt BSP</td><td>32.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+736.30</td></tr>
-          <tr><td>12-Aug-26</td><td>21:00</td><td class="horse">May We Dance</td><td>Kempton Park</td><td>Place</td><td>1pt BSP Place</td><td>5.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+735.30</td></tr>
-          <tr class="meeting-header"><td colspan="10">13 August 2026 &mdash; Lingfield / Windsor</td></tr>
-          <tr><td>13-Aug-26</td><td>18:28</td><td class="horse">Elvetham</td><td>Lingfield</td><td>Win</td><td>1pt BSP</td><td>5.49</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+734.30</td></tr>
-          <tr><td>13-Aug-26</td><td>18:28</td><td class="horse">Elvetham</td><td>Lingfield</td><td>Place</td><td>1pt BSP Place</td><td>2.27</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+733.30</td></tr>
-          <tr><td>13-Aug-26</td><td>19:28</td><td class="horse">Champagne Beau</td><td>Lingfield</td><td>Win</td><td>1pt BSP</td><td>620.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+732.30</td></tr>
-          <tr><td>13-Aug-26</td><td>19:28</td><td class="horse">Champagne Beau</td><td>Lingfield</td><td>Place</td><td>1pt BSP Place</td><td>52.28</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+731.30</td></tr>
-          <tr><td>13-Aug-26</td><td>19:41</td><td class="horse">Parlando</td><td>Windsor</td><td>Win</td><td>1pt BSP</td><td>11.77</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+730.30</td></tr>
-          <tr class="meeting-header"><td colspan="10">14 August 2026 &mdash; Newbury</td></tr>
-          <tr><td>14-Aug-26</td><td>17:23</td><td class="horse">Elevating</td><td>Newbury</td><td>Win</td><td>1pt BSP</td><td>6.04</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+729.30</td></tr>
-          <tr><td>14-Aug-26</td><td>17:23</td><td class="horse">Elevating</td><td>Newbury</td><td>Place</td><td>1pt BSP Place</td><td>26.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+728.30</td></tr>
-          <tr class="meeting-header"><td colspan="10">15 August 2026 &mdash; Newbury / Ripon</td></tr>
-          <tr><td>15-Aug-26</td><td>15:10</td><td class="horse">Back In Black</td><td>Newbury</td><td>Win</td><td>2pt BSP</td><td>10.92</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+726.30</td></tr>
-          <tr><td>15-Aug-26</td><td>15:10</td><td class="horse">Back In Black</td><td>Newbury</td><td>Place</td><td>2pt BSP Place</td><td>3.05</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+724.30</td></tr>
-          <tr><td>15-Aug-26</td><td>15:25</td><td class="horse">Aramram</td><td>Ripon</td><td>Win</td><td>1pt BSP</td><td>9.60</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+723.30</td></tr>
-          <tr><td>15-Aug-26</td><td>15:25</td><td class="horse">Manila Scouse</td><td>Ripon</td><td>Win</td><td>1pt BSP</td><td>71.41</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+721.30</td></tr>
-          <tr><td>15-Aug-26</td><td>15:25</td><td class="horse">Manila Scouse</td><td>Ripon</td><td>Place</td><td>1pt BSP Place</td><td>16.04</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.0</td><td class="running">+719.30</td></tr>
-          <tr class="meeting-header"><td colspan="10">19 August 2026 &mdash; York</td></tr>
-          <tr><td>19-Aug-26</td><td>13:50</td><td class="horse">Dark Thirty</td><td>York</td><td>Win</td><td>1pt BSP</td><td>25.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+718.30</td></tr>
-          <tr><td>19-Aug-26</td><td>13:50</td><td class="horse">Dark Thirty</td><td>York</td><td>Place</td><td>1pt BSP Place</td><td>5.20</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+717.30</td></tr>
-          <tr><td>19-Aug-26</td><td>15:35</td><td class="horse">Almaqam</td><td>York</td><td>Win</td><td>1pt BSP</td><td>20.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+716.30</td></tr>
-          <tr><td>19-Aug-26</td><td>15:35</td><td class="horse">Almaqam</td><td>York</td><td>Place</td><td>1pt BSP Place</td><td>2.45</td><td class="won">Won</td><td class="pl-pos">+1.45</td><td class="running">+717.75</td></tr>
-          <tr><td>19-Aug-26</td><td>16:10</td><td class="horse">Duke Of Oxford</td><td>York</td><td>Win</td><td>1pt BSP</td><td>335.59</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+716.75</td></tr>
-          <tr><td>19-Aug-26</td><td>16:10</td><td class="horse">Duke Of Oxford</td><td>York</td><td>Place</td><td>1pt BSP Place</td><td>34.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.0</td><td class="running">+715.75</td></tr>
-          <tr class="meeting-header"><td colspan="10">20 August 2026 &mdash; York</td></tr>
-          <tr><td>20-Aug-26</td><td>17:20</td><td class="horse">Bellarchi</td><td>York</td><td>Win</td><td>1pt BSP</td><td>&#45;&#45;</td><td class="pending">Pending</td><td>&#45;&#45;</td><td class="running">+715.75</td></tr>
-          <tr><td>20-Aug-26</td><td>17:20</td><td class="horse">Bellarchi</td><td>York</td><td>Place</td><td>1pt BSP Place</td><td>&#45;&#45;</td><td class="pending">Pending</td><td>&#45;&#45;</td><td class="running">+715.75</td></tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="8">August 2026 Total &mdash; 43 bets &nbsp;&#183;&nbsp; 49pts staked</td>
-            <td class="total-pl" colspan="2">&#45;35.96pts</td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
+    <section style="margin-bottom:3rem">
+      <div class="section-label">Records By Month</div>
+      <div class="month-grid">
+        <a href="bsp-march-2026.html" class="month-card">
+          <div class="month-card-name">March 2026</div>
+          <div class="month-card-pl">+90.63pts</div>
+          <div class="month-card-roi">ROI 94.4%</div>
+          <div class="month-card-bets">95 bets &nbsp;&#183;&nbsp; Win + Place markets</div>
+          <div class="month-card-link">View full record &rarr;</div>
+        </a>
+        <a href="bsp-april-2026.html" class="month-card">
+          <div class="month-card-name">April 2026</div>
+          <div class="month-card-pl">+596.33pts</div>
+          <div class="month-card-roi">ROI 537.2%</div>
+          <div class="month-card-bets">98 bets &nbsp;&#183;&nbsp; Win + Place markets</div>
+          <div class="month-card-link">View full record &rarr;</div>
+        </a>
+        <a href="bsp-may-2026.html" class="month-card">
+          <div class="month-card-name">May 2026</div>
+          <div class="month-card-pl">&#45;74.92pts</div>
+          <div class="month-card-roi">ROI &#45;70.0%</div>
+          <div class="month-card-bets">83 bets &nbsp;&#183;&nbsp; Win + Place markets</div>
+          <div class="month-card-link">View full record &rarr;</div>
+        </a>
+        <a href="bsp-june-2026.html" class="month-card">
+          <div class="month-card-name">June 2026</div>
+          <div class="month-card-pl">&#45;8.44pts</div>
+          <div class="month-card-roi">ROI &#45;9.5%</div>
+          <div class="month-card-bets">82 bets &nbsp;&#183;&nbsp; Win + Place markets</div>
+          <div class="month-card-link">View full record &rarr;</div>
+        </a>
+        <a href="bsp-july-2026.html" class="month-card">
+          <div class="month-card-name">July 2026</div>
+          <div class="month-card-pl">+148.11pts</div>
+          <div class="month-card-roi">ROI 139.7%</div>
+          <div class="month-card-bets">95 bets &nbsp;&#183;&nbsp; Win + Place markets</div>
+          <div class="month-card-link">View full record &rarr;</div>
+        </a>
+        <a href="bsp-august-2026.html" class="month-card current">
+          <div class="month-card-name">August 2026 &#45;&#45; Current</div>
+          <div class="month-card-pl neg">&#45;35.96pts</div>
+          <div class="month-card-roi">ROI &#45;73.4%</div>
+          <div class="month-card-bets">43 bets &nbsp;&#183;&nbsp; Win + Place markets</div>
+          <div class="month-card-link">View full record &rarr;</div>
+        </a>
+      </div>
+    </section>
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:#555;margin-top:1rem;">BSP = Betfair Starting Price. Each EW selection split into separate Win and Place markets at 1pt per side.</p>
   </main>
   <footer>
     <div class="compliance">
