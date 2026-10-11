@@ -31,6 +31,7 @@
     .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #333; margin-bottom: 3rem; }
     .stat { background: #0a0a0a; padding: 1.2rem 1.5rem; text-align: center; }
     .stat-number { font-size: 1.9rem; font-weight: 900; color: #FFD700; line-height: 1; }
+    .stat-number.neg { color: #888; }
     .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.3rem; }
     .table-wrap { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; }
@@ -39,7 +40,6 @@
     tbody tr:hover { background: #111; }
     tbody td { padding: 0.7rem 1rem; color: #ccc; white-space: nowrap; }
     tbody td.horse { color: #F5F0E8; font-weight: 700; font-family: 'Nunito', sans-serif; font-size: 0.85rem; }
-    tbody td.market { color: #555; font-size: 0.68rem; }
     tbody td.won { color: #FFD700; font-weight: 700; }
     tbody td.placed { color: #FF6600; font-weight: 700; }
     tbody td.lost { color: #555; }
@@ -47,12 +47,10 @@
     tbody td.pl-pos { color: #FFD700; }
     tbody td.pl-neg { color: #888; }
     tbody td.running { color: #F5F0E8; font-weight: 700; }
-    tbody tr.place-row { background: #0d0d0d; }
-    tbody tr.place-row td.horse { color: #aaa; font-weight: 400; font-size: 0.78rem; }
     .meeting-header td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.5rem 1rem; border-top: 1px solid #333; }
     tfoot td { background: #111; color: #FF6600; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem; border-top: 2px solid #FF6600; font-weight: 700; }
     tfoot td.total-pl { color: #FFD700; font-size: 1rem; }
-    footer { border-top: 1px solid #333; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 4rem; }
+    footer { border-top: 1px solid #333; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     .compliance { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #888; letter-spacing: 0.05em; line-height: 1.6; }
     .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
     .compliance a:hover { color: #FF6600; }
@@ -69,7 +67,7 @@
         <div class="tagline">The Esoteric Tipster.</div>
       </div>
     </div>
-    <div class="header-record">Since inception &nbsp;&#183;&nbsp; 173 bets &nbsp;&#183;&nbsp; +89.61pts &nbsp;&#183;&nbsp; advised price</div>
+    <div class="header-record">Since inception &nbsp;&#183;&nbsp; 331 bets &nbsp;&#183;&nbsp; +307.26pts &nbsp;&#183;&nbsp; advised price</div>
   </header>
   <nav>
     <a href="index.html">Home</a>
@@ -85,7 +83,7 @@
       <div class="summary">
         <div class="stat"><div class="stat-number">+596.33pts</div><div class="stat-label">Total P&amp;L</div></div>
         <div class="stat"><div class="stat-number">98</div><div class="stat-label">Bets</div></div>
-        <div class="stat"><div class="stat-number">537.2%</div><div class="stat-label">ROI</div></div>
+        <div class="stat"><div class="stat-number">+527.7%</div><div class="stat-label">ROI</div></div>
         <div class="stat"><div class="stat-number">Win + Place</div><div class="stat-label">Markets Split</div></div>
       </div>
     </section>
@@ -93,150 +91,155 @@
       <table>
         <thead>
           <tr>
-            <th>Date</th><th>Time</th><th>Horse</th><th>Course</th><th>Market</th><th>Stake</th><th>BSP</th><th>Result</th><th>Return</th><th>P&amp;L</th><th>Running</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Horse</th>
+            <th>Course</th>
+            <th>Market</th>
+            <th>Stake</th>
+            <th>BSP</th>
+            <th>Result</th>
+            <th>P&amp;L</th>
+            <th>Running P&amp;L</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="meeting-header"><td colspan="11">Wincanton / Southwell / Kempton Park &#45;&#45; 1 April 2026</td></tr>
-          <tr><td>01-Apr</td><td>15:50</td><td class="horse">Stage Show</td><td>Wincanton</td><td class="market">Win</td><td>1pt</td><td>34.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-1.00</td></tr>
-          <tr class="place-row"><td>01-Apr</td><td>15:50</td><td class="horse">Stage Show</td><td>Wincanton</td><td class="market">Place</td><td>1pt</td><td>10.11</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-2.00</td></tr>
-          <tr><td>01-Apr</td><td>16:30</td><td class="horse">Immortal Flame</td><td>Southwell</td><td class="market">Win</td><td>1pt</td><td>28.60</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-3.00</td></tr>
-          <tr><td>01-Apr</td><td>17:30</td><td class="horse">Divine Wish</td><td>Kempton Park</td><td class="market">Win</td><td>1pt</td><td>24.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-4.00</td></tr>
-          <tr class="place-row"><td>01-Apr</td><td>17:30</td><td class="horse">Divine Wish</td><td>Kempton Park</td><td class="market">Place</td><td>1pt</td><td>3.38</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-5.00</td></tr>
-          <tr class="meeting-header"><td colspan="11">Chepstow / Southwell &#45;&#45; 2 April 2026</td></tr>
-          <tr><td>02-Apr</td><td>16:07</td><td class="horse">It&#39;s Top</td><td>Chepstow</td><td class="market">Win</td><td>1pt</td><td>10.37</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-6.00</td></tr>
-          <tr><td>02-Apr</td><td>18:18</td><td class="horse">Hardstyle</td><td>Southwell</td><td class="market">Win</td><td>2pt</td><td>6.60</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">-8.00</td></tr>
-          <tr class="meeting-header"><td colspan="11">Newcastle / Curragh / Lingfield &#45;&#45; 3 April 2026</td></tr>
-          <tr><td>03-Apr</td><td>13:50</td><td class="horse">Sparksmith</td><td>Newcastle</td><td class="market">Win</td><td>1pt</td><td>16.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-9.00</td></tr>
-          <tr class="place-row"><td>03-Apr</td><td>13:50</td><td class="horse">Sparksmith</td><td>Newcastle</td><td class="market">Place</td><td>1pt</td><td>4.40</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">-10.00</td></tr>
-          <tr><td>03-Apr</td><td>15:07</td><td class="horse">Celestial Orbit</td><td>Curragh</td><td class="market">Win</td><td>1pt</td><td>65.00</td><td class="won">Won</td><td>66.00</td><td class="pl-pos">+65</td><td class="running">55.00</td></tr>
-          <tr class="place-row"><td>03-Apr</td><td>15:07</td><td class="horse">Celestial Orbit</td><td>Curragh</td><td class="market">Place</td><td>1pt</td><td>7.60</td><td class="won">Won</td><td>8.60</td><td class="pl-pos">+7.60</td><td class="running">62.60</td></tr>
-          <tr><td>03-Apr</td><td>16:25</td><td class="horse">Grey Horizon</td><td>Lingfield</td><td class="market">Win</td><td>2pt</td><td>16.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">60.60</td></tr>
-          <tr class="place-row"><td>03-Apr</td><td>16:25</td><td class="horse">Grey Horizon</td><td>Lingfield</td><td class="market">Place</td><td>2pt</td><td>3.75</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-3</td><td class="running">57.60</td></tr>
-          <tr class="meeting-header"><td colspan="11">Musselburgh / Fairyhouse &#45;&#45; 4 April 2026</td></tr>
-          <tr><td>04-Apr</td><td>15:42</td><td class="horse">Rhythm N Hooves</td><td>Musselburgh</td><td class="market">Win</td><td>1pt</td><td>n/a</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">56.60</td></tr>
-          <tr class="place-row"><td>04-Apr</td><td>15:42</td><td class="horse">Rhythm N Hooves</td><td>Musselburgh</td><td class="market">Place</td><td>1pt</td><td>n/a</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">55.60</td></tr>
-          <tr><td>04-Apr</td><td>16:25</td><td class="horse">Sept Etoiles</td><td>Fairyhouse</td><td class="market">Win</td><td>1pt</td><td>243.41</td><td class="won">Won</td><td>486.20</td><td class="pl-pos">+484.82</td><td class="running">540.42</td></tr>
-          <tr class="place-row"><td>04-Apr</td><td>16:25</td><td class="horse">Sept Etoiles</td><td>Fairyhouse</td><td class="market">Place</td><td>1pt</td><td>38.95</td><td class="won">Won</td><td>77.90</td><td class="pl-pos">+75.90</td><td class="running">616.32</td></tr>
-          <tr class="meeting-header"><td colspan="11">Bath &#45;&#45; 5 April 2026</td></tr>
-          <tr><td>05-Apr</td><td>15:10</td><td class="horse">Azure Angel</td><td>Bath</td><td class="market">Win</td><td>1pt</td><td>30.14</td><td class="won">Won</td><td>30.12</td><td class="pl-pos">+29.12</td><td class="running">645.44</td></tr>
-          <tr class="place-row"><td>05-Apr</td><td>15:10</td><td class="horse">Azure Angel</td><td>Bath</td><td class="market">Place</td><td>1pt</td><td>7.60</td><td class="won">Won</td><td>7.60</td><td class="pl-pos">+6.60</td><td class="running">652.04</td></tr>
-          <tr><td>05-Apr</td><td>16:20</td><td class="horse">Summer Evening</td><td>Bath</td><td class="market">Win</td><td>1pt</td><td>580.68</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">651.04</td></tr>
-          <tr class="place-row"><td>05-Apr</td><td>16:20</td><td class="horse">Summer Evening</td><td>Bath</td><td class="market">Place</td><td>1pt</td><td>17.87</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">650.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Fairyhouse &#45;&#45; 6 April 2026</td></tr>
-          <tr><td>06-Apr</td><td>17:00</td><td class="horse">Better Times Ahead</td><td>Fairyhouse</td><td class="market">Win</td><td>1pt</td><td>51.04</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">649.04</td></tr>
-          <tr class="place-row"><td>06-Apr</td><td>17:00</td><td class="horse">Better Times Ahead</td><td>Fairyhouse</td><td class="market">Place</td><td>1pt</td><td>8.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">648.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Pontefract / Southwell &#45;&#45; 7 April 2026</td></tr>
-          <tr><td>07-Apr</td><td>17:00</td><td class="horse">Dream Forever</td><td>Pontefract</td><td class="market">Win</td><td>1pt</td><td>15.30</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">647.04</td></tr>
-          <tr><td>07-Apr</td><td>18:30</td><td class="horse">Go Victor</td><td>Southwell</td><td class="market">Win</td><td>1pt</td><td>41.85</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">646.04</td></tr>
-          <tr class="place-row"><td>07-Apr</td><td>18:30</td><td class="horse">Go Victor</td><td>Southwell</td><td class="market">Place</td><td>1pt</td><td>10.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">645.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Nottingham / Gowran Park &#45;&#45; 8 April 2026</td></tr>
-          <tr><td>08-Apr</td><td>13:17</td><td class="horse">Tripoli Flyer</td><td>Nottingham</td><td class="market">Win</td><td>1pt</td><td>38.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">644.04</td></tr>
-          <tr><td>08-Apr</td><td>13:47</td><td class="horse">Plutarch</td><td>Nottingham</td><td class="market">Win</td><td>1pt</td><td>338.96</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">643.04</td></tr>
-          <tr class="place-row"><td>08-Apr</td><td>13:47</td><td class="horse">Plutarch</td><td>Nottingham</td><td class="market">Place</td><td>1pt</td><td>38.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">642.04</td></tr>
-          <tr><td>08-Apr</td><td>15:50</td><td class="horse">Balance Of Trade</td><td>Gowran Park</td><td class="market">Win</td><td>1pt</td><td>7.40</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">641.04</td></tr>
-          <tr class="place-row"><td>08-Apr</td><td>15:50</td><td class="horse">Balance Of Trade</td><td>Gowran Park</td><td class="market">Place</td><td>1pt</td><td>2.40</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">640.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Aintree / Wolverhampton &#45;&#45; 9 April 2026</td></tr>
-          <tr><td>09-Apr</td><td>16:05</td><td class="horse">Golden Ace</td><td>Aintree</td><td class="market">Win</td><td>1pt</td><td>12.81</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">639.04</td></tr>
-          <tr class="place-row"><td>09-Apr</td><td>16:05</td><td class="horse">Golden Ace</td><td>Aintree</td><td class="market">Place</td><td>1pt</td><td>4.80</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">638.04</td></tr>
-          <tr><td>09-Apr</td><td>16:40</td><td class="horse">Hercule Du Seuil</td><td>Aintree</td><td class="market">Win</td><td>1pt</td><td>75.97</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">637.04</td></tr>
-          <tr class="place-row"><td>09-Apr</td><td>16:40</td><td class="horse">Hercule Du Seuil</td><td>Aintree</td><td class="market">Place</td><td>1pt</td><td>18.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">636.04</td></tr>
-          <tr><td>09-Apr</td><td>17:15</td><td class="horse">Burds Of A Feather</td><td>Aintree</td><td class="market">Win</td><td>2pt</td><td>14.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">634.04</td></tr>
-          <tr><td>09-Apr</td><td>19:30</td><td class="horse">City Cyclone</td><td>Wolverhampton</td><td class="market">Win</td><td>1pt</td><td>8.20</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">633.04</td></tr>
-          <tr class="place-row"><td>09-Apr</td><td>19:30</td><td class="horse">City Cyclone</td><td>Wolverhampton</td><td class="market">Place</td><td>1pt</td><td>3.05</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">632.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Aintree / Thirsk &#45;&#45; 10 April 2026</td></tr>
-          <tr><td>10-Apr</td><td>13:45</td><td class="horse">Fingle Bridge</td><td>Aintree</td><td class="market">Win</td><td>1pt</td><td>55.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">631.04</td></tr>
-          <tr class="place-row"><td>10-Apr</td><td>13:45</td><td class="horse">Fingle Bridge</td><td>Aintree</td><td class="market">Place</td><td>1pt</td><td>10.14</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">630.04</td></tr>
-          <tr><td>10-Apr</td><td>16:25</td><td class="horse">Darkness</td><td>Thirsk</td><td class="market">Win</td><td>1pt</td><td>55.89</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">629.04</td></tr>
-          <tr class="place-row"><td>10-Apr</td><td>16:25</td><td class="horse">Darkness</td><td>Thirsk</td><td class="market">Place</td><td>1pt</td><td>7.13</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">628.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Aintree &#45;&#45; 11 April 2026</td></tr>
-          <tr><td>11-Apr</td><td>16:00</td><td class="horse">Marble Sands</td><td>Aintree</td><td class="market">Win</td><td>2pt</td><td>190.30</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">626.04</td></tr>
-          <tr class="place-row"><td>11-Apr</td><td>16:00</td><td class="horse">Marble Sands</td><td>Aintree</td><td class="market">Place</td><td>2pt</td><td>28.07</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">624.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Musselburgh &#45;&#45; 12 April 2026</td></tr>
-          <tr><td>12-Apr</td><td>17:15</td><td class="horse">Per Contra</td><td>Musselburgh</td><td class="market">Win</td><td>1pt</td><td>24.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">623.04</td></tr>
-          <tr class="place-row"><td>12-Apr</td><td>17:15</td><td class="horse">Per Contra</td><td>Musselburgh</td><td class="market">Place</td><td>1pt</td><td>5.30</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">622.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Fakenham &#45;&#45; 13 April 2026</td></tr>
-          <tr><td>13-Apr</td><td>14:40</td><td class="horse">Mahon Falls</td><td>Fakenham</td><td class="market">Win</td><td>1pt</td><td>80.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">621.04</td></tr>
-          <tr class="place-row"><td>13-Apr</td><td>14:40</td><td class="horse">Mahon Falls</td><td>Fakenham</td><td class="market">Place</td><td>1pt</td><td>10.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">620.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Newmarket (Rowley) &#45;&#45; 14 April 2026</td></tr>
-          <tr><td>14-Apr</td><td>13:15</td><td class="horse">Powder Monkey</td><td>Newmarket (Rowley)</td><td class="market">Win</td><td>1pt</td><td>60.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">619.04</td></tr>
-          <tr class="place-row"><td>14-Apr</td><td>13:15</td><td class="horse">Powder Monkey</td><td>Newmarket (Rowley)</td><td class="market">Place</td><td>1pt</td><td>6.61</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">618.04</td></tr>
-          <tr><td>14-Apr</td><td>16:10</td><td class="horse">Blue To Blue</td><td>Newmarket (Rowley)</td><td class="market">Win</td><td>2pt</td><td>101.20</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">616.04</td></tr>
-          <tr class="place-row"><td>14-Apr</td><td>16:10</td><td class="horse">Blue To Blue</td><td>Newmarket (Rowley)</td><td class="market">Place</td><td>2pt</td><td>17.02</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">614.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Newmarket (Rowley) &#45;&#45; 15 April 2026</td></tr>
-          <tr><td>15-Apr</td><td>14:25</td><td class="horse">Shayem</td><td>Newmarket (Rowley)</td><td class="market">Win</td><td>2pt</td><td>7.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">612.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Newmarket (Rowley) &#45;&#45; 16 April 2026</td></tr>
-          <tr><td>16-Apr</td><td>13:50</td><td class="horse">Pilu</td><td>Newmarket (Rowley)</td><td class="market">Win</td><td>1pt</td><td>&#45;</td><td class="nr">NR</td><td>0</td><td>0</td><td class="running">612.04</td></tr>
-          <tr class="place-row"><td>16-Apr</td><td>13:50</td><td class="horse">Pilu</td><td>Newmarket (Rowley)</td><td class="market">Place</td><td>1pt</td><td>&#45;</td><td class="nr">NR</td><td>0</td><td>0</td><td class="running">612.04</td></tr>
-          <tr><td>16-Apr</td><td>15:00</td><td class="horse">Completely Random</td><td>Newmarket (Rowley)</td><td class="market">Win</td><td>2pt</td><td>18.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">610.04</td></tr>
-          <tr><td>16-Apr</td><td>17:20</td><td class="horse">Goldmoyne</td><td>Newmarket (Rowley)</td><td class="market">Win</td><td>2pt</td><td>3.35</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">608.04</td></tr>
-          <tr class="meeting-header"><td colspan="11">Ayr / Newbury &#45;&#45; 17 April 2026</td></tr>
-          <tr><td>17-Apr</td><td>13:45</td><td class="horse">Gaballo De Guerra</td><td>Ayr</td><td class="market">Win</td><td>1pt</td><td>15.86</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">607.04</td></tr>
-          <tr class="place-row"><td>17-Apr</td><td>13:45</td><td class="horse">Gaballo De Guerra</td><td>Ayr</td><td class="market">Place</td><td>1pt</td><td>4.90</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">606.04</td></tr>
-          <tr><td>17-Apr</td><td>16:05</td><td class="horse">Phantomofthepoints</td><td>Ayr</td><td class="market">Win</td><td>1pt</td><td>17.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">605.04</td></tr>
-          <tr class="place-row"><td>17-Apr</td><td>16:05</td><td class="horse">Phantomofthepoints</td><td>Ayr</td><td class="market">Place</td><td>1pt</td><td>5.60</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">604.04</td></tr>
-          <tr><td>17-Apr</td><td>16:55</td><td class="horse">The Resdev Scholar</td><td>Newbury</td><td class="market">Win</td><td>1pt</td><td>38.17</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">603.04</td></tr>
-          <tr class="place-row"><td>17-Apr</td><td>16:55</td><td class="horse">The Resdev Scholar</td><td>Newbury</td><td class="market">Place</td><td>1pt</td><td>6.79</td><td class="won">Won</td><td>6.79</td><td class="pl-pos">+5.79</td><td class="running">608.83</td></tr>
-          <tr><td>17-Apr</td><td>17:25</td><td class="horse">Arctic Thunder</td><td>Newbury</td><td class="market">Win</td><td>1pt</td><td>7.80</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">607.83</td></tr>
-          <tr class="meeting-header"><td colspan="11">Newbury &#45;&#45; 18 April 2026</td></tr>
-          <tr><td>18-Apr</td><td>13:25</td><td class="horse">Splish Splash</td><td>Newbury</td><td class="market">Win</td><td>1pt</td><td>19.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">606.83</td></tr>
-          <tr class="place-row"><td>18-Apr</td><td>13:25</td><td class="horse">Splish Splash</td><td>Newbury</td><td class="market">Place</td><td>1pt</td><td>4.70</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">605.83</td></tr>
-          <tr><td>18-Apr</td><td>14:00</td><td class="horse">Ardisia</td><td>Newbury</td><td class="market">Win</td><td>1pt</td><td>23.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">604.83</td></tr>
-          <tr class="place-row"><td>18-Apr</td><td>14:00</td><td class="horse">Ardisia</td><td>Newbury</td><td class="market">Place</td><td>1pt</td><td>3.86</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">603.83</td></tr>
-          <tr><td>18-Apr</td><td>15:10</td><td class="horse">Ebt&#39;s Guard</td><td>Newbury</td><td class="market">Win</td><td>1pt</td><td>18.01</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">602.83</td></tr>
-          <tr class="place-row"><td>18-Apr</td><td>15:10</td><td class="horse">Ebt&#39;s Guard</td><td>Newbury</td><td class="market">Place</td><td>1pt</td><td>4.16</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">601.83</td></tr>
-          <tr class="meeting-header"><td colspan="11">Curragh &#45;&#45; 19 April 2026</td></tr>
-          <tr><td>19-Apr</td><td>15:00</td><td class="horse">Nouvel Espoir</td><td>Curragh</td><td class="market">Win</td><td>1pt</td><td>90.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">600.83</td></tr>
-          <tr class="place-row"><td>19-Apr</td><td>15:00</td><td class="horse">Nouvel Espoir</td><td>Curragh</td><td class="market">Place</td><td>1pt</td><td>14.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">599.83</td></tr>
-          <tr><td>19-Apr</td><td>16:45</td><td class="horse">San Aer</td><td>Curragh</td><td class="market">Win</td><td>1pt</td><td>50.29</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">598.83</td></tr>
-          <tr class="place-row"><td>19-Apr</td><td>16:45</td><td class="horse">San Aer</td><td>Curragh</td><td class="market">Place</td><td>1pt</td><td>7.40</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">597.83</td></tr>
-          <tr class="meeting-header"><td colspan="11">Pontefract / Yarmouth &#45;&#45; 21 April 2026</td></tr>
-          <tr><td>21-Apr</td><td>14:17</td><td class="horse">Uncertainty</td><td>Pontefract</td><td class="market">Win</td><td>1pt</td><td>&#45;</td><td class="nr">NR</td><td>0</td><td>0</td><td class="running">597.83</td></tr>
-          <tr class="place-row"><td>21-Apr</td><td>14:17</td><td class="horse">Uncertainty</td><td>Pontefract</td><td class="market">Place</td><td>1pt</td><td>&#45;</td><td class="nr">NR</td><td>0</td><td>0</td><td class="running">597.83</td></tr>
-          <tr><td>21-Apr</td><td>15:27</td><td class="horse">Parlando</td><td>Pontefract</td><td class="market">Win</td><td>1pt</td><td>10.37</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">596.83</td></tr>
-          <tr><td>21-Apr</td><td>16:55</td><td class="horse">Captain Parma</td><td>Yarmouth</td><td class="market">Win</td><td>1pt</td><td>19.61</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">595.83</td></tr>
-          <tr class="place-row"><td>21-Apr</td><td>16:55</td><td class="horse">Captain Parma</td><td>Yarmouth</td><td class="market">Place</td><td>1pt</td><td>4.36</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">594.83</td></tr>
-          <tr class="meeting-header"><td colspan="11">Sandown Park &#45;&#45; 24 April 2026</td></tr>
-          <tr><td>24-Apr</td><td>13:50</td><td class="horse">Suspended Sentence</td><td>Sandown Park</td><td class="market">Win</td><td>1pt</td><td>17.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">593.83</td></tr>
-          <tr class="place-row"><td>24-Apr</td><td>13:50</td><td class="horse">Suspended Sentence</td><td>Sandown Park</td><td class="market">Place</td><td>1pt</td><td>5.60</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">592.83</td></tr>
-          <tr><td>24-Apr</td><td>15:00</td><td class="horse">Cicero&#39;s Gift</td><td>Sandown Park</td><td class="market">Win</td><td>2pt</td><td>28.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">590.83</td></tr>
-          <tr class="place-row"><td>24-Apr</td><td>15:00</td><td class="horse">Cicero&#39;s Gift</td><td>Sandown Park</td><td class="market">Place</td><td>2pt</td><td>9.53</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-2</td><td class="running">588.83</td></tr>
-          <tr class="meeting-header"><td colspan="11">Sandown Park / Navan / Haydock &#45;&#45; 25 April 2026</td></tr>
-          <tr><td>25-Apr</td><td>13:45</td><td class="horse">Dutch Corner</td><td>Sandown Park</td><td class="market">Win</td><td>1pt</td><td>18.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">587.83</td></tr>
-          <tr class="place-row"><td>25-Apr</td><td>13:45</td><td class="horse">Dutch Corner</td><td>Sandown Park</td><td class="market">Place</td><td>1pt</td><td>4.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">586.83</td></tr>
-          <tr><td>25-Apr</td><td>15:05</td><td class="horse">Layfayette</td><td>Navan</td><td class="market">Win</td><td>1pt</td><td>36.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">585.83</td></tr>
-          <tr class="place-row"><td>25-Apr</td><td>15:05</td><td class="horse">Layfayette</td><td>Navan</td><td class="market">Place</td><td>1pt</td><td>9.40</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">584.83</td></tr>
-          <tr><td>25-Apr</td><td>15:30</td><td class="horse">Transmission</td><td>Sandown Park</td><td class="market">Win</td><td>1pt</td><td>18.00</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">583.83</td></tr>
-          <tr class="place-row"><td>25-Apr</td><td>15:30</td><td class="horse">Transmission</td><td>Sandown Park</td><td class="market">Place</td><td>1pt</td><td>4.50</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">582.83</td></tr>
-          <tr><td>25-Apr</td><td>15:45</td><td class="horse">Dunkeld Dreamer</td><td>Haydock</td><td class="market">Win</td><td>1pt</td><td>23.00</td><td class="won">Won</td><td>23.00</td><td class="pl-pos">+21.00</td><td class="running">603.83</td></tr>
-          <tr class="place-row"><td>25-Apr</td><td>15:45</td><td class="horse">Dunkeld Dreamer</td><td>Haydock</td><td class="market">Place</td><td>1pt</td><td>4.40</td><td class="won">Won</td><td>4.40</td><td class="pl-pos">+3.50</td><td class="running">607.33</td></tr>
-          <tr class="meeting-header"><td colspan="11">Naas &#45;&#45; 27 April 2026</td></tr>
-          <tr><td>27-Apr</td><td>19:15</td><td class="horse">Fahrenheit Seven</td><td>Naas</td><td class="market">Win</td><td>1pt</td><td>4.90</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">606.33</td></tr>
-          <tr class="meeting-header"><td colspan="11">Punchestown &#45;&#45; 28 April 2026</td></tr>
-          <tr><td>28-Apr</td><td>15:05</td><td class="horse">San Hilario</td><td>Punchestown</td><td class="market">Win</td><td>1pt</td><td>&#45;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">605.33</td></tr>
-          <tr class="place-row"><td>28-Apr</td><td>15:05</td><td class="horse">San Hilario</td><td>Punchestown</td><td class="market">Place</td><td>1pt</td><td>&#45;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">604.33</td></tr>
-          <tr><td>28-Apr</td><td>15:40</td><td class="horse">We&#39;re Red And Blue</td><td>Punchestown</td><td class="market">Win</td><td>1pt</td><td>&#45;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">603.33</td></tr>
-          <tr class="place-row"><td>28-Apr</td><td>15:40</td><td class="horse">We&#39;re Red And Blue</td><td>Punchestown</td><td class="market">Place</td><td>1pt</td><td>&#45;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">602.33</td></tr>
-          <tr class="meeting-header"><td colspan="11">Punchestown &#45;&#45; 29 April 2026</td></tr>
-          <tr><td>29-Apr</td><td>17:25</td><td class="horse">Jesse Evans</td><td>Punchestown</td><td class="market">Win</td><td>1pt</td><td>&#45;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">601.33</td></tr>
-          <tr class="place-row"><td>29-Apr</td><td>17:25</td><td class="horse">Jesse Evans</td><td>Punchestown</td><td class="market">Place</td><td>1pt</td><td>&#45;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">600.33</td></tr>
-          <tr class="meeting-header"><td colspan="11">Punchestown &#45;&#45; 30 April 2026</td></tr>
-          <tr><td>30-Apr</td><td>14:30</td><td class="horse">Ionian</td><td>Punchestown</td><td class="market">Win</td><td>1pt</td><td>&#45;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">599.33</td></tr>
-          <tr class="place-row"><td>30-Apr</td><td>14:30</td><td class="horse">Ionian</td><td>Punchestown</td><td class="market">Place</td><td>1pt</td><td>&#45;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">598.33</td></tr>
-          <tr><td>30-Apr</td><td>16:50</td><td class="horse">Western Diego</td><td>Punchestown</td><td class="market">Win</td><td>1pt</td><td>&#45;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">597.33</td></tr>
-          <tr class="place-row"><td>30-Apr</td><td>16:50</td><td class="horse">Western Diego</td><td>Punchestown</td><td class="market">Place</td><td>1pt</td><td>&#45;</td><td class="lost">Lost</td><td>0</td><td class="pl-neg">-1</td><td class="running">596.33</td></tr>
+          <tr class="meeting-header"><td colspan="10">1 April 2026 &#45;&#45; Wincanton / Southwell / Kempton Park</td></tr>
+          <tr><td>01-Apr-26</td><td>15:50</td><td class="horse">Stage Show</td><td>Wincanton</td><td>Win</td><td>1pt BSP</td><td>34.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+89.63</td></tr>
+          <tr><td>01-Apr-26</td><td>15:50</td><td class="horse">Stage Show</td><td>Wincanton</td><td>Place</td><td>1pt BSP Place</td><td>10.11</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+88.63</td></tr>
+          <tr><td>01-Apr-26</td><td>16:30</td><td class="horse">Immortal Flame</td><td>Southwell</td><td>Win</td><td>1pt BSP</td><td>28.60</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+87.63</td></tr>
+          <tr><td>01-Apr-26</td><td>17:30</td><td class="horse">Divine Wish</td><td>Kempton Park</td><td>Win</td><td>1pt BSP</td><td>24.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+86.63</td></tr>
+          <tr><td>01-Apr-26</td><td>17:30</td><td class="horse">Divine Wish</td><td>Kempton Park</td><td>Place</td><td>1pt BSP Place</td><td>3.38</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+85.63</td></tr>
+          <tr class="meeting-header"><td colspan="10">2 April 2026 &#45;&#45; Chepstow / Southwell</td></tr>
+          <tr><td>02-Apr-26</td><td>16:07</td><td class="horse">It's Top</td><td>Chepstow</td><td>Win</td><td>1pt BSP</td><td>10.37</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+84.63</td></tr>
+          <tr><td>02-Apr-26</td><td>18:18</td><td class="horse">Hardstyle</td><td>Southwell</td><td>Win</td><td>2pt BSP</td><td>6.60</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+82.63</td></tr>
+          <tr class="meeting-header"><td colspan="10">3 April 2026 &#45;&#45; Newcastle / Curragh / Lingfield</td></tr>
+          <tr><td>03-Apr-26</td><td>13:50</td><td class="horse">Sparksmith</td><td>Newcastle</td><td>Win</td><td>1pt BSP</td><td>16.50</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+81.63</td></tr>
+          <tr><td>03-Apr-26</td><td>13:50</td><td class="horse">Sparksmith</td><td>Newcastle</td><td>Place</td><td>1pt BSP Place</td><td>4.40</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+80.63</td></tr>
+          <tr><td>03-Apr-26</td><td>15:07</td><td class="horse">Celestial Orbit</td><td>Curragh</td><td>Win</td><td>1pt BSP</td><td>65.00</td><td class="won">Won</td><td class="pl-pos">+65.00</td><td class="running">+145.63</td></tr>
+          <tr><td>03-Apr-26</td><td>15:07</td><td class="horse">Celestial Orbit</td><td>Curragh</td><td>Place</td><td>1pt BSP Place</td><td>7.60</td><td class="won">Won</td><td class="pl-pos">+7.60</td><td class="running">+153.23</td></tr>
+          <tr><td>03-Apr-26</td><td>16:25</td><td class="horse">Grey Horizon</td><td>Lingfield</td><td>Win</td><td>2pt BSP</td><td>16.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+151.23</td></tr>
+          <tr><td>03-Apr-26</td><td>16:25</td><td class="horse">Grey Horizon</td><td>Lingfield</td><td>Place</td><td>2pt BSP Place</td><td>3.75</td><td class="lost">Lost</td><td class="pl-neg">&#45;3.00</td><td class="running">+148.23</td></tr>
+          <tr class="meeting-header"><td colspan="10">4 April 2026 &#45;&#45; Musselburgh / Fairyhouse</td></tr>
+          <tr><td>04-Apr-26</td><td>15:42</td><td class="horse">Rhythm N Hooves</td><td>Musselburgh</td><td>Win</td><td>1pt BSP</td><td>&#45;&#45;</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+147.23</td></tr>
+          <tr><td>04-Apr-26</td><td>15:42</td><td class="horse">Rhythm N Hooves</td><td>Musselburgh</td><td>Place</td><td>1pt BSP Place</td><td>&#45;&#45;</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+146.23</td></tr>
+          <tr><td>04-Apr-26</td><td>16:25</td><td class="horse">Sept Etoiles</td><td>Fairyhouse</td><td>Win</td><td>2pt BSP</td><td>243.41</td><td class="won">Won</td><td class="pl-pos">+484.82</td><td class="running">+631.05</td></tr>
+          <tr><td>04-Apr-26</td><td>16:25</td><td class="horse">Sept Etoiles</td><td>Fairyhouse</td><td>Place</td><td>2pt BSP Place</td><td>38.95</td><td class="won">Won</td><td class="pl-pos">+75.90</td><td class="running">+706.95</td></tr>
+          <tr class="meeting-header"><td colspan="10">5 April 2026 &#45;&#45; Bath</td></tr>
+          <tr><td>05-Apr-26</td><td>15:10</td><td class="horse">Azure Angel</td><td>Bath</td><td>Win</td><td>1pt BSP</td><td>30.14</td><td class="won">Won</td><td class="pl-pos">+29.12</td><td class="running">+736.07</td></tr>
+          <tr><td>05-Apr-26</td><td>15:10</td><td class="horse">Azure Angel</td><td>Bath</td><td>Place</td><td>1pt BSP Place</td><td>7.60</td><td class="won">Won</td><td class="pl-pos">+6.60</td><td class="running">+742.67</td></tr>
+          <tr><td>05-Apr-26</td><td>16:20</td><td class="horse">Summer Evening</td><td>Bath</td><td>Win</td><td>1pt BSP</td><td>580.68</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+741.67</td></tr>
+          <tr><td>05-Apr-26</td><td>16:20</td><td class="horse">Summer Evening</td><td>Bath</td><td>Place</td><td>1pt BSP Place</td><td>17.87</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+740.67</td></tr>
+          <tr class="meeting-header"><td colspan="10">6 April 2026 &#45;&#45; Fairyhouse</td></tr>
+          <tr><td>06-Apr-26</td><td>17:00</td><td class="horse">Better Times Ahead</td><td>Fairyhouse</td><td>Win</td><td>1pt BSP</td><td>51.04</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+739.67</td></tr>
+          <tr><td>06-Apr-26</td><td>17:00</td><td class="horse">Better Times Ahead</td><td>Fairyhouse</td><td>Place</td><td>1pt BSP Place</td><td>8.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+738.67</td></tr>
+          <tr class="meeting-header"><td colspan="10">7 April 2026 &#45;&#45; Pontefract / Southwell</td></tr>
+          <tr><td>07-Apr-26</td><td>17:00</td><td class="horse">Dream Forever</td><td>Pontefract</td><td>Win</td><td>1pt BSP</td><td>15.30</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+737.67</td></tr>
+          <tr><td>07-Apr-26</td><td>18:30</td><td class="horse">Go Victor</td><td>Southwell</td><td>Win</td><td>1pt BSP</td><td>41.85</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+736.67</td></tr>
+          <tr><td>07-Apr-26</td><td>18:30</td><td class="horse">Go Victor</td><td>Southwell</td><td>Place</td><td>1pt BSP Place</td><td>10.50</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+735.67</td></tr>
+          <tr class="meeting-header"><td colspan="10">8 April 2026 &#45;&#45; Nottingham / Gowran Park</td></tr>
+          <tr><td>08-Apr-26</td><td>13:17</td><td class="horse">Tripoli Flyer</td><td>Nottingham</td><td>Win</td><td>1pt BSP</td><td>38.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+734.67</td></tr>
+          <tr><td>08-Apr-26</td><td>13:47</td><td class="horse">Plutarch</td><td>Nottingham</td><td>Win</td><td>1pt BSP</td><td>338.96</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+733.67</td></tr>
+          <tr><td>08-Apr-26</td><td>13:47</td><td class="horse">Plutarch</td><td>Nottingham</td><td>Place</td><td>1pt BSP Place</td><td>38.50</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+732.67</td></tr>
+          <tr><td>08-Apr-26</td><td>15:50</td><td class="horse">Balance Of Trade</td><td>Gowran Park</td><td>Win</td><td>1pt BSP</td><td>7.40</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+731.67</td></tr>
+          <tr><td>08-Apr-26</td><td>15:50</td><td class="horse">Balance Of Trade</td><td>Gowran Park</td><td>Place</td><td>1pt BSP Place</td><td>2.40</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+730.67</td></tr>
+          <tr class="meeting-header"><td colspan="10">9 April 2026 &#45;&#45; Aintree / Wolverhampton</td></tr>
+          <tr><td>09-Apr-26</td><td>16:05</td><td class="horse">Golden Ace</td><td>Aintree</td><td>Win</td><td>1pt BSP</td><td>12.81</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+729.67</td></tr>
+          <tr><td>09-Apr-26</td><td>16:05</td><td class="horse">Golden Ace</td><td>Aintree</td><td>Place</td><td>1pt BSP Place</td><td>4.80</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+728.67</td></tr>
+          <tr><td>09-Apr-26</td><td>16:40</td><td class="horse">Hercule Du Seuil</td><td>Aintree</td><td>Win</td><td>1pt BSP</td><td>75.97</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+727.67</td></tr>
+          <tr><td>09-Apr-26</td><td>16:40</td><td class="horse">Hercule Du Seuil</td><td>Aintree</td><td>Place</td><td>1pt BSP Place</td><td>18.50</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+726.67</td></tr>
+          <tr><td>09-Apr-26</td><td>17:15</td><td class="horse">Burds Of A Feather</td><td>Aintree</td><td>Win</td><td>2pt BSP</td><td>14.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+724.67</td></tr>
+          <tr><td>09-Apr-26</td><td>19:30</td><td class="horse">City Cyclone</td><td>Wolverhampton</td><td>Win</td><td>1pt BSP</td><td>8.20</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+723.67</td></tr>
+          <tr><td>09-Apr-26</td><td>19:30</td><td class="horse">City Cyclone</td><td>Wolverhampton</td><td>Place</td><td>1pt BSP Place</td><td>3.05</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+722.67</td></tr>
+          <tr class="meeting-header"><td colspan="10">10 April 2026 &#45;&#45; Aintree / Thirsk</td></tr>
+          <tr><td>10-Apr-26</td><td>13:45</td><td class="horse">Fingle Bridge</td><td>Aintree</td><td>Win</td><td>1pt BSP</td><td>55.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+721.67</td></tr>
+          <tr><td>10-Apr-26</td><td>13:45</td><td class="horse">Fingle Bridge</td><td>Aintree</td><td>Place</td><td>1pt BSP Place</td><td>10.14</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+720.67</td></tr>
+          <tr><td>10-Apr-26</td><td>16:25</td><td class="horse">Darkness</td><td>Thirsk</td><td>Win</td><td>1pt BSP</td><td>55.89</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+719.67</td></tr>
+          <tr><td>10-Apr-26</td><td>16:25</td><td class="horse">Darkness</td><td>Thirsk</td><td>Place</td><td>1pt BSP Place</td><td>7.13</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+718.67</td></tr>
+          <tr class="meeting-header"><td colspan="10">11 April 2026 &#45;&#45; Aintree</td></tr>
+          <tr><td>11-Apr-26</td><td>16:00</td><td class="horse">Marble Sands</td><td>Aintree</td><td>Win</td><td>2pt BSP</td><td>190.30</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+716.67</td></tr>
+          <tr><td>11-Apr-26</td><td>16:00</td><td class="horse">Marble Sands</td><td>Aintree</td><td>Place</td><td>2pt BSP Place</td><td>28.07</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+714.67</td></tr>
+          <tr class="meeting-header"><td colspan="10">12 April 2026 &#45;&#45; Musselburgh</td></tr>
+          <tr><td>12-Apr-26</td><td>17:15</td><td class="horse">Per Contra</td><td>Musselburgh</td><td>Win</td><td>1pt BSP</td><td>24.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+713.67</td></tr>
+          <tr><td>12-Apr-26</td><td>17:15</td><td class="horse">Per Contra</td><td>Musselburgh</td><td>Place</td><td>1pt BSP Place</td><td>5.30</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+712.67</td></tr>
+          <tr class="meeting-header"><td colspan="10">13 April 2026 &#45;&#45; Fakenham</td></tr>
+          <tr><td>13-Apr-26</td><td>14:40</td><td class="horse">Mahon Falls</td><td>Fakenham</td><td>Win</td><td>1pt BSP</td><td>80.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+711.67</td></tr>
+          <tr><td>13-Apr-26</td><td>14:40</td><td class="horse">Mahon Falls</td><td>Fakenham</td><td>Place</td><td>1pt BSP Place</td><td>10.50</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+710.67</td></tr>
+          <tr class="meeting-header"><td colspan="10">14 April 2026 &#45;&#45; Newmarket Rowley</td></tr>
+          <tr><td>14-Apr-26</td><td>13:15</td><td class="horse">Powder Monkey</td><td>Newmarket Rowley</td><td>Win</td><td>1pt BSP</td><td>60.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+709.67</td></tr>
+          <tr><td>14-Apr-26</td><td>13:15</td><td class="horse">Powder Monkey</td><td>Newmarket Rowley</td><td>Place</td><td>1pt BSP Place</td><td>6.61</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+708.67</td></tr>
+          <tr><td>14-Apr-26</td><td>14:25</td><td class="horse">Shayem</td><td>Newmarket Rowley</td><td>Win</td><td>2pt BSP</td><td>7.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+706.67</td></tr>
+          <tr><td>14-Apr-26</td><td>16:10</td><td class="horse">Blue To Blue</td><td>Newmarket Rowley</td><td>Win</td><td>2pt BSP</td><td>101.20</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+704.67</td></tr>
+          <tr><td>14-Apr-26</td><td>16:10</td><td class="horse">Blue To Blue</td><td>Newmarket Rowley</td><td>Place</td><td>2pt BSP Place</td><td>17.02</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+702.67</td></tr>
+          <tr class="meeting-header"><td colspan="10">16 April 2026 &#45;&#45; Newmarket Rowley</td></tr>
+          <tr><td>16-Apr-26</td><td>13:50</td><td class="horse">Pilu</td><td>Newmarket Rowley</td><td>Win</td><td>1pt BSP</td><td>&#45;&#45;</td><td class="nr">NR</td><td class="nr">&#45;&#45;</td><td class="running">+702.67</td></tr>
+          <tr><td>16-Apr-26</td><td>13:50</td><td class="horse">Pilu</td><td>Newmarket Rowley</td><td>Place</td><td>1pt BSP Place</td><td>&#45;&#45;</td><td class="nr">NR</td><td class="nr">&#45;&#45;</td><td class="running">+702.67</td></tr>
+          <tr><td>16-Apr-26</td><td>15:00</td><td class="horse">Completely Random</td><td>Newmarket Rowley</td><td>Win</td><td>2pt BSP</td><td>18.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+700.67</td></tr>
+          <tr><td>16-Apr-26</td><td>17:20</td><td class="horse">Goldmoyne</td><td>Newmarket Rowley</td><td>Win</td><td>2pt BSP</td><td>3.35</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+698.67</td></tr>
+          <tr class="meeting-header"><td colspan="10">17 April 2026 &#45;&#45; Ayr / Newbury</td></tr>
+          <tr><td>17-Apr-26</td><td>13:45</td><td class="horse">Gaballo De Guerra</td><td>Ayr</td><td>Win</td><td>1pt BSP</td><td>15.86</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+697.67</td></tr>
+          <tr><td>17-Apr-26</td><td>13:45</td><td class="horse">Gaballo De Guerra</td><td>Ayr</td><td>Place</td><td>1pt BSP Place</td><td>4.90</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+696.67</td></tr>
+          <tr><td>17-Apr-26</td><td>16:05</td><td class="horse">Phantomofthepoints</td><td>Ayr</td><td>Win</td><td>1pt BSP</td><td>17.50</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+695.67</td></tr>
+          <tr><td>17-Apr-26</td><td>16:05</td><td class="horse">Phantomofthepoints</td><td>Ayr</td><td>Place</td><td>1pt BSP Place</td><td>5.60</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+694.67</td></tr>
+          <tr><td>17-Apr-26</td><td>16:55</td><td class="horse">The Resdev Scholar</td><td>Newbury</td><td>Win</td><td>1pt BSP</td><td>38.17</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+693.67</td></tr>
+          <tr><td>17-Apr-26</td><td>16:55</td><td class="horse">The Resdev Scholar</td><td>Newbury</td><td>Place</td><td>1pt BSP Place</td><td>6.79</td><td class="won">Won</td><td class="pl-pos">+5.79</td><td class="running">+699.46</td></tr>
+          <tr><td>17-Apr-26</td><td>17:25</td><td class="horse">Arctic Thunder</td><td>Newbury</td><td>Win</td><td>1pt BSP</td><td>7.80</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+698.46</td></tr>
+          <tr class="meeting-header"><td colspan="10">18 April 2026 &#45;&#45; Newbury</td></tr>
+          <tr><td>18-Apr-26</td><td>13:25</td><td class="horse">Splish Splsh</td><td>Newbury</td><td>Win</td><td>1pt BSP</td><td>19.50</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+697.46</td></tr>
+          <tr><td>18-Apr-26</td><td>13:25</td><td class="horse">Splish Splsh</td><td>Newbury</td><td>Place</td><td>1pt BSP Place</td><td>4.70</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+696.46</td></tr>
+          <tr><td>18-Apr-26</td><td>14:00</td><td class="horse">Ardisia</td><td>Newbury</td><td>Win</td><td>1pt BSP</td><td>23.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+695.46</td></tr>
+          <tr><td>18-Apr-26</td><td>14:00</td><td class="horse">Ardisia</td><td>Newbury</td><td>Place</td><td>1pt BSP Place</td><td>3.86</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+694.46</td></tr>
+          <tr><td>18-Apr-26</td><td>15:10</td><td class="horse">Ebt's Guard</td><td>Newbury</td><td>Win</td><td>1pt BSP</td><td>18.01</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+693.46</td></tr>
+          <tr><td>18-Apr-26</td><td>15:10</td><td class="horse">Ebt's Guard</td><td>Newbury</td><td>Place</td><td>1pt BSP Place</td><td>4.16</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+692.46</td></tr>
+          <tr class="meeting-header"><td colspan="10">19 April 2026 &#45;&#45; Curragh</td></tr>
+          <tr><td>19-Apr-26</td><td>15:00</td><td class="horse">Nouvel Espoir</td><td>Curragh</td><td>Win</td><td>1pt BSP</td><td>90.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+691.46</td></tr>
+          <tr><td>19-Apr-26</td><td>15:00</td><td class="horse">Nouvel Espoir</td><td>Curragh</td><td>Place</td><td>1pt BSP Place</td><td>14.50</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+690.46</td></tr>
+          <tr><td>19-Apr-26</td><td>16:45</td><td class="horse">San Aer</td><td>Curragh</td><td>Win</td><td>1pt BSP</td><td>50.29</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+689.46</td></tr>
+          <tr><td>19-Apr-26</td><td>16:45</td><td class="horse">San Aer</td><td>Curragh</td><td>Place</td><td>1pt BSP Place</td><td>7.40</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+688.46</td></tr>
+          <tr class="meeting-header"><td colspan="10">21 April 2026 &#45;&#45; Pontefract / Yarmouth</td></tr>
+          <tr><td>21-Apr-26</td><td>14:17</td><td class="horse">Uncertainty</td><td>Pontefract</td><td>Win</td><td>1pt BSP</td><td>&#45;&#45;</td><td class="nr">NR</td><td class="nr">&#45;&#45;</td><td class="running">+688.46</td></tr>
+          <tr><td>21-Apr-26</td><td>14:17</td><td class="horse">Uncertainty</td><td>Pontefract</td><td>Place</td><td>1pt BSP Place</td><td>&#45;&#45;</td><td class="nr">NR</td><td class="nr">&#45;&#45;</td><td class="running">+688.46</td></tr>
+          <tr><td>21-Apr-26</td><td>15:27</td><td class="horse">Parlando</td><td>Pontefract</td><td>Win</td><td>1pt BSP</td><td>10.37</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+687.46</td></tr>
+          <tr><td>21-Apr-26</td><td>16:55</td><td class="horse">Captain Parma</td><td>Yarmouth</td><td>Win</td><td>1pt BSP</td><td>19.61</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+686.46</td></tr>
+          <tr><td>21-Apr-26</td><td>16:55</td><td class="horse">Captain Parma</td><td>Yarmouth</td><td>Place</td><td>1pt BSP Place</td><td>4.36</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+685.46</td></tr>
+          <tr class="meeting-header"><td colspan="10">24 April 2026 &#45;&#45; Sandown</td></tr>
+          <tr><td>24-Apr-26</td><td>13:50</td><td class="horse">Suspended Sentence</td><td>Sandown</td><td>Win</td><td>1pt BSP</td><td>17.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+684.46</td></tr>
+          <tr><td>24-Apr-26</td><td>13:50</td><td class="horse">Suspended Sentence</td><td>Sandown</td><td>Place</td><td>1pt BSP Place</td><td>5.60</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+683.46</td></tr>
+          <tr><td>24-Apr-26</td><td>15:00</td><td class="horse">Cicero's Gift</td><td>Sandown</td><td>Win</td><td>2pt BSP</td><td>28.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+681.46</td></tr>
+          <tr><td>24-Apr-26</td><td>15:00</td><td class="horse">Cicero's Gift</td><td>Sandown</td><td>Place</td><td>2pt BSP Place</td><td>9.53</td><td class="lost">Lost</td><td class="pl-neg">&#45;2.00</td><td class="running">+679.46</td></tr>
+          <tr class="meeting-header"><td colspan="10">25 April 2026 &#45;&#45; Sandown / Navan / Haydock</td></tr>
+          <tr><td>25-Apr-26</td><td>13:45</td><td class="horse">Dutch Corner</td><td>Sandown</td><td>Win</td><td>1pt BSP</td><td>18.50</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+678.46</td></tr>
+          <tr><td>25-Apr-26</td><td>13:45</td><td class="horse">Dutch Corner</td><td>Sandown</td><td>Place</td><td>1pt BSP Place</td><td>4.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+677.46</td></tr>
+          <tr><td>25-Apr-26</td><td>15:05</td><td class="horse">Layfayette</td><td>Navan</td><td>Win</td><td>1pt BSP</td><td>36.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+676.46</td></tr>
+          <tr><td>25-Apr-26</td><td>15:05</td><td class="horse">Layfayette</td><td>Navan</td><td>Place</td><td>1pt BSP Place</td><td>9.40</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+675.46</td></tr>
+          <tr><td>25-Apr-26</td><td>15:30</td><td class="horse">Transmission</td><td>Sandown</td><td>Win</td><td>1pt BSP</td><td>18.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+674.46</td></tr>
+          <tr><td>25-Apr-26</td><td>15:30</td><td class="horse">Transmission</td><td>Sandown</td><td>Place</td><td>1pt BSP Place</td><td>4.50</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+673.46</td></tr>
+          <tr><td>25-Apr-26</td><td>15:45</td><td class="horse">Dunkeld Dreamer</td><td>Haydock</td><td>Win</td><td>1pt BSP</td><td>23.00</td><td class="won">Won</td><td class="pl-pos">+21.00</td><td class="running">+694.46</td></tr>
+          <tr><td>25-Apr-26</td><td>15:45</td><td class="horse">Dunkeld Dreamer</td><td>Haydock</td><td>Place</td><td>1pt BSP Place</td><td>4.40</td><td class="won">Won</td><td class="pl-pos">+3.50</td><td class="running">+697.96</td></tr>
+          <tr class="meeting-header"><td colspan="10">27 April 2026 &#45;&#45; Naas</td></tr>
+          <tr><td>27-Apr-26</td><td>19:15</td><td class="horse">Fahrenheit Seven</td><td>Naas</td><td>Win</td><td>1pt BSP</td><td>4.90</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+696.96</td></tr>
+          <tr class="meeting-header"><td colspan="10">28 April 2026 &#45;&#45; Punchestown</td></tr>
+          <tr><td>28-Apr-26</td><td>15:05</td><td class="horse">San Hilario</td><td>Punchestown</td><td>Win</td><td>1pt BSP</td><td>22.84</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+695.96</td></tr>
+          <tr><td>28-Apr-26</td><td>15:05</td><td class="horse">San Hilario</td><td>Punchestown</td><td>Place</td><td>1pt BSP Place</td><td>5.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+694.96</td></tr>
+          <tr><td>28-Apr-26</td><td>15:40</td><td class="horse">We're Red And Blue</td><td>Punchestown</td><td>Win</td><td>1pt BSP</td><td>24.28</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+693.96</td></tr>
+          <tr><td>28-Apr-26</td><td>15:40</td><td class="horse">We're Red And Blue</td><td>Punchestown</td><td>Place</td><td>1pt BSP Place</td><td>5.40</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+692.96</td></tr>
+          <tr class="meeting-header"><td colspan="10">29 April 2026 &#45;&#45; Punchestown</td></tr>
+          <tr><td>29-Apr-26</td><td>17:25</td><td class="horse">Jesse Evans</td><td>Punchestown</td><td>Win</td><td>1pt BSP</td><td>42.71</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+691.96</td></tr>
+          <tr><td>29-Apr-26</td><td>17:25</td><td class="horse">Jesse Evans</td><td>Punchestown</td><td>Place</td><td>1pt BSP Place</td><td>7.60</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+690.96</td></tr>
+          <tr class="meeting-header"><td colspan="10">30 April 2026 &#45;&#45; Punchestown</td></tr>
+          <tr><td>30-Apr-26</td><td>14:30</td><td class="horse">Ionian</td><td>Punchestown</td><td>Win</td><td>1pt BSP</td><td>13.39</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+689.96</td></tr>
+          <tr><td>30-Apr-26</td><td>14:30</td><td class="horse">Ionian</td><td>Punchestown</td><td>Place</td><td>1pt BSP Place</td><td>4.42</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+688.96</td></tr>
+          <tr><td>30-Apr-26</td><td>16:50</td><td class="horse">Western Diego</td><td>Punchestown</td><td>Win</td><td>1pt BSP</td><td>50.00</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+687.96</td></tr>
+          <tr><td>30-Apr-26</td><td>16:50</td><td class="horse">Western Diego</td><td>Punchestown</td><td>Place</td><td>1pt BSP Place</td><td>9.90</td><td class="lost">Lost</td><td class="pl-neg">&#45;1.00</td><td class="running">+686.96</td></tr>
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="8">Total &#45;&#45; 98 bets (win + place markets) &nbsp;&#183;&nbsp; 1pt std stake</td>
-            <td></td>
-            <td class="total-pl">+596.33pts</td>
-            <td class="total-pl">ROI 537.2%</td>
+            <td colspan="8">April 2026 Total &#45;&#45; 98 bets &nbsp;&#183;&nbsp; 113pts staked &nbsp;&#183;&nbsp; 4 non-runner rows</td>
+            <td class="total-pl" colspan="2">+596.33pts</td>
           </tr>
         </tfoot>
       </table>
     </div>
-    <p style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:#555;margin-top:1rem;">BSP = Betfair Starting Price. Each EW selection split into separate Win and Place markets at 1pt per side. Late April Punchestown BSPs pending final settlement &#45; shown as &#45; until confirmed.</p>
   </main>
   <footer>
     <div class="compliance">
