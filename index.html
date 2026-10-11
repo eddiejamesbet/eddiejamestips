@@ -33,12 +33,20 @@
     .cta-bar { display: flex; flex-direction: row; gap: 1px; margin-bottom: 3rem; margin-top: 1px; }
     .follow-link { display: inline-flex; align-items: center; justify-content: center; gap: 0.7rem; background: #FF6600; color: #0a0a0a; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 1.8rem; transition: background 0.2s; flex: 1; }
     .follow-link:hover { background: #FFD700; }
-    .winner-card { border: 1px solid #333; border-left: 4px solid #FFD700; padding: 1.4rem 2rem; margin-bottom: 1px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; }
-    .placed-card { border: 1px solid #333; border-left: 4px solid #FF6600; padding: 1.4rem 2rem; margin-bottom: 1px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; }
-    .winner-horse { font-size: 1.2rem; font-weight: 900; color: #F5F0E8; line-height: 1; }
-    .winner-detail { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: #aaa; margin-top: 0.3rem; }
-    .winner-price { font-size: 1.6rem; font-weight: 900; color: #FFD700; text-align: right; line-height: 1; display: flex; align-items: baseline; gap: 0.4rem; justify-content: flex-end; }
-    .winner-price-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: #aaa; text-align: right; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.2rem; }
+    .list { border: 1px solid #333; }
+    .list.won { border-left: 4px solid #FFD700; }
+    .list.plc { border-left: 4px solid #FF6600; }
+    .lhead { display: grid; grid-template-columns: 62px 1fr 132px 62px 74px; gap: 0.5rem; padding: 0.5rem 1rem; background: #111; border-bottom: 1px solid #333; font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: #777; }
+    .r { display: grid; grid-template-columns: 62px 1fr 132px 62px 74px; gap: 0.5rem; padding: 0.42rem 1rem; border-bottom: 1px solid #161616; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; }
+    .r:last-child { border-bottom: none; }
+    .r:hover { background: #111; }
+    .r .d { color: #777; }
+    .r .h { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.88rem; color: #F5F0E8; }
+    .r .c { color: #8c8c8c; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .r .p { text-align: right; color: #ddd; }
+    .r .w { text-align: right; color: #FFD700; font-weight: 600; }
+    .r .pl { text-align: right; color: #FF6600; font-weight: 600; }
+    .lnote { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: #555; padding: 0.5rem 1rem; background: #0d0d0d; border-top: 1px solid #222; }
     .festival-card { border: 1px solid #333; border-left: 4px solid #FF6600; padding: 1.8rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; margin-bottom: 1px; }
     .festival-name { font-size: 1.1rem; font-weight: 800; color: #F5F0E8; }
     .festival-detail { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: #aaa; margin-top: 0.3rem; }
@@ -55,7 +63,18 @@
     .compliance { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #888; letter-spacing: 0.05em; line-height: 1.6; }
     .compliance a { color: #aaa; text-decoration: none; border-bottom: 1px solid #555; }
     .compliance a:hover { color: #FF6600; }
-    @media (max-width: 600px) { .h-inner { padding: 1rem 1.2rem; gap: 1rem; } main { padding: 1.5rem 1.2rem 3rem; } .festival-card { grid-template-columns: 1fr; } .festival-pl { text-align: left; } .winner-card, .placed-card { grid-template-columns: 1fr; } .winner-price { text-align: left; } footer { flex-direction: column; padding: 1.5rem 1.2rem; } nav { overflow-x: auto; } .cta-bar { flex-direction: column; gap: 1px; } }
+    @media (max-width: 640px) {
+      .h-inner { padding: 1rem 1.2rem; gap: 1rem; }
+      main { padding: 1.5rem 1rem 3rem; }
+      .lhead, .r { grid-template-columns: 52px 1fr 52px 64px; gap: 0.4rem; padding-left: 0.7rem; padding-right: 0.7rem; }
+      .lhead .c, .r .c { display: none; }
+      .r .h { font-size: 0.8rem; }
+      .festival-card { grid-template-columns: 1fr; }
+      .festival-pl { text-align: left; }
+      footer { flex-direction: column; padding: 1.5rem 1.2rem; }
+      nav { overflow-x: auto; }
+      .cta-bar { flex-direction: column; gap: 1px; }
+    }
   </style>
 </head>
 <body>
@@ -68,7 +87,7 @@
         <div class="tagline">The Esoteric Tipster.</div>
       </div>
     </div>
-    <div class="header-record">Since inception &nbsp;&#183;&nbsp; 329 bets &nbsp;&#183;&nbsp; +312.26pts &nbsp;&#183;&nbsp; advised price</div>
+    <div class="header-record">Since inception &nbsp;&#183;&nbsp; 329 bets &nbsp;&#183;&nbsp; +309.26pts &nbsp;&#183;&nbsp; advised price</div>
   </header>
   <nav>
     <a href="index.html">Home</a>
@@ -95,112 +114,70 @@
     <div class="cta-bar" style="margin-top: 1rem;">
       <a class="follow-link" href="https://x.com/EddieJamesTips" target="_blank" rel="noopener">Follow on X &rarr;</a>
     </div>
+
     <section style="margin-bottom:3rem">
-      <div class="section-label">Recent Winners</div>
-      <div class="winner-card">
-        <div>
-          <div class="winner-horse">Alphonse Le Grande</div>
-          <div class="winner-detail">10 October 2026 &nbsp;&#183;&nbsp; Newmarket 15:40 &nbsp;&#183;&nbsp; 2pts EW (1EW) &nbsp;&#183;&nbsp; Advised 25/1</div>
-        </div>
-        <div>
-          <div class="winner-price">25/1 <span>Won</span></div>
-          <div class="winner-price-label">Advised</div>
-        </div>
-      </div>
-      <div class="winner-card">
-        <div>
-          <div class="winner-horse">Ruby's Angel</div>
-          <div class="winner-detail">9 October 2026 &nbsp;&#183;&nbsp; Newmarket 16:10 &nbsp;&#183;&nbsp; 2pts EW (1EW) &nbsp;&#183;&nbsp; Advised 40/1</div>
-        </div>
-        <div>
-          <div class="winner-price">40/1 <span>Won</span></div>
-          <div class="winner-price-label">Advised</div>
-        </div>
-      </div>
-      <div class="winner-card">
-        <div>
-          <div class="winner-horse">Cliff Danger</div>
-          <div class="winner-detail">6 October 2026 &nbsp;&#183;&nbsp; Southwell 20:00 &nbsp;&#183;&nbsp; 1pt WIN &nbsp;&#183;&nbsp; Advised 5/1</div>
-        </div>
-        <div>
-          <div class="winner-price">5/1 <span>Won</span></div>
-          <div class="winner-price-label">Advised</div>
-        </div>
-      </div>
-      <div class="winner-card">
-        <div>
-          <div class="winner-horse">Hello Cotai</div>
-          <div class="winner-detail">1 October 2026 &nbsp;&#183;&nbsp; Salisbury 16:24 &nbsp;&#183;&nbsp; 2pts EW (1EW) &nbsp;&#183;&nbsp; Advised 22/1</div>
-        </div>
-        <div>
-          <div class="winner-price">22/1 <span>Won</span></div>
-          <div class="winner-price-label">Advised</div>
-        </div>
-      </div>
-      <div class="winner-card">
-        <div>
-          <div class="winner-horse">Chally Chute</div>
-          <div class="winner-detail">27 September 2026 &nbsp;&#183;&nbsp; Curragh 16:20 &nbsp;&#183;&nbsp; 2pts EW (1EW) &nbsp;&#183;&nbsp; Advised 28/1</div>
-        </div>
-        <div>
-          <div class="winner-price">28/1 <span>Won</span></div>
-          <div class="winner-price-label">Advised</div>
-        </div>
-      </div>
-      <div class="winner-card">
-        <div>
-          <div class="winner-horse">Pierre Royal</div>
-          <div class="winner-detail">26 September 2026 &nbsp;&#183;&nbsp; Newmarket 15:40 &nbsp;&#183;&nbsp; 2pts EW (1EW) &nbsp;&#183;&nbsp; Advised 40/1</div>
-        </div>
-        <div>
-          <div class="winner-price">40/1 <span>Won</span></div>
-          <div class="winner-price-label">Advised</div>
-        </div>
+      <div class="section-label">Every Winner &#45;&#45; Since Inception</div>
+      <div class="list won">
+        <div class="lhead"><span>Date</span><span>Horse</span><span>Course</span><span style="text-align:right">Advised</span><span style="text-align:right">Pts</span></div>
+        <div class="r"><span class="d">10 Oct</span><span class="h">Alphonse Le Grande</span><span class="c">Newmarket</span><span class="p">25/1</span><span class="w">+30.00</span></div>
+        <div class="r"><span class="d">9 Oct</span><span class="h">Ruby's Angel</span><span class="c">Newmarket</span><span class="p">40/1</span><span class="w">+33.60</span></div>
+        <div class="r"><span class="d">6 Oct</span><span class="h">Cliff Danger</span><span class="c">Southwell</span><span class="p">5/1</span><span class="w">+5.00</span></div>
+        <div class="r"><span class="d">1 Oct</span><span class="h">Hello Cotai</span><span class="c">Salisbury</span><span class="p">22/1</span><span class="w">+26.40</span></div>
+        <div class="r"><span class="d">27 Sep</span><span class="h">Chally Chute</span><span class="c">Curragh</span><span class="p">28/1</span><span class="w">+33.60</span></div>
+        <div class="r"><span class="d">26 Sep</span><span class="h">Pierre Royal</span><span class="c">Newmarket</span><span class="p">40/1</span><span class="w">+48.00</span></div>
+        <div class="r"><span class="d">18 Jul</span><span class="h">Brielle</span><span class="c">Newmarket July</span><span class="p">33/1</span><span class="w">+79.20</span></div>
+        <div class="r"><span class="d">12 Jul</span><span class="h">Basilette</span><span class="c">Stratford</span><span class="p">10/1</span><span class="w">+12.00</span></div>
+        <div class="r"><span class="d">9 Jul</span><span class="h">Asmen Warrior</span><span class="c">Newmarket</span><span class="p">17/2</span><span class="w">+10.20</span></div>
+        <div class="r"><span class="d">4 Jul</span><span class="h">Sportingsilvermine</span><span class="c">Newmarket July</span><span class="p">22/1</span><span class="w">+26.40</span></div>
+        <div class="r"><span class="d">27 Jun</span><span class="h">Room Service</span><span class="c">Newcastle</span><span class="p">28/1</span><span class="w">+33.60</span></div>
+        <div class="r"><span class="d">6 Jun</span><span class="h">Bay City Roller</span><span class="c">Epsom Downs</span><span class="p">20/1</span><span class="w">+24.00</span></div>
+        <div class="r"><span class="d">25 Apr</span><span class="h">Dunkeld Dreamer</span><span class="c">Haydock</span><span class="p">20/1</span><span class="w">+24.00</span></div>
+        <div class="r"><span class="d">5 Apr</span><span class="h">Azure Angel</span><span class="c">Bath</span><span class="p">33/1</span><span class="w">+39.60</span></div>
+        <div class="r"><span class="d">4 Apr</span><span class="h">Sept Etoiles</span><span class="c">Fairyhouse</span><span class="p">22/1</span><span class="w">+52.80</span></div>
+        <div class="r"><span class="d">3 Apr</span><span class="h">Celestial Orbit</span><span class="c">Curragh</span><span class="p">18/1</span><span class="w">+21.60</span></div>
+        <div class="r"><span class="d">28 Mar</span><span class="h">Aramram</span><span class="c">Doncaster</span><span class="p">16/1</span><span class="w">+19.20</span></div>
+        <div class="r"><span class="d">21 Mar</span><span class="h">Speiriuil</span><span class="c">Kelso</span><span class="p">13/2</span><span class="w">+6.50</span></div>
+        <div class="r"><span class="d">13 Mar</span><span class="h">Wilful</span><span class="c">Cheltenham</span><span class="p">14/1</span><span class="w">+16.80</span></div>
+        <div class="r"><span class="d">12 Mar</span><span class="h">Home By The Lee</span><span class="c">Cheltenham</span><span class="p">28/1</span><span class="w">+33.60</span></div>
+        <div class="r"><span class="d">12 Mar</span><span class="h">Heart Wood</span><span class="c">Cheltenham</span><span class="p">12/1</span><span class="w">+6.00</span></div>
+        <div class="r"><span class="d">12 Mar</span><span class="h">Meetmebythesea</span><span class="c">Cheltenham</span><span class="p">11/2</span><span class="w">+5.50</span></div>
+        <div class="r"><span class="d">11 Mar</span><span class="h">Kitzbuhel</span><span class="c">Cheltenham</span><span class="p">14/1</span><span class="w">+16.80</span></div>
+        <div class="lnote">All 23 winners since 10 March 2026. Every losing selection is published on the record pages.</div>
       </div>
     </section>
+
     <section style="margin-bottom:3rem">
       <div class="section-label">Recent Placed</div>
-      <div class="placed-card">
-        <div>
-          <div class="winner-horse">Credit Forgedd It</div>
-          <div class="winner-detail">7 October 2026 &nbsp;&#183;&nbsp; Kempton Park 19:00 &nbsp;&#183;&nbsp; 2pts EW (1EW) &nbsp;&#183;&nbsp; Advised 20/1</div>
-        </div>
-        <div>
-          <div class="winner-price" style="color:#FF6600;">20/1 <span>Placed</span></div>
-          <div class="winner-price-label">Advised</div>
-        </div>
-      </div>
-      <div class="placed-card">
-        <div>
-          <div class="winner-horse">Bay City Roller</div>
-          <div class="winner-detail">4 October 2026 &nbsp;&#183;&nbsp; ParisLongchamp 15:05 &nbsp;&#183;&nbsp; 2pts EW (1EW) &nbsp;&#183;&nbsp; Advised 25/1</div>
-        </div>
-        <div>
-          <div class="winner-price" style="color:#FF6600;">25/1 <span>Placed</span></div>
-          <div class="winner-price-label">Advised</div>
-        </div>
-      </div>
-      <div class="placed-card">
-        <div>
-          <div class="winner-horse">Secret History</div>
-          <div class="winner-detail">3 October 2026 &nbsp;&#183;&nbsp; Ascot 13:15 &nbsp;&#183;&nbsp; 2pts EW (1EW) &nbsp;&#183;&nbsp; Advised 50/1</div>
-        </div>
-        <div>
-          <div class="winner-price" style="color:#FF6600;">50/1 <span>Placed</span></div>
-          <div class="winner-price-label">Advised</div>
-        </div>
-      </div>
-      <div class="placed-card">
-        <div>
-          <div class="winner-horse">Blue Hero</div>
-          <div class="winner-detail">29 September 2026 &nbsp;&#183;&nbsp; Bath 15:02 &nbsp;&#183;&nbsp; 2pts EW (1EW) &nbsp;&#183;&nbsp; Advised 14/1</div>
-        </div>
-        <div>
-          <div class="winner-price" style="color:#FF6600;">14/1 <span>Placed</span></div>
-          <div class="winner-price-label">Advised</div>
-        </div>
+      <div class="list plc">
+        <div class="lhead"><span>Date</span><span>Horse</span><span>Course</span><span style="text-align:right">Advised</span><span style="text-align:right">Pts</span></div>
+        <div class="r"><span class="d">7 Oct</span><span class="h">Credit Forgedd It</span><span class="c">Kempton Park</span><span class="p">20/1</span><span class="pl">+3.00</span></div>
+        <div class="r"><span class="d">4 Oct</span><span class="h">Bay City Roller</span><span class="c">ParisLongchamp</span><span class="p">25/1</span><span class="pl">+4.00</span></div>
+        <div class="r"><span class="d">3 Oct</span><span class="h">Secret History</span><span class="c">Ascot</span><span class="p">50/1</span><span class="pl">+9.00</span></div>
+        <div class="r"><span class="d">29 Sep</span><span class="h">Blue Hero</span><span class="c">Bath</span><span class="p">14/1</span><span class="pl">+1.80</span></div>
+        <div class="r"><span class="d">6 Sep</span><span class="h">Have Secret</span><span class="c">York</span><span class="p">50/1</span><span class="pl">+9.00</span></div>
+        <div class="r"><span class="d">5 Sep</span><span class="h">In The Breeze</span><span class="c">Haydock Park</span><span class="p">25/1</span><span class="pl">+5.25</span></div>
+        <div class="r"><span class="d">30 Aug</span><span class="h">Wahdan</span><span class="c">Beverley</span><span class="p">16/1</span><span class="pl">+2.20</span></div>
+        <div class="r"><span class="d">26 Aug</span><span class="h">Lushill</span><span class="c">Newbury</span><span class="p">22/1</span><span class="pl">+3.40</span></div>
+        <div class="r"><span class="d">19 Aug</span><span class="h">Almaqam</span><span class="c">York</span><span class="p">18/1</span><span class="pl">+2.60</span></div>
+        <div class="r"><span class="d">10 Aug</span><span class="h">Uncle Don</span><span class="c">Windsor</span><span class="p">25/1</span><span class="pl">+4.00</span></div>
+        <div class="r"><span class="d">2 Aug</span><span class="h">Bythesametoken</span><span class="c">Galway</span><span class="p">28/1</span><span class="pl">+6.00</span></div>
+        <div class="r"><span class="d">29 Jul</span><span class="h">Hell Of A Spin</span><span class="c">Goodwood</span><span class="p">40/1</span><span class="pl">+18.00</span></div>
+        <div class="r"><span class="d">19 Jul</span><span class="h">Happy Pharoah</span><span class="c">Curragh</span><span class="p">14/1</span><span class="pl">+1.80</span></div>
+        <div class="r"><span class="d">18 Jul</span><span class="h">Partisan Hero</span><span class="c">Curragh</span><span class="p">10/1</span><span class="pl">+1.00</span></div>
+        <div class="r"><span class="d">18 Jul</span><span class="h">Breizh River</span><span class="c">Market Rasen</span><span class="p">10/1</span><span class="pl">+1.00</span></div>
+        <div class="r"><span class="d">15 Jul</span><span class="h">Character Testing</span><span class="c">Uttoxeter</span><span class="p">10/1</span><span class="pl">+1.00</span></div>
+        <div class="r"><span class="d">13 Jul</span><span class="h">Educator</span><span class="c">Lingfield</span><span class="p">10/1</span><span class="pl">+1.00</span></div>
+        <div class="r"><span class="d">10 Jul</span><span class="h">Pellitory</span><span class="c">York</span><span class="p">33/1</span><span class="pl">+5.60</span></div>
+        <div class="r"><span class="d">7 Jul</span><span class="h">Muhib</span><span class="c">Pontefract</span><span class="p">20/1</span><span class="pl">+3.00</span></div>
+        <div class="r"><span class="d">6 Jul</span><span class="h">Henry Hawk</span><span class="c">Ayr</span><span class="p">16/1</span><span class="pl">+2.20</span></div>
+        <div class="r"><span class="d">4 Jul</span><span class="h">Partisan Hero</span><span class="c">Sandown</span><span class="p">25/1</span><span class="pl">+3.00</span></div>
+        <div class="r"><span class="d">18 Jun</span><span class="h">Brilliant Star</span><span class="c">Ascot</span><span class="p">40/1</span><span class="pl">+7.00</span></div>
+        <div class="r"><span class="d">17 Jun</span><span class="h">EBT's Guard</span><span class="c">Ascot</span><span class="p">33/1</span><span class="pl">+5.60</span></div>
+        <div class="r"><span class="d">17 Jun</span><span class="h">Cerulean Bay</span><span class="c">Ascot</span><span class="p">33/1</span><span class="pl">+5.60</span></div>
+        <div class="lnote">24 most recent of 45 placed since 10 March 2026. Full record, win and lose, on the record pages.</div>
       </div>
     </section>
+
     <section style="margin-bottom:3rem">
       <div class="section-label">Advised Price Record</div>
       <div class="festival-card">
