@@ -27,13 +27,24 @@
     main { max-width: 860px; margin: 0 auto; padding: 2rem 2rem 4rem; }
     .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: #FF6600; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem; }
     .section-label::after { content: ''; flex: 1; height: 1px; background: #333; }
-    .today { margin-bottom: 0; }
-    .no-bet { border: 1px solid #333; border-left: 4px solid #333; padding: 1.6rem 2rem; margin-bottom: 1px; }
-    .no-bet-text { font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: #555; letter-spacing: 0.05em; }
-    .soon { border: 1px solid #333; border-left: 4px solid #FFD700; padding: 1.8rem 2rem; margin-bottom: 1px; }
-    .soon-head { font-size: 1.5rem; font-weight: 900; color: #F5F0E8; line-height: 1.1; margin-bottom: 0.7rem; }
-    .soon-body { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: #aaa; line-height: 1.7; }
-    .cta-bar { display: flex; flex-direction: row; gap: 1px; margin-bottom: 3rem; margin-top: 1px; }
+    .live-now { border: 1px solid #333; border-left: 4px solid #FFD700; padding: 1.3rem 1.6rem; margin-bottom: 1.3rem; }
+    .live-now-text { font-family: 'IBM Plex Mono', monospace; font-size: 0.86rem; color: #F5F0E8; line-height: 1.7; }
+    .live-now-text strong { color: #FFD700; font-weight: 500; }
+    .live-now-date { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: #555; margin-top: 0.6rem; }
+    .join-intro { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: #ccc; line-height: 1.8; margin-bottom: 1.4rem; }
+    .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #333; margin-bottom: 1px; }
+    .plan { background: #0a0a0a; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 1.8rem 1.6rem; display: flex; flex-direction: column; }
+    .plan.feature { border-left: 4px solid #FFD700; }
+    .plan.alt { border-left: 4px solid #FF6600; }
+    .plan-name { font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; letter-spacing: 0.15em; text-transform: uppercase; color: #aaa; margin-bottom: 0.9rem; }
+    .plan-price { font-size: 2.6rem; font-weight: 900; color: #FFD700; line-height: 1; }
+    .plan-sub { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: #FF6600; margin-top: 0.4rem; }
+    .plan-note { font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; color: #888; margin-top: 0.8rem; line-height: 1.6; flex: 1; }
+    .plan-btn { display: block; text-align: center; background: #FF6600; color: #0a0a0a; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; padding: 0.85rem 1rem; margin-top: 1.3rem; transition: background 0.2s; }
+    .plan-btn:hover { background: #FFD700; }
+    .join-foot { border: 1px solid #333; border-top: none; padding: 1.1rem 1.6rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: #888; line-height: 1.8; }
+    .join-foot strong { color: #ccc; font-weight: 500; }
+    .cta-bar { display: flex; flex-direction: row; gap: 1px; margin-bottom: 3rem; margin-top: 1.4rem; }
     .follow-link { display: inline-flex; align-items: center; justify-content: center; gap: 0.7rem; background: #FF6600; color: #0a0a0a; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 1.8rem; transition: background 0.2s; flex: 1; }
     .follow-link:hover { background: #FFD700; }
     .list { border: 1px solid #333; }
@@ -69,6 +80,7 @@
     @media (max-width: 640px) {
       .h-inner { padding: 1rem 1.2rem; gap: 1rem; }
       main { padding: 1.5rem 1rem 3rem; }
+      .plans { grid-template-columns: 1fr; }
       .lhead, .r { grid-template-columns: 52px 1fr 52px 64px; gap: 0.4rem; padding-left: 0.7rem; padding-right: 0.7rem; }
       .lhead .c, .r .c { display: none; }
       .r .h { font-size: 0.8rem; }
@@ -101,16 +113,39 @@
   </nav>
   <main>
     <section class="today">
-      <div class="section-label">Eddie Advises</div>
-      <div class="soon">
-        <div class="soon-head">Coming Soon</div>
-        <div class="soon-body">
-          Details of where to find the daily advice will appear here shortly.<br>
-          The full record &#45;&#45; every selection, win and lose &#45;&#45; stays on this site, free.
+      <div class="section-label">Membership</div>
+      <div class="live-now">
+        <div class="live-now-text">
+          <strong>Monday 2nd November selections are LIVE NOW</strong> and priced 18/1 and 16/1 at time of writing.
+        </div>
+        <div class="live-now-date">Prices correct as of 2 November 2026.</div>
+      </div>
+      <p class="join-intro">
+        Eddie James bets will be emailed on a daily basis and also posted in an exclusive<br>
+        Telegram broadcast group that you will be given access to once joining.
+      </p>
+      <div class="plans">
+        <div class="plan feature">
+          <div class="plan-name">November 2026 Trial Membership</div>
+          <div class="plan-price">&pound;20</div>
+          <div class="plan-sub">usual price &pound;30 per month</div>
+          <div class="plan-note">Please note this is NOT, REPEAT NOT, a recurring Subscription payment &#45;&#45; this is a ONE OFF &pound;20 payment. On 1st December you will be given the chance to sign up again for December 2026 and so on.</div>
+          <a class="plan-btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=8388F6JK6KY4Q" target="_blank" rel="noopener">Join for November &rarr;</a>
+        </div>
+        <div class="plan alt">
+          <div class="plan-name">6 Month Membership &#45;&#45; until 30th April 2027</div>
+          <div class="plan-price">&pound;120</div>
+          <div class="plan-sub">saving you &pound;60 on monthly fees</div>
+          <div class="plan-note">Again this is NOT, REPEAT NOT, a recurring subscription.</div>
+          <a class="plan-btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=RJA6SVNXNFGMN" target="_blank" rel="noopener">Join for six months &rarr;</a>
         </div>
       </div>
+      <div class="join-foot">
+        <strong>Neither option is a recurring payment.</strong> Nothing is taken automatically and there is nothing to cancel.<br>
+        The full record &#45;&#45; every selection, win and lose &#45;&#45; stays on this site, free to read.
+      </div>
     </section>
-    <div class="cta-bar" style="margin-top: 1rem;">
+    <div class="cta-bar">
       <a class="follow-link" href="https://x.com/EddieJamesTips" target="_blank" rel="noopener">Follow on X &rarr;</a>
     </div>
 
